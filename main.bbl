@@ -1,0 +1,19 @@
+\begin{thebibliography}{3}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Brouwer and Jansen(2004)}]{2}
+Brouwer, D.~R., Jansen, J.~D., 2004. Dynamic optimization of waterflooding with
+  smart wells using optimal control theory. SPE Journal 9~(4), 391--402.
+
+\bibitem[{Muskat(1937)}]{3}
+Muskat, M., 1937. Flow of Homogeneous Fluids. McGraw Hill.
+
+\bibitem[{Sarma and Chen(2008)}]{1}
+Sarma, P., Chen, W.~H., 2008. Applications of optimal control theory for
+  efficient production optimization of realistic reservoirs. In: Proceedings of
+  the International Petroleum Technology Conference. Kuala Lumpur, Malaysia.
+
+\end{thebibliography}

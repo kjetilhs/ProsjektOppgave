@@ -1,0 +1,136 @@
+%===================================== CHAP 1 =================================
+
+\chapter{Introduction}
+
+\section{Background and motivation}
+
+Unmanned aerial vehicles (UAVs) have long been used by the military, but is now becoming increasingly more popular in the civilian sector. UAVs is a cheaper alternative in some situation like . Today manned helicopters and aircraft in jobs like aerial photography, and large area inspections. That increase the cost of such operation, and have the limitation that aircraft and helicopter mostly needs an airport to operate from. UAVs do not have the same limitation. A fixed wing drone can be launched from a catapult, and can be design such that it do not need a runway to land.
+
+UAVs are predicted to be more applied in the industry. In the maritime sector they can be used in iceberg management, monitoring of oil spills, search and rescue and maritime traffic monitoring.
+
+UAV operations from ship is considered more challenging compared to land operation. Launching UAV from a maritime platform can be done with a catapult, witch is a common way to launch UAV even on land. However, landing the UAV poses several problems. A ship has usally limited space, and if it's not design as an aircraft carrier landing on the deck is not an option. Existing system today relay on a net placed somewhere on the ship that caches the UAV. The problem with this solution is that it requires a guiding  system either on the ship or in the UAV to hit the net.
+
+Talk some about GPS system. It is nesesary to enable the UAV to land
+
+Today UAVs are mostly used on land, but the possibility to apply them in maritime sector is something that are being develop. Fixed wing UAVs has the advantages that they can cover huge areas, compared to unmanned helicopters. The drawback of fixed wing is the recovery phase. There exist landing system, but they are limited to a few UAVs, and expensive to install (need reference). UAVs can be used to track icebergs or applied in search and rescue.
+
+What is the problem with flying from a ship
+
+A automatic recovery system for UAV on a ship would over time remove the need of a pilot on-board the ship. (maybe in emergency) could ask about that.  
+
+How should this thesis help solve that problem
+
+This project theises is about implement and test a nett landing system using RTK-GPS for position measurement.
+
+\section{Previous work}
+On the landing subsject: The UAV lab community; direct link to Frølich work. 
+
+Other master thesis, paper on visual aid landing system. Frølich did the same research.
+\section{Goal of thesis}
+Implement a automatic landing system on a x8 fixed wing UAV, and safely land it in a net. 
+\section{Layout of thesis}
+\begin{verbatim}
+\begin{eqnarray}\label{eq1}
+F = m \times a
+\end{eqnarray}
+\end{verbatim}
+
+\noindent This will produce
+
+\begin{eqnarray}\label{eq1}
+F = m \times a
+\end{eqnarray}
+
+\noindent To refer to the equation
+
+\begin{verbatim}
+\eqref{eq1}
+\end{verbatim}
+
+\noindent This will produce \eqref{eq1}.
+
+
+\section{Figures}
+To create a figure
+
+\begin{verbatim}
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.5\textwidth]{fig/pikachu}
+  \caption{Pikachu.}
+\label{fig1}
+\end{figure}
+\end{verbatim}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.5\textwidth]{fig/pikachu}
+ \caption{Pikachu.}
+\label{fig1}
+\end{figure}
+
+\noindent To refer to the figure
+
+\begin{verbatim}
+\textbf{Fig. \ref{fig1}}
+\end{verbatim}
+
+\noindent This will produce \textbf{Fig. \ref{fig1}}
+
+\section{References}
+
+To cite references
+
+\begin{verbatim}
+\cite{1,2,3}
+\end{verbatim}
+or
+\begin{verbatim}
+\citep{1,2,3}
+\end{verbatim}
+
+\noindent This will produce: \cite{1,2,3} or \citep{1,2,3}, respectively.
+
+\section{Tables}
+
+To creat a table
+
+\begin{verbatim}
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    \textbf{No.} & \textbf{Data 1} & \textbf{Data 2} \\ \hline
+     1 & a1 & b1 \\ \hline
+     2 & a2 & b2 \\ \hline
+    \end{tabular}
+\end{center}
+\caption{Table 1.}
+\label{Tab1}
+\end{table}
+\end{verbatim}
+
+\noindent This will produce
+
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    \textbf{No.} & \textbf{Data 1} & \textbf{Data 2} \\ \hline
+     1 & a1 & b1 \\ \hline
+     2 & a2 & b2 \\ \hline
+    \end{tabular}
+\end{center}
+\caption{Table 1.}
+\label{Tab1}
+\end{table}
+
+\noindent To refer to the table
+
+\begin{verbatim}
+\textbf{Table. \ref{Tab1}}
+\end{verbatim}
+
+\noindent This will produce \textbf{Table. \ref{Tab1}}.
+
+\cleardoublepage
