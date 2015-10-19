@@ -4,8 +4,12 @@
 This chapter outline the basic on how RTKGPS works. It's assumed that the reader is familiar with how a single GPS receiver works. The first section give a brief summary on what differential GPS is, and how that principle is applied in RTK-GPS. The two following sections is directly used in RKT-GPS(maybe write some more). The last section give a quick overview over the error sources that effect the measurement.
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
+
+Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant. 
 \section{Interger Ambiguity Resolution}
+What is it used for. Could include the cycle slip error here.
 \subsection{Search space minimization strategies}
+Liste different staretgies.
 \section{Error sources}
 Link the error source to where they originate
 \subsection{Clock error}
@@ -13,8 +17,9 @@ There is drift in both the satellite clock and the receiver clock. The satellite
 \subsection{Ionospheric and Trophospheric Delays}
 Effect of signals travelling through the atmosphere. Free electrons from ultraviolet rays ionize a portion of gas molecules. These influence electromagnetic wave propagation.
 
-Tropshospheric: clody weather, rain or sun
+Tropshospheric: clody weather, rain or sun. Local effect. Is removed with DGPS
 \subsection{Ephemeris Errors (maa leses om; se foiler?)}
+Error from satellites out of position. Cannot be corrected locally, but are maintained by someone.
 \subsection{Multipath}
-
+Main source of error in DGPS. Cannot be removed. 
 \cleardoublepage
