@@ -19,20 +19,28 @@
 \BOOKMARK [2][-]{subsection.2.1.3}{Dubins path}{section.2.1}% 19
 \BOOKMARK [1][-]{section.2.2}{GPS}{chapter.2}% 20
 \BOOKMARK [2][-]{subsection.2.2.1}{RTKGPS}{section.2.2}% 21
-\BOOKMARK [0][-]{chapter.3}{System Components}{}% 22
-\BOOKMARK [1][-]{section.3.1}{Software}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.1.1}{Dune}{section.3.1}% 24
-\BOOKMARK [2][-]{subsection.3.1.2}{Netpus}{section.3.1}% 25
-\BOOKMARK [2][-]{subsection.3.1.3}{Ardupilot}{section.3.1}% 26
-\BOOKMARK [2][-]{subsection.3.1.4}{RTKGPS}{section.3.1}% 27
-\BOOKMARK [1][-]{section.3.2}{Physical system}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.2.1}{x8 with all components}{section.3.2}% 29
-\BOOKMARK [0][-]{chapter.4}{Method}{}% 30
-\BOOKMARK [0][-]{chapter.5}{Experimental testing}{}% 31
-\BOOKMARK [1][-]{section.5.1}{SIL testing}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.2}{Physical testing}{chapter.5}% 33
-\BOOKMARK [2][-]{subsection.5.2.1}{Fly test}{section.5.2}% 34
-\BOOKMARK [2][-]{subsection.5.2.2}{GPS test}{section.5.2}% 35
-\BOOKMARK [0][-]{chapter.6}{Conclusion and Discussion}{}% 36
-\BOOKMARK [0][-]{chapter.6}{Bibliography}{}% 37
-\BOOKMARK [0][-]{section*.9}{Appendix}{}% 38
+\BOOKMARK [0][-]{chapter.3}{Real time kinematic GPS}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Differential GPS}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.2}{Interger Ambiguity Resolution}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.2.1}{Search space minimization strategies}{section.3.2}% 25
+\BOOKMARK [1][-]{section.3.3}{Error sources}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.1}{Clock error}{section.3.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.2}{Ionospheric and Trophospheric Delays}{section.3.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.3}{Ephemeris Errors \(maa leses om; se foiler?\)}{section.3.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.4}{Multipath}{section.3.3}% 30
+\BOOKMARK [0][-]{chapter.4}{System Components}{}% 31
+\BOOKMARK [1][-]{section.4.1}{Software}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.1.1}{Dune}{section.4.1}% 33
+\BOOKMARK [2][-]{subsection.4.1.2}{Netpus}{section.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.1.3}{Ardupilot}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.4}{RTKGPS}{section.4.1}% 36
+\BOOKMARK [1][-]{section.4.2}{Physical system}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.2.1}{x8 with all components}{section.4.2}% 38
+\BOOKMARK [0][-]{chapter.5}{Experimental testing}{}% 39
+\BOOKMARK [1][-]{section.5.1}{SIL testing}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.2}{Physical testing}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.2.1}{Fly test}{section.5.2}% 42
+\BOOKMARK [2][-]{subsection.5.2.2}{GPS test}{section.5.2}% 43
+\BOOKMARK [0][-]{chapter.6}{Conclusion and Discussion}{}% 44
+\BOOKMARK [0][-]{chapter.6}{Bibliography}{}% 45
+\BOOKMARK [0][-]{section*.9}{Appendix}{}% 46
