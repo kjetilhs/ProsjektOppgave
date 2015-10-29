@@ -22,9 +22,9 @@
 \contentsline {chapter}{\numberline {3}Real time kinematic GPS}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}GPS signals}{7}{section.3.1}
 \contentsline {section}{\numberline {3.2}Differential GPS}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Interger Ambiguity Resolution}{7}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Search space minimization strategies}{7}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Error sources}{7}{section.3.4}
+\contentsline {section}{\numberline {3.3}Interger Ambiguity Resolution}{8}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Search space minimization strategies}{8}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Error sources}{8}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Clock error}{8}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Ionospheric and Trophospheric Delays}{8}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Ephemeris Errors (maa leses om; se foiler?)}{8}{subsection.3.4.3}

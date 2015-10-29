@@ -1,13 +1,11 @@
 %===================================== CHAP 3 =================================
 
 \chapter{Real time kinematic GPS}
-This chapter outline the basic on how RTKGPS works. It's assumed that the reader is familiar with how a single GPS receiver works. The first section give a brief summary on what differential GPS is, and how that principle is applied in RTK-GPS. The two following sections is directly used in RKT-GPS(maybe write some more). The last section give a quick overview over the error sources that effect the measurement.
+This chapter outline the basic of the GPS signal. how RTKGPS works. It's assumed that the reader is familiar with how a single GPS receiver works. The first section give a brief summary on what differential GPS is, and how that principle is applied in RTK-GPS. The two following sections is directly used in RKT-GPS(maybe write some more). The last section give a quick overview over the error sources that effect the measurement.
 
-A short description of GPS
+A short description of GPS signals and error sources. How to find the Ambiguity resolution and why it's important. What is differential gps, and why use RTK-GPS.
 \section{GPS signals}
-
-The GPS signal stucture is currently divided in to 
-Satellite signal structure
+The signal structure form GPS is written:
 \begin{align*}
 L_1(t) &= A_1p(t)d(t)\cos(f_1t) + A_1c(t)d(t)\sin(f_1t) \\
 L_2(t) &= A_2p(t)d(t)\cos(f_2t)
@@ -17,7 +15,13 @@ The carrier frequencies for the $L_1$ and $ L_2$ signal are
 f_1 &= 1575.42 MHz \\
 f_2 &= 1227.60 MHz
 \end{align*}
-$A_1$ and $A_2$ are the signal amplitude, and $c(t)$ and $p(t)$ are the Pseudo Random Noise, where $c(t)$ is sequences modulated into the $L_1$ signal and $p(t)$ into both the $L_1$ and $L_2$ signals.
+$A_1$ and $A_2$ are the signal amplitude, and $c(t)$ and $p(t)$ are the Pseudo Random Noise, where $c(t)$ is sequences modulated into the $L_1$ signal and $p(t)$ into both the $L_1$ and $L_2$ signals. This thesis will mainly focus on the $L_1$ signal.
+
+Could tell what c(t) and p(t) is, and what is known about them. Also the strength of A1 and A2. How the psudorange is not important for this thesis.
+
+What is important:
+
+Have done: Setting up the new GPS in the base station and in x8. Need to explain how rtklib work, and what is RTKGPS. Also need to talk about Ublox LEA M8T. It's here the talk about L1 becomes relevant. Maybe talk about the coordinate frame. Why use NED/ENU with base-station as fixed frame. The configuration of the GPS ( elvation mask, kalman filter, search algortihm). Think I must remove the path theory chapter. Insert a theory chapter about coordinate frames. Maybe a chapter about Kalman filtering.
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
 
