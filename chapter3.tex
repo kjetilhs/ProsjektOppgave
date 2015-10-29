@@ -2,6 +2,22 @@
 
 \chapter{Real time kinematic GPS}
 This chapter outline the basic on how RTKGPS works. It's assumed that the reader is familiar with how a single GPS receiver works. The first section give a brief summary on what differential GPS is, and how that principle is applied in RTK-GPS. The two following sections is directly used in RKT-GPS(maybe write some more). The last section give a quick overview over the error sources that effect the measurement.
+
+A short description of GPS
+\section{GPS signals}
+
+The GPS signal stucture is currently divided in to 
+Satellite signal structure
+\begin{align*}
+L_1(t) &= A_1p(t)d(t)\cos(f_1t) + A_1c(t)d(t)\sin(f_1t) \\
+L_2(t) &= A_2p(t)d(t)\cos(f_2t)
+\end{align*}
+The carrier frequencies for the $L_1$ and $ L_2$ signal are
+\begin{align*}
+f_1 &= 1575.42 MHz \\
+f_2 &= 1227.60 MHz
+\end{align*}
+$A_1$ and $A_2$ are the signal amplitude, and $c(t)$ and $p(t)$ are the Pseudo Random Noise, where $c(t)$ is sequences modulated into the $L_1$ signal and $p(t)$ into both the $L_1$ and $L_2$ signals.
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
 
