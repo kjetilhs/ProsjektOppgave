@@ -30,7 +30,11 @@ Differential GPS consist of at least two receivers, where one is called a base s
 
 Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant. 
 \section{Interger Ambiguity Resolution}
-What is it used for. Could include the cycle slip error here.
+Interger Amiguity is used to calculate the carrier phase
+\begin{equation}
+\phi(t) = \phi_u(t)-\phi^s(t-\tau)+N
+\end{equation}
+
 \subsection{Search space minimization strategies}
 Liste different staretgies.
 \section{Error sources}
@@ -39,6 +43,9 @@ Link the error source to where they originate
 There is drift in both the satellite clock and the receiver clock. The satellite clock drift is smaller, because the clock is an atomic clock. The receiver clock error can be relative large. The satellite clock error given in the satellite message. 
 \subsection{Ionospheric and Trophospheric Delays}
 Effect of signals travelling through the atmosphere. Free electrons from ultraviolet rays ionize a portion of gas molecules. These influence electromagnetic wave propagation.
+\subsubsection{Ionospheric delay}
+\subsubsection{Troposheric delay}
+
 
 Tropshospheric: clody weather, rain or sun. Local effect. Is removed with DGPS
 \subsection{Ephemeris Errors (maa leses om; se foiler?)}
