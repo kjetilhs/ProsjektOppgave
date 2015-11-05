@@ -3,6 +3,17 @@
 \chapter{Introduction}
 
 \section{Background and motivation}
+Why is the project thesis relevant: Installing better GPS to enable better hight estimation
+
+What have I done? Integrated new GPS with DUNE
+
+What is next? Land the UAV. Test algorthm to Frølich, better state estimation 
+
+Unmanned aerial vehicles have in seen an increase usage in the civilian sector on land, where they can be used at a cheaper price then manned aircraft. However this has not jet been the case in the civil maritime sector, due to a harsher environment and smaller landing areas.
+
+A UAV can increase performance in many maritime operation where today only other manned aircraft or satelites are the only solution. In the maritime sector they can be used in iceberg management, monitoring of oil spills, search and rescue and maritime traffic monitoring. To enable a safe UAV operation at sea there must be a system in place to ensure a safe landing.
+
+There exist landing system that can guide the UAV towards a net, but they are expensive and restricted to a few UAVs. A pilot could always land the UAV, but it would be better if the UAV could hit the net by it self. In order to make the UAV able to performe a automatic landing the minimum requirement is that it know where it is at all time. Estimation of the altitude can give error over 1 meter, which is unacceptable for a automatic landing system
 
 Unmanned aerial vehicles (UAVs) have long been used by the military, but is now becoming increasingly more popular in the civilian sector. UAVs is a cheaper alternative in some situation like . Today manned helicopters and aircraft in jobs like aerial photography, and large area inspections. That increase the cost of such operation, and have the limitation that aircraft and helicopter mostly needs an airport to operate from. UAVs do not have the same limitation. A fixed wing drone can be launched from a catapult, and can be design such that it do not need a runway to land.
 
@@ -25,9 +36,9 @@ This project theises is about implement and test a nett landing system using RTK
 \section{Previous work}
 On the landing subsject: The UAV lab community; direct link to Frølich work. 
 
-Other master thesis, paper on visual aid landing system. Frølich did the same research.
+Other master thesis, paper on visual aid landing system. Frølich did the same research, using reasearch from Spocli.
 \section{Goal of thesis}
-Implement a automatic landing system on a x8 fixed wing UAV, and safely land it in a net. 
+Install new GPS reciver with higher accuracy to enable automatic landing
 \section{Layout of thesis}
 \begin{verbatim}
 \begin{eqnarray}\label{eq1}
