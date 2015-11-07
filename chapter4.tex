@@ -4,11 +4,17 @@
 This chapter contains a brief description of the system that has been used.
 \section{Software}
 \subsection{Dune}
-A type of middleware
+A type of middleware. write how to link rtklib with dune
 \subsection{Netpus}
 \subsection{Ardupilot}
-Ref to Grytes simulator.
+Ref to Grytes simulator. Remove from thesis
 \subsection{RTKLIB}
+Rtklib is open source program that can estimate the receiver position based on raw GPS data. It can be used both with a single receiver or differential gps in real time. The setup is based on a base station and a rover. The base station use the str2str app to create a tcp connection with the rovers rtkrcv app.
+\subsubsection{rtkrcv}
+Rtkrcv is the app program that calculate the position of the rovers antenna. Rtkrcv is configured with a moving baseline in order to get a fixed solution of the position estimate.
+\subsubsection{str2str}
+Str2str is the app program that retrive the ublox signal from the gps and sends over tcp to the rtkrcv app. The str2str is setup to either send RMTC 3 messages, or whatever is send in from the GPS. Since the str2str do not support to send ublox signal directly. HOw to write that the user should not spesify the input format or the output format.
 \section{Physical system}
-\subsection{x8 with all components}
+\subsection{The GPS receiver}
+Write about the Ublox LEA M8T gnss receiver. Also include that it support sending GPS and GLONASS data at the same time. Need to be configured.
 \cleardoublepage
