@@ -34,13 +34,16 @@ Interger Amiguity is used to calculate the carrier phase
 \begin{equation}
 \phi(t) = \phi_u(t)-\phi^s(t-\tau)+N
 \end{equation}
-
+Counting the periods from 
 \subsection{Search space minimization strategies}
 Liste different staretgies.
 \section{Error sources}
+In order to get high accuracy in the position estimation the different error sources must be identified and removed if possible. This section will identify some of the larger error souces that can affect the gps signal, and how to remove them in the estimation.
 Link the error source to where they originate
 \subsection{Clock error}
-There is drift in both the satellite clock and the receiver clock. The satellite clock drift is smaller, because the clock is an atomic clock. The receiver clock error can be relative large. The satellite clock error given in the satellite message. 
+There is drift in both the satellite clock and the receiver clock. The atomic in the satellites makes the clock drift neglable from the user perspective. The receiver clock tend to drift, and if not taken into account will cause large deviations in the position estimate from the true position. This error is remove by including a fourth satellite in the position computation.  The satellite clock drift is smaller, because the clock is an atomic clock. The receiver clock error can be relative large. The satellite clock error given in the satellite message. 
+
+Relative time different
 \subsection{Ionospheric and Trophospheric Delays}
 Effect of signals travelling through the atmosphere. Free electrons from ultraviolet rays ionize a portion of gas molecules. These influence electromagnetic wave propagation.
 \subsubsection{Ionospheric delay}
