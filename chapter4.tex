@@ -3,8 +3,17 @@
 \chapter{System Components}
 This chapter contains a brief description of the system that has been used.
 \section{Software}
+This section contain the different software that is used in the x8 system. The control and guidance system is runs on Dune, and the missionplaner on Neptus. The x8 operation system is GLUED. The system is connected to the rtklib whitch is in communitation with DUNE. The internal communication in DUNE is based on IMC messages
+\subsection{GLUED}
+Glued is a minimal Linux distribution that contain only the necessary packages to run an embedded system. Write why it's used, what is the advantage
 \subsection{Dune}
+Dune is a runtime environment for unmanned systems on-board software created by LSTS (Underwater Systems and Technology Laboratory) in Porto, Portugal. The enviroment type is called a middleware, whitch is seeing increase usage in unmanned systems. Can refer to ROS or MOOS middleware.
+
+Dune workes by setining up indivitual task that can dispatch and subscribe to different IMC messages. The IMC messages will be explained in \ref{ss:IMC}
 A type of middleware. write how to link rtklib with dune
+Refer to the dune wiki page
+\subsection{IMC}\label{ss:IMC}
+Write about the message structure and how it's connected to DUNE. Include how to make new messages.
 \subsection{Netpus}
 \subsection{Ardupilot}
 Ref to Grytes simulator. Remove from thesis

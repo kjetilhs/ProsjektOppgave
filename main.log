@@ -1,13 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  29 OCT 2015 17:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.8)  7 NOV 2015 11:59
 entering extended mode
 **main.tex
-(main.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
-Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"
-File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -26,7 +35,7 @@ File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
@@ -53,15 +62,16 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (docsetup.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\docsetup.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
@@ -69,7 +79,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -101,7 +111,7 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
-Package: amsthm 2015/03/04 v2.20.2
+Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks17
 \thm@bodyfont=\toks18
 \thm@headfont=\toks19
@@ -171,13 +181,14 @@ LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 142.
-) (fncychap.sty
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \RW=\skip49
 \mylen=\skip50
@@ -301,10 +312,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `colorlinks' set `true' on input line 17.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2015/09/17 v1.7-111 caption3 kernel (AR)
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen126
 \captionmargin@=\dimen127
@@ -347,7 +358,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box29
 )
 \@float@every@figure=\toks30
-) (main.aux)
+)
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
@@ -428,16 +440,19 @@ LaTeX Info: Redefining \ref on input line 9.
 LaTeX Info: Redefining \pageref on input line 9.
 LaTeX Info: Redefining \nameref on input line 9.
 
-(main.out) (main.out)
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.out)
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.out)
 \@outlinefile=\write3
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
- (dedication.tex [1
 
-{C:/Users/kjetilhs/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\dedication.tex [1
 
-]) (summary.tex
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+
+])
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\summary.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
@@ -463,14 +478,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
 [1
 
-]) (preface.tex
+]) (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\preface.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
 [2
 
-]) (list.tex (main.toc
+]) (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\list.tex
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
  [3
@@ -478,7 +494,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 
 ])
 \tf@toc=\write4
- [4] (main.lot)
+ [4]
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.lot)
 \tf@lot=\write5
  [5
 
@@ -486,17 +503,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 ] [6
 
 
-] (main.lof)
+]
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.lof)
 \tf@lof=\write6
  [7])
-(abbreviations.tex
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\abbreviations.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
 [8
 
-]) (chapter1.tex
+]) (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\chapter1.tex
 Chapter 1.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 3.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
@@ -504,29 +522,31 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¸ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¸ in font ptmr7t!
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 \section
-             {Goal of thesis} [1
+l.26 T
+      oday UAVs are mostly used on land, but the possibility to apply them i...
+[1
 
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 32.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¸ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¸ in font ptmr7t!
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 43.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 <fig/pikachu.jpg, id=296, 217.81375pt x 232.87pt>
 File: fig/pikachu.jpg Graphic file (type jpg)
  <use fig/pikachu.jpg>
-Package pdftex.def Info: fig/pikachu.jpg used on input line 67.
+Package pdftex.def Info: fig/pikachu.jpg used on input line 78.
 (pdftex.def)             Requested size: 179.25237pt x 191.64041pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -535,16 +555,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.111 \end{verbatim}
-                     [2]
-Overfull \hbox (13.49527pt too wide) in paragraph at lines 111--111
+l.91 \section
+             {References} [2]
+Overfull \hbox (13.49527pt too wide) in paragraph at lines 122--122
 []    \OT1/pcr/m/n/10 \textbf{No.} & \textbf{Data 1} & \textbf{Data 2} \\ \hlin
 e[] 
  []
 
-[3 <./fig/pikachu.jpg>] [4
 
-]) (chapter2.tex
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <C:/Users/Kjetil/Documents/prosjekt/ProsjektOppgave/fig/pikachu.jpg>]
+[4]) (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\chapter2.tex
 Chapter 2.
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¦ in font ptmr7t!
@@ -552,71 +574,86 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 [5
 
+
 ] [6
 
-]) (chapter3.tex
+]) (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\chapter3.tex
 Chapter 3.
 [7
 
-] [8]) (chapter4.tex
+] [8] [9] [10
+
+])
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\chapter4.tex
 Chapter 4.
-[9
-
-
-] [10
-
-]) (chapter5.tex
-Chapter 5.
 [11
 
-] [12
-
-]) (chapter6.tex
-Chapter 6.
+] [12]) (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\chapter5.tex
+Chapter 5.
 [13
+
 
 ] [14
 
-]) (references.tex (main.bbl) [15
+]) (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\chapter6.tex
+Chapter 6.
+[15
 
 ] [16
 
-]) (appendix.tex
+]) (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\references.tex
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.bbl) [17
+
+] [18
+
+])
+(C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\appendix.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
- [17]
+ [19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
- (main.aux)
+ (C:\Users\Kjetil\Documents\prosjekt\ProsjektOppgave\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AA5554722C6947BA20FCFEE025CB8AED;2947.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: AA5554722C6947BA20FCFEE025CB8AED;2947
+(rerunfilecheck)             After:  400EFD1418F9AA279F96AC24A76789AF;3004.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
  ) 
 Here is how much of TeX's memory you used:
- 8344 strings out of 493673
- 120992 string characters out of 3143952
- 216811 words of memory out of 3000000
- 11443 multiletter control sequences out of 15000+200000
+ 8346 strings out of 493921
+ 123358 string characters out of 3147280
+ 212228 words of memory out of 3000000
+ 11382 multiletter control sequences out of 15000+200000
  25277 words of font info for 51 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 38i,11n,48p,634b,449s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 841 hyphenation exceptions out of 8191
+ 38i,12n,48p,634b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courie
-r/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (27 pages, 169110 bytes).
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on main.pdf (29 pages, 182632 bytes).
 PDF statistics:
- 437 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
  390 words of extra memory for PDF output out of 10000 (max. 10000000)
 
