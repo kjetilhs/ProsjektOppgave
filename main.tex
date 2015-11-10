@@ -1,33 +1,104 @@
-%% Master Thesis Template
-%% Please update the specification through this link: https://daim.idi.ntnu.no/howto_thesis_submission.pdf
+\documentclass{MScthesisITEM}
 
-\documentclass[pdftex,10pt,b5paper,twoside]{book}
-\usepackage[lmargin=25mm,rmargin=25mm,tmargin=5mm,bmargin=20mm]{geometry}
+% this package is just to generate text for demo-purposes
+\usepackage{blindtext}
 
-\input{docsetup.tex}
+
+\title{Title} % The title of your assignement; NB use \newlinetitle to start a newline
+\author{Firstname Lastname} % Your firstname and lastname
+\professor{Firstname Lastname, Affiliation} % Affiliation = ITEM for instance
+\supervisor{Firstname Lastname, Affiliation}
+
+%% Uncomment the following in case you want subfigures; note that there will be a warning for the caption package
+% \let\subcaption\undefined
+% \let\subfloat\undefined
+% \usepackage[bf]{caption}
+% \usepackage{subcaption}
+
+\DeclareGraphicsExtensions{.pdf,.jpg}
+\graphicspath{{./figs/}}
+
+\loadglsentries{glossary}
+\makeglossaries
 
 \begin{document}
+\selectlanguage{english}
+\pagenumbering{roman}
+\pagestyle{plain}
 
-%% PART 1
-%%The title page will be automatically generated and added by the DAIM system
-\input{dedication.tex}		%% Optional
+%% Only for the project; comment out the line below for the master's thesis; the front page will be generated automatically by DAIM
+\titleITEM
 
-%% PART 2
-\input{summary.tex}		%% Optional
-\input{preface.tex}		%% Optional
-\input{list.tex}			%% Generate TOC, list of tables, and list of figures automatically
-\input{abbreviations.tex}	%% Optional
+%% Only for the master's thesis; for the project report the description is taken from It's Learning and added by the department
+% \selectlanguage{english} % Change to 'norsk' if you are writing in Norwegian
+% \input{problem_description}
+% \cleardoublepage
 
-%% PART 3 -- The Chapters
-\input{chapter1.tex}		%% Edit each chapter
-\input{chapter2.tex}
-\input{chapter3.tex}
-\input{chapter4.tex}
-\input{chapter5.tex}
-\input{chapter6.tex}
+%% There must be an abstract in English, even though the main text is in Norwegian
+\selectlanguage{english}
+\include{abstract_english}
+\cleardoublepage
 
-%% PART 4
-\input{references.tex}	%% Edit your references in "mylib.bib"
-\input{appendix.tex}		%% Optional
+%% Only for the master's thesis; if the main text is in English and you can write Norwegian, there must be an abstract in Norwegian as well.
+% \selectlanguage{norsk}
+% \include{abstract_norwegian}
+% \cleardoublepage
 
-\end{document}
+\selectlanguage{english}% Change to 'norsk' if you are writing in Norwegian
+
+\include{preface}
+\cleardoublepage
+
+% similarly you may add a separate acknowledgments page
+
+\tableofcontents*
+\cleardoublepage
+
+%% include if relevant
+\listoffigures
+\cleardoublepage
+
+%% include if relevant
+\listoftables
+\cleardoublepage
+
+%% include if relevant
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\cleardoublepage
+
+%% include if relevant
+\printglossary[title=List of Symbols, style=long]
+\cleardoublepage
+\glsaddall[]
+
+%% include if relevant
+\printglossary[title=List of Acronyms,type=\acronymtype] % prints just the list of acronyms
+\cleardoublepage
+
+\pagenumbering{arabic}
+\pagestyle{ruled}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+%% include here the other chapters
+
+\renewcommand*{\bibname}{References}
+\bibliographystyle{alpha}
+\bibliography{main}
+
+%% Uncomment the following if you have any appendix
+% \appendix
+% \addtocontents{toc}{%
+%  \protect\vspace{1em}% 
+%  \protect\noindent \bfseries \appendixtocname\protect\par
+%  \protect\vspace{-.5em}%
+% }
+% \renewcommand{\chaptername}{\appendixname}
+%% include below possible appendices (chapters)
+
+
+\end{document} 
