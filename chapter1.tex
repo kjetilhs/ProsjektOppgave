@@ -1,7 +1,7 @@
 %===================================== CHAP 1 =================================
 
 \chapter{Introduction}
-
+This chapter the background and motivation to why this project thesis has been written. Also reference to privios work, the goal of the thesis and the layout.
 \section{Background and motivation}
 Why is the project thesis relevant: Installing better GPS to enable better hight estimation
 
@@ -9,35 +9,19 @@ What have I done? Integrated new GPS with DUNE
 
 What is next? Land the UAV. Test algorthm to Frølich, better state estimation 
 
-Unmanned aerial vehicles have in seen an increase usage in the civilian sector on land, where they can be used at a cheaper price then manned aircraft. However this has not jet been the case in the civil maritime sector, due to a harsher environment and smaller landing areas.
+Unmanned aerial vehicles have in seen an increase usage in the civilian sector on land, where they can be used at a cheaper price then manned aircraft. However this has not yet been the case in the civil maritime sector, due to a harsher environment and smaller landing areas.
 
-A UAV can increase performance in many maritime operation where today only other manned aircraft or satelites are the only solution. In the maritime sector they can be used in iceberg management, monitoring of oil spills, search and rescue and maritime traffic monitoring. To enable a safe UAV operation at sea there must be a system in place to ensure a safe landing.
+A UAV can increase performance in many maritime operation where today only other manned aircraft or satellites are the only solution. In the maritime sector they can be used in iceberg management, monitoring of oil spills, search and rescue and maritime traffic monitoring. To enable a safe UAV operation at sea there must be a system in place to ensure a safe landing.
 
-There exist landing system that can guide the UAV towards a net, but they are expensive and restricted to a few UAVs. A pilot could always land the UAV, but it would be better if the UAV could hit the net by it self. In order to make the UAV able to performe a automatic landing the minimum requirement is that it know where it is at all time. Estimation of the altitude can give error over 1 meter, which is unacceptable for a automatic landing system
+There exist landing system that can guide the UAV towards a net, but they are expensive and restricted to a few UAVs. A pilot could always land the UAV, but it would be better if the UAV could hit the net by it self. In order to make the UAV able to perform a automatic landing the minimum requirement is that it know where it is at all time. This put a requirement of the position sensor. The position system need to combine low cost with high position accuracy. This thesis will test a new generation of GNSS receiver, and use GPS to find the position to the UAV. The demand on the accuracy is that the error must be in decimetres to ensure safe landing in the net.
 
-Unmanned aerial vehicles (UAVs) have long been used by the military, but is now becoming increasingly more popular in the civilian sector. UAVs is a cheaper alternative in some situation like . Today manned helicopters and aircraft in jobs like aerial photography, and large area inspections. That increase the cost of such operation, and have the limitation that aircraft and helicopter mostly needs an airport to operate from. UAVs do not have the same limitation. A fixed wing drone can be launched from a catapult, and can be design such that it do not need a runway to land.
-
-UAVs are predicted to be more applied in the industry. In the maritime sector they can be used in iceberg management, monitoring of oil spills, search and rescue and maritime traffic monitoring.
-
-UAV operations from ship is considered more challenging compared to land operation. Launching UAV from a maritime platform can be done with a catapult, witch is a common way to launch UAV even on land. However, landing the UAV poses several problems. A ship has usally limited space, and if it's not design as an aircraft carrier landing on the deck is not an option. Existing system today relay on a net placed somewhere on the ship that caches the UAV. The problem with this solution is that it requires a guiding  system either on the ship or in the UAV to hit the net.
-
-Talk some about GPS system. It is nesesary to enable the UAV to land
-
-Today UAVs are mostly used on land, but the possibility to apply them in maritime sector is something that are being develop. Fixed wing UAVs has the advantages that they can cover huge areas, compared to unmanned helicopters. The drawback of fixed wing is the recovery phase. There exist landing system, but they are limited to a few UAVs, and expensive to install (need reference). UAVs can be used to track icebergs or applied in search and rescue.
-
-What is the problem with flying from a ship
-
-A automatic recovery system for UAV on a ship would over time remove the need of a pilot on-board the ship. (maybe in emergency) could ask about that.  
-
-How should this thesis help solve that problem
-
-This project theises is about implement and test a nett landing system using RTK-GPS for position measurement.
 
 \section{Previous work}
-On the landing subsject: The UAV lab community; direct link to Frølich work. 
+The work done by Frølich on simulation of a net landing. Work done by Spockeli. Need other research field. GPS navigation is a well researched field. Relevant to this task is landing with gps, or high accurate position estimation. 
 
 Other master thesis, paper on visual aid landing system. Frølich did the same research, using reasearch from Spocli.
 \section{Goal of thesis}
+Install new GPS receiver on the x8 and base station. Test and compare to the pixi gps that is the standard solution i the uavlab. Evaluate if the new gps is good enough to enable automatic landing
 Install new GPS reciver with higher accuracy to enable automatic landing
 \section{Layout of thesis}
 \begin{verbatim}
