@@ -8,40 +8,40 @@
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Background and motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Previous work}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Goal of thesis}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Layout of thesis}{3}{section.1.4}
+\contentsline {section}{\numberline {1.3}Goal of thesis}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Layout of thesis}{2}{section.1.4}
 \contentsline {section}{\numberline {1.5}Figures}{3}{section.1.5}
-\contentsline {section}{\numberline {1.6}References}{4}{section.1.6}
-\contentsline {section}{\numberline {1.7}Tables}{4}{section.1.7}
-\contentsline {chapter}{\chapternumberline {2}Coordinate systems}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}ECEF}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}LLH}{7}{section.2.2}
-\contentsline {section}{\numberline {2.3}Ellipsoid}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}NED and ENU}{7}{section.2.4}
-\contentsline {chapter}{\chapternumberline {3}Real time kinematic GPS}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}GPS signals}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Differential GPS}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Interger Ambiguity Resolution}{10}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Search space minimization strategies}{10}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Error sources}{10}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Clock error}{10}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Ionospheric and Trophospheric Delays}{11}{subsection.3.4.2}
-\contentsline {subsubsection}{Ionospheric delay}{11}{section*.4}
-\contentsline {subsubsection}{Troposheric delay}{11}{section*.5}
-\contentsline {subsection}{\numberline {3.4.3}Ephemeris Errors (maa leses om; se foiler?)}{11}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Multipath}{11}{subsection.3.4.4}
-\contentsline {chapter}{\chapternumberline {4}System Components}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Software}{13}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}GLUED}{13}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Dune}{13}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}IMC}{14}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Netpus}{14}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Ardupilot}{14}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}RTKLIB}{14}{subsection.4.1.6}
-\contentsline {subsubsection}{rtkrcv}{14}{section*.6}
-\contentsline {subsubsection}{str2str}{14}{section*.7}
-\contentsline {section}{\numberline {4.2}Physical system}{14}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}The GPS receiver}{14}{subsection.4.2.1}
+\contentsline {section}{\numberline {1.6}References}{3}{section.1.6}
+\contentsline {section}{\numberline {1.7}Tables}{3}{section.1.7}
+\contentsline {chapter}{\chapternumberline {2}Coordinate systems}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}ECEF}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}LLH}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Ellipsoid}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}NED and ENU}{5}{section.2.4}
+\contentsline {chapter}{\chapternumberline {3}Real time kinematic GPS}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}GPS signals}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Differential GPS}{8}{section.3.2}
+\contentsline {section}{\numberline {3.3}Interger Ambiguity Resolution}{8}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Search space minimization strategies}{8}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Error sources}{8}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Clock error}{8}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Ionospheric and Trophospheric Delays}{9}{subsection.3.4.2}
+\contentsline {subsubsection}{Ionospheric delay}{9}{section*.4}
+\contentsline {subsubsection}{Troposheric delay}{9}{section*.5}
+\contentsline {subsection}{\numberline {3.4.3}Ephemeris Errors (maa leses om; se foiler?)}{9}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Multipath}{9}{subsection.3.4.4}
+\contentsline {chapter}{\chapternumberline {4}System Components}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Software}{11}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}GLUED}{11}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Dune}{11}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}IMC}{12}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Netpus}{12}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}RTKLIB}{12}{subsection.4.1.5}
+\contentsline {subsubsection}{rtkrcv}{12}{section*.6}
+\contentsline {subsubsection}{str2str}{12}{section*.7}
+\contentsline {section}{\numberline {4.2}Physical system}{13}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Beaglebone}{13}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}The GPS receiver}{13}{subsection.4.2.2}
 \contentsline {chapter}{\chapternumberline {5}Experimental testing}{15}{chapter.5}
 \contentsline {section}{\numberline {5.1}SIL testing}{15}{section.5.1}
 \contentsline {section}{\numberline {5.2}HIL testing}{15}{section.5.2}
