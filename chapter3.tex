@@ -17,32 +17,13 @@ The carrier frequencies for the $L_1$ and $ L_2$ signal are
 f_1 &= 1575.42 MHz \\
 f_2 &= 1227.60 MHz
 \end{align*}
-$A_1$ and $A_2$ are the signal amplitude, and $c(t)$ and $p(t)$ are the Pseudo Random Noise, where $c(t)$ is sequences modulated into the $L_1$ signal and $p(t)$ into both the $L_1$ and $L_2$ signals. This thesis will mainly focus on the $L_1$ signal.
+$A_1$ and $A_2$ are the signal amplitude, and $c(t)$ and $p(t)$ are the Pseudo Random Noise, where $c(t)$ is sequences modulated into the $L_1$ signal and $p(t)$ into both the $L_1$ and $L_2$ signals.
 
 Could tell what c(t) and p(t) is, and what is known about them. Also the strength of A1 and A2. How the psudorange is not important for this thesis.
 
 What is important:
 
 Have done: Setting up the new GPS in the base station and in x8. Need to explain how rtklib work, and what is RTKGPS. Also need to talk about Ublox LEA M8T. It's here the talk about L1 becomes relevant. Maybe talk about the coordinate frame. Why use NED/ENU with base-station as fixed frame. The configuration of the GPS ( elvation mask, kalman filter, search algortihm). Think I must remove the path theory chapter. Insert a theory chapter about coordinate frames. Maybe a chapter about Kalman filtering.
-\section{Differential GPS}
-Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
-
-\subsection{RTK GPS}
-
-Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant.
-
-Trade off between getting the position fast, and getting it right 
-
-Moving baseline restrictions. The base stations position is calculated with in single mode. The error in position to the base station is inherit by the rover. Source of error.
-\section{Interger Ambiguity Resolution}
-Interger Amiguity is used to calculate the carrier phase
-\begin{equation}
-\phi(t) = \phi_u(t)-\phi^s(t-\tau)+N
-\end{equation}
-Counting the periods from 
-\subsection{Search space minimization strategies}
-There are several search techniques that can be applied to resolve the integer ambiguity, but this section will only cover the "Least Square Ambiguity Decorrelation Adjustment" (LAMBDA) method which is the technique used in rtklib.
-
  
 \section{Error sources}
 In order to get high accuracy in the position estimation the different error sources must be identified and removed if possible. This section will identify some of the larger error souces that can affect the gps signal, and how to remove them in the estimation.
@@ -61,5 +42,50 @@ Tropshospheric: clody weather, rain or sun. Local effect. Is removed with DGPS
 \subsection{Ephemeris Errors (maa leses om; se foiler?)}
 Error from satellites out of position. Cannot be corrected locally, but are maintained by someone.
 \subsection{Multipath}
-Main source of error in DGPS. Cannot be removed. 
+Main source of error in DGPS. Cannot be removed.
+\section{Differential GPS}
+Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
+
+The advantage with DGPS is that two or more recivers can share the same error sources. This enable the solution system almost completely remove them.
+HUSK AA SKRIVE HVA RMS STAAR FOR
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{ | l | l | l |}
+    \hline
+    \textbf{Source} & \textbf{Potential error size} & \textbf{Error mitigation and residual error} \\ \hline
+     Satellite clock model & Clock modeling error: 2 m (rms) & DGPS: 0.0 m \\ \hline
+     Satellite ephemeris prediction & Component of the ephemeris prediction error allong the line of sight: 2 m (rms) & DGPS: 0.1 m (rms) \\ \hline
+     Ionospheric delay & Effect upon the code and the carrier is equal and opposite: The code is delayed while the carrier is advanced by the same amount.
+     
+     Delay in zenith direction $\approx 2-10 m $, depending upon user latitude, time of the day, and solar activity.
+     
+     Delay for a satellite at elevation angel $el = zenith delay \times obliquity factor$ (el)
+     
+     Obliquity factor: 1 at zenith; $1.8$ at $30\deg$ elevation angle; and 3 at $5\deg$. & DGPS = 0.2 m (rms) \\ \hline
+     4 Number of valid satellites (ns) & The number of valid satellites for solution estimation. \\ \hline
+     5 Standard deviation & blabla \\ \hline
+     6 Age of differential & time \\ \hline
+     7 Ratio factor & Ratio \\ \hline
+    \end{tabular}
+\end{center}
+\caption{Table 1. }
+\label{Tab1}
+\end{table}
+\subsection{RTK GPS}
+
+Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant.
+
+Trade off between getting the position fast, and getting it right 
+
+Moving baseline restrictions. The base stations position is calculated with in single mode. The error in position to the base station is inherit by the rover. Source of error.
+\section{Interger Ambiguity Resolution}
+Interger Amiguity is used to calculate the carrier phase
+\begin{equation}
+\phi(t) = \phi_u(t)-\phi^s(t-\tau)+N
+\end{equation}
+Counting the periods from 
+\subsection{Search space minimization strategies}
+There are several search techniques that can be applied to resolve the integer ambiguity, but this section will only cover the "Least Square Ambiguity Decorrelation Adjustment" (LAMBDA) method which is the technique used in rtklib.
+
+
 \cleardoublepage
