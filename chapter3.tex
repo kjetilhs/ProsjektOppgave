@@ -7,8 +7,7 @@ A short description of GPS signals and error sources. How to find the Ambiguity 
 
 
 \section{GPS signals}
-Signal structure for the L1 signal. No need to write that much about the L1 signal.
-The signal structure form GPS is written:
+For position estimation purpose there are two signals mainly available, $L1$ and $L2$. A third signal,$L5$, has recently been introduce, but since the service is not fully operational it will not be covered in this thesis. The signal structure form GPS is written:
 \begin{align*}
 L_1(t) &= A_1p(t)d(t)\cos(f_1t) + A_1c(t)d(t)\sin(f_1t) \\
 L_2(t) &= A_2p(t)d(t)\cos(f_2t)
@@ -28,7 +27,11 @@ Have done: Setting up the new GPS in the base station and in x8. Need to explain
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
 
-Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant. 
+\subsection{RTK GPS}
+
+Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant.
+
+Trade off between getting the position fast, and getting it right 
 
 Moving baseline restrictions. The base stations position is calculated with in single mode. The error in position to the base station is inherit by the rover. Source of error.
 \section{Interger Ambiguity Resolution}
@@ -38,7 +41,9 @@ Interger Amiguity is used to calculate the carrier phase
 \end{equation}
 Counting the periods from 
 \subsection{Search space minimization strategies}
-Liste different staretgies.
+There are several search techniques that can be applied to resolve the integer ambiguity, but this section will only cover the "Least Square Ambiguity Decorrelation Adjustment" (LAMBDA) method which is the technique used in rtklib.
+
+ 
 \section{Error sources}
 In order to get high accuracy in the position estimation the different error sources must be identified and removed if possible. This section will identify some of the larger error souces that can affect the gps signal, and how to remove them in the estimation.
 Link the error source to where they originate
