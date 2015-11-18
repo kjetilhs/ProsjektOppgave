@@ -45,32 +45,10 @@ Error from satellites out of position. Cannot be corrected locally, but are main
 Main source of error in DGPS. Cannot be removed.
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
-
+\subsection{Error mitigation in DGPS}
 The advantage with DGPS is that two or more recivers can share the same error sources. This enable the solution system almost completely remove them.
-HUSK AA SKRIVE HVA RMS STAAR FOR
-\begin{table}[!h]
-\begin{center}
-    \begin{tabular}{ | l | l | l |}
-    \hline
-    \textbf{Source} & \textbf{Potential error size} & \textbf{Error mitigation and residual error} \\ \hline
-     Satellite clock model & Clock modeling error: 2 m (rms) & DGPS: 0.0 m \\ \hline
-     Satellite ephemeris prediction & Component of the ephemeris prediction error allong the line of sight: 2 m (rms) & DGPS: 0.1 m (rms) \\ \hline
-     Ionospheric delay & Effect upon the code and the carrier is equal and opposite: The code is delayed while the carrier is advanced by the same amount.
-     
-     Delay in zenith direction $\approx 2-10 m $, depending upon user latitude, time of the day, and solar activity.
-     
-     Delay for a satellite at elevation angel $el = zenith delay \times obliquity factor$ (el)
-     
-     Obliquity factor: 1 at zenith; $1.8$ at $30\deg$ elevation angle; and 3 at $5\deg$. & DGPS = 0.2 m (rms) \\ \hline
-     4 Number of valid satellites (ns) & The number of valid satellites for solution estimation. \\ \hline
-     5 Standard deviation & blabla \\ \hline
-     6 Age of differential & time \\ \hline
-     7 Ratio factor & Ratio \\ \hline
-    \end{tabular}
-\end{center}
-\caption{Table 1. }
-\label{Tab1}
-\end{table}
+
+
 \subsection{RTK GPS}
 
 Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant.

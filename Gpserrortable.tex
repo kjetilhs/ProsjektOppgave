@@ -1,0 +1,23 @@
+HUSK AA SKRIVE HVA RMS STAAR FOR
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{ | l | l | l |}
+    \hline
+    \textbf{Source} & \textbf{Potential error size} & \textbf{Error mitigation and residual error} \\ \hline
+     Satellite clock model & Clock modeling error: 2 m (rms) & DGPS: 0.0 m \\ \hline
+     Satellite ephemeris prediction & Component of the ephemeris prediction error allong the line of sight: 2 m (rms) & DGPS: 0.1 m (rms) \\ \hline
+     Ionospheric delay & Effect upon the code and the carrier is equal and opposite: The code is delayed while the carrier is advanced by the same amount.
+     
+     Delay in zenith direction $\approx 2-10 m $, depending upon user latitude, time of the day, and solar activity.
+     
+     Delay for a satellite at elevation angel $el = zenith delay \times obliquity factor$ (el)
+     
+     Obliquity factor: 1 at zenith; $1.8$ at $30\deg$ elevation angle; and 3 at $5\deg$. & DGPS = 0.2 m (rms) \\ \hline
+     Troposheric delay & Code and the carrier are both delayed by the same amount. Delay in zenith direction at sea level $\approx 2.3-2.5 m$;lower at heigher altitudes Delay for satellite at elevation angel $el = zenith delay \times obliquity factor (el)$ Obliquity factor: 1 at zenith; 2 at $30\deg$ elevation angle; 4 at $15\deg$; and 10 at $5\deg$ \\ \hline
+     Multipath & In a clean environment: $Code 0.5-1 m Carrier: 0.5-1 cm$ \\ \hline
+     Receiver noise & Code:$0.25-0.5 m$ rms \\ \hline
+    \end{tabular}
+\end{center}
+\caption{Table 1. }
+\label{Tab1}
+\end{table}
