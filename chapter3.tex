@@ -42,6 +42,7 @@ Tropshospheric: clody weather, rain or sun. Local effect. Is removed with DGPS
 \subsection{Ephemeris Errors (maa leses om; se foiler?)}
 Error from satellites out of position. Cannot be corrected locally, but are maintained by someone.
 \subsection{Multipath}
+Before the satellite signal reach the gnss antenna there is a chance that it has allready been reflected from a nearby surface. This is called multipath and cause a time delay in the gnss signal. 
 Main source of error in DGPS. Cannot be removed.
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
@@ -50,7 +51,11 @@ The advantage with DGPS is that two or more recivers can share the same error so
 
 
 \subsection{RTK GPS}
+RTK GPS scarifies correctness in order to give a position estimate in real-time. ADD HERE RESEARCH IN THE RTK FIELD. Real time position is critical for a autonomous system to navigate to a given position. 
 
+
+PASS PÅ FOR Å GÅ INNOM SYSTEM SPEC. KUN TEORI OM RTK GPS
+Dynamic system can be solved in kinematic mode, or with a moving baseline. In kinematic mode the rover is allowed to move, but the base station is assumed stationary with a known position. In the case of a moving baseline both the rover and base station is allowed to move. The position of the base station is calculated in single mode. Without a known position of the base station the global position of the rover can never be better then if calculated in single mode. However the relative position of the rover from the base station is calculate accurately. There for from a local control systems per
 Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant.
 
 Trade off between getting the position fast, and getting it right 
