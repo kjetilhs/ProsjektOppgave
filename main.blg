@@ -8,8 +8,6 @@ A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: chapter5.aux
 A level-1 auxiliary file: chapter6.aux
 The style file: alpha.bst
+I found no \citation commands---while reading file main.aux
 Database file #1: main.bib
-Warning--I didn't find a database entry for "1"
-Warning--I didn't find a database entry for "2"
-Warning--I didn't find a database entry for "3"
-(There were 3 warnings)
+(There was 1 error message)
