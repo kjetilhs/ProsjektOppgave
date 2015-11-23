@@ -1,12 +1,20 @@
 %===================================== CHAP 3 =================================
 
-\chapter{Real time kinematic GPS}
+\chapter{Real time kinematic GNSS}
 This chapter outline the basic of the GPS signal. how RTKGPS works. It's assumed that the reader is familiar with how a single GPS receiver works. The first section give a brief summary on what differential GPS is, and how that principle is applied in RTK-GPS. The two following sections is directly used in RKT-GPS(maybe write some more). The last section give a quick overview over the error sources that effect the measurement.
 
 A short description of GPS signals and error sources. How to find the Ambiguity resolution and why it's important. What is differential gps, and why use RTK-GPS.
 
 
 \section{GPS signals}
+GPS uses the signals L1 and L2 to calculate the receiver position, with the L5 signal soon fully available. More detailed information about the GPS signals can be found in 
+
+What is needed:
+
+Carrier frequencies?
+
+Code and phase measurements: Phase measurement is a must due to the ambiguity resolution
+
 For position estimation purpose there are two signals mainly available, $L1$ and $L2$. A third signal,$L5$, has recently been introduce, but since the service is not fully operational it will not be covered in this thesis. The signal structure form GPS is written:
 \begin{align*}
 L_1(t) &= A_1p(t)d(t)\cos(f_1t) + A_1c(t)d(t)\sin(f_1t) \\
