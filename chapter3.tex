@@ -5,9 +5,14 @@ This chapter outline the basic of the GPS signal. how RTKGPS works. It's assumed
 
 A short description of GPS signals and error sources. How to find the Ambiguity resolution and why it's important. What is differential gps, and why use RTK-GPS.
 
-
+\section{GNSS constelations}
+The two main GNSS constelation is operation today is GPS and Glonass. 
 \section{GPS signals}
-GPS uses the signals L1 and L2 to calculate the receiver position, with the L5 signal soon fully available. More detailed information about the GPS signals can be found in \cite{GPS BOOK}
+GPS uses the signals L1 and L2 to calculate the receiver position, with the L5 signal soon fully available. More detailed information about the GPS signals can be found in (ref her)
+
+The position is calculated from the pseudorange to each satellite that the receiver is tracking. The two basic ways to measure the psedurange is code and phase measurement. Phase measurement is the most accurate of the two, bu also least reliable.
+
+The receiver needs at least four satellite to be able to estimate the receiver position. Three of the satellite is used for the position, and the fourth if used to calculate the receiver clock bias.
 
 What is needed:
 
@@ -43,6 +48,8 @@ Relative time different
 \subsection{Ionospheric and Trophospheric Delays}
 Effect of signals travelling through the atmosphere. Free electrons from ultraviolet rays ionize a portion of gas molecules. These influence electromagnetic wave propagation.
 \subsubsection{Ionospheric delay}
+Upper layer of the atmos
+
 \subsubsection{Troposheric delay}
 
 
@@ -54,6 +61,15 @@ Before the satellite signal reach the gnss antenna there is a chance that it has
 Main source of error in DGPS. Cannot be removed.
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
+\subsection{Interger Ambiguity Resolution}
+Fixed and Float
+Interger Amiguity is used to calculate the carrier phase
+\begin{equation}
+\phi(t) = \phi_u(t)-\phi^s(t-\tau)+N
+\end{equation}
+Counting the periods from
+
+Write about how the different strategies work
 \subsection{Error mitigation in DGPS}
 The advantage with DGPS is that two or more recivers can share the same error sources. This enable the solution system almost completely remove them.
 
@@ -71,11 +87,7 @@ Trade off between getting the position fast, and getting it right
 
 Moving baseline restrictions. The base stations position is calculated with in single mode. The error in position to the base station is inherit by the rover. Source of error.
 \section{Interger Ambiguity Resolution}
-Interger Amiguity is used to calculate the carrier phase
-\begin{equation}
-\phi(t) = \phi_u(t)-\phi^s(t-\tau)+N
-\end{equation}
-Counting the periods from 
+
 \subsection{Search space minimization strategies}
 There are several search techniques that can be applied to resolve the integer ambiguity, but this section will only cover the "Least Square Ambiguity Decorrelation Adjustment" (LAMBDA) method which is the technique used in rtklib.
 
