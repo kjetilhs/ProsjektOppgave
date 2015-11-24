@@ -5,13 +5,13 @@ A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: Oritentation.aux
 A level-1 auxiliary file: RTKGNSS.aux
 A level-1 auxiliary file: System.aux
+A level-1 auxiliary file: Implementation.aux
 A level-1 auxiliary file: Experiment.aux
 A level-1 auxiliary file: Discusion.aux
-The style file: alpha.bst
-I found no \citation commands---while reading file main.aux
+The style file: plain.bst
 Database file #1: main.bib
-I was expecting a `,' or a `}'---line 1 of file main.bib
- : @book{GPS 
- :           BOOK,
+I was expecting a `,' or a `}'---line 58 of file main.bib
+ : @article{Ambiguity 
+ :                    Estimation,
 I'm skipping whatever remains of this entry
-(There were 2 error messages)
+(There was 1 error message)
