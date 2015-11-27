@@ -1,6 +1,23 @@
 \chapter{Implementation}
 
 \section{Software implementation}
+\subsection{Rtklib}
+
+PLASSERES I APPENDIX
+\subsubsection{str2str configuration}
+The system has to instances of rtklib. The base station uses the str2str and the x8 uses rtkrcv. str2str is configured to receive raw data from the ublox at a frequency of 10 Hz. The connection between str2str and the GNSS receiver is a uart cable that is configured with a baudrate at 115200. The program starts a tcp serve were rtkrcv becommes a client.
+
+Very short about how Glued is used: Start up, 
+
+About rtklib: What does rtklib do in the system, were do it run, what instances is used, how do it connect to dune, what is the output message
+
+About dune: What task are used to communicate with rtklib, how do they communicate, what is the output of the given task
+
+About Neptus: What do neptus do, how is it used in the system, how will it be used in a automatic landing senario.
+
+About Ardupilot: Very short on what Ardupilot do in the system 
+
+
 
 All in one section unless something need more space.
 Write here how rtklib is configured and how the system is connected
@@ -9,3 +26,20 @@ Write here how neptus is configured for the test, and how it is used
 How Glued is configured to run rtklib and Dune
 \section{Hardware implementation}
 This section contain how all the physical components are connected at both the rover and the base station. Include also how everything was prepared.
+
+About Beaglebone: What runs on the beaglebone, connections, devices, what is it place in the system
+
+About Ublox: Explain the ublox from a system perspective, how it's connected
+
+Pixhawk: What do it do in the system:
+
+Piksi: Same as ublox
+
+The X8: How do it fit in the system
+
+The base station: Same as x8
+
+Antennas: 
+
+Wifi router
+
