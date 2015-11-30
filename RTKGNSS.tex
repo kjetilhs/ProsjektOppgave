@@ -48,17 +48,18 @@ Relative time different
 \subsection{Ionospheric and Trophospheric Delays}
 Effect of signals travelling through the atmosphere. Free electrons from ultraviolet rays ionize a portion of gas molecules. These influence electromagnetic wave propagation.
 \subsubsection{Ionospheric delay}
-Upper layer of the atmos
+Gas molecules in the ionosphere becomes ionized by the ultraviolet rays that is emitted by the sun, which release free electrons. These electron can influence electromagnetic wave propagation, such as GNSS signals. 
 
-\subsubsection{Troposheric delay}
 
+Muligens nevne hvordan fjerne forsinkelsen
+\subsubsection{Tropospheric delay}
+The tropospheric delay is a function of the local temperature, pressure and relative humidity. The delay can vary from $2.4$meters to $25$ meters depending on the elevation angle of the satellites.
 
 Tropshospheric: clody weather, rain or sun. Local effect. Is removed with DGPS
 \subsection{Ephemeris Errors (maa leses om; se foiler?)}
 Error from satellites out of position. Cannot be corrected locally, but are maintained by someone.
 \subsection{Multipath}
-Before the satellite signal reach the gnss antenna there is a chance that it has allready been reflected from a nearby surface. This is called multipath and cause a time delay in the gnss signal. 
-Main source of error in DGPS. Cannot be removed.
+One of the primary source of error in in a GNSS receiver is multipath. Multipath happens when the satellite signal is reflected by a nearby surface before if reach the antenna. The delay introduced in the signal can make the receiver believe that its position is several meters away form its true position. The easiest way to mitigated multipath is to place the antenna at a location with open skies, and not tall structures nearby.
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
 \subsection{Interger Ambiguity Resolution}
@@ -74,8 +75,8 @@ Counting the periods from
 
 Write about how the different strategies work
 \subsection{Error mitigation in DGPS}
-The advantage with DGPS is that two or more recivers can share the same error sources. This enable the solution system almost completely remove them.
-
+The advantage with DGPS is that two or more receivers can share the same error sources. This enable the solution system almost completely remove them.
+In the case of a moving baseline situation the GNSS system assumes that the rover is close enough to the base station such that they shear the same atmospheric conditions. If this assumption holds the system should be able to almost remove the error caused by atmospheric delay.
 
 
 \subsection{RTK GPS}
