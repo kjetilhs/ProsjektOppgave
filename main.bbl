@@ -1,9 +1,28 @@
 \begin{thebibliography}{1}
 
+\bibitem{Froelich}
+Marcus Frølich.
+\newblock Automatic ship landing system for fixed-wing uav.
+\newblock Master's thesis, Norwegian University of Science and Technology,
+  NTNU, 2015.
+
 \bibitem{GPSBOOK}
 Pratap Misra and Per Enge.
 \newblock {\em Global Positioning System Signals, Measurements and Performance
   Revised Second Edition}.
 \newblock Ganga-Jamuna Press, 2011.
+
+\bibitem{Skulstad&Syversen}
+Robert Skulstad and Christoffer~Lie Syversen.
+\newblock Low-cost instrumentation system for recovery of fixed-wing uav in a
+  net.
+\newblock Master's thesis, Norwegian University of Science and Technology,
+  NTNU, 2014.
+
+\bibitem{Spockeli}
+Bjørn~Amstrup Spockeli.
+\newblock Integration of rtk gps and imu for accurate uav positioning.
+\newblock Master's thesis, Norwegian University of Science and Technology,
+  NTNU, 2015.
 
 \end{thebibliography}
