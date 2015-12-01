@@ -8,10 +8,5 @@ A level-1 auxiliary file: System.aux
 A level-1 auxiliary file: Implementation.aux
 A level-1 auxiliary file: Experiment.aux
 A level-1 auxiliary file: Discusion.aux
-The style file: plain.bst
+The style file: plainnat.bst
 Database file #1: main.bib
-I was expecting a `,' or a `}'---line 58 of file main.bib
- : @article{Ambiguity 
- :                    Estimation,
-I'm skipping whatever remains of this entry
-(There was 1 error message)
