@@ -245,7 +245,7 @@
 \renewcommand*{\sectionrefname}{Section~}
 
 % Bibliography
-\RequirePackage[square,numbers]{natbib}
+\RequirePackage[sort,comma,authoryear,square,numbers]{natbib}
 \renewcommand*{\bibname}{References}
 \renewenvironment{thebibliography}[1]{%
   \setlength{\bibitemsep}{-\parsep - 0.5em}
