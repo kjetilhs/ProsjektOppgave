@@ -18,6 +18,12 @@ Write about the message structure and how it's connected to DUNE. Include how to
 
 \subsection{RTKLIB}
 Rtklib is open source program that can estimate the receiver position based on raw GPS data. It can be used both with a single receiver or differential gps in real time. The setup is based on a base station and a rover. The base station use the str2str app to create a tcp connection with the rovers rtkrcv app.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/Rtklib_structure.png}
+		\caption{The imu system and the true system}
+		\label{figure:IMUSys}
+\end{figure}
 \subsubsection{rtkrcv}
 Rtkrcv is the app program that calculate the position of the rovers antenna. Rtkrcv is configured with a moving baseline in order to get a fixed solution of the position estimate. Write about other design choices that affect the position output. 
 
