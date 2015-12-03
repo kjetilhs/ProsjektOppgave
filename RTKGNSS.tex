@@ -48,14 +48,11 @@ Relative time different
 \subsection{Ionospheric and Trophospheric Delays}
 Effect of signals travelling through the atmosphere. Free electrons from ultraviolet rays ionize a portion of gas molecules. These influence electromagnetic wave propagation.
 \subsubsection{Ionospheric delay}
-Gas molecules in the ionosphere becomes ionized by the ultraviolet rays that is emitted by the sun, which release free electrons. These electron can influence electromagnetic wave propagation, such as GNSS signals. 
+Gas molecules in the ionosphere becomes ionized by the ultraviolet rays that is emitted by the sun, which release free electrons. These electron can influence electromagnetic wave propagation, such as GNSS signals. The delay that the single get from the ionosphere may cause a error the the order of $1-10 meters$. The error can be mitigated by using a double frequency receiver, or by applying a mathematical model to estimate the delay. Both those cases is with a single receiver, but by having a second receiver the GNSS solution system can assume that both receiver receive signal in the same epoch, which means that the signals have experienced the same delay. More on this in section \ref{ss: Error mitigation DGPS}.
 
-
-Muligens nevne hvordan fjerne forsinkelsen
 \subsubsection{Tropospheric delay}
-The tropospheric delay is a function of the local temperature, pressure and relative humidity. The delay can vary from $2.4$meters to $25$ meters depending on the elevation angle of the satellites.
+The tropospheric delay is a function of the local temperature, pressure and relative humidity. The delay can vary from $2.4$meters to $25$ meters depending on the elevation angle of the satellites. The error can be mitigated by applying a mathematical model to estimate the tropospheric delay, and by using a elevation mask can remove all satellites with a elevation angle bellow a certain threshold. Error caused by tropospheric delay can be removed in the same manners as ionospheric delay when using two or more receivers. More on this in section \ref{ss: Error mitigation DGPS}.
 
-Tropshospheric: clody weather, rain or sun. Local effect. Is removed with DGPS
 \subsection{Ephemeris Errors (maa leses om; se foiler?)}
 Error from satellites out of position. Cannot be corrected locally, but are maintained by someone.
 \subsection{Multipath}
@@ -74,7 +71,7 @@ Interger Amiguity is used to calculate the carrier phase
 Counting the periods from
 
 Write about how the different strategies work
-\subsection{Error mitigation in DGPS}
+\subsection{Error mitigation in DGPS} \label{ss: Error mitigation DGPS}
 The advantage with DGPS is that two or more receivers can share the same error sources. This enable the solution system almost completely remove them.
 In the case of a moving baseline situation the GNSS system assumes that the rover is close enough to the base station such that they shear the same atmospheric conditions. If this assumption holds the system should be able to almost remove the error caused by atmospheric delay.
 
