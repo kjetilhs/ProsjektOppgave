@@ -53,14 +53,14 @@ Gas molecules in the ionosphere becomes ionized by the ultraviolet rays that is 
 \subsubsection{Tropospheric delay}
 The tropospheric delay is a function of the local temperature, pressure and relative humidity. The delay can vary from $2.4$meters to $25$ meters depending on the elevation angle of the satellites. The error can be mitigated by applying a mathematical model to estimate the tropospheric delay, and by using a elevation mask can remove all satellites with a elevation angle bellow a certain threshold. Error caused by tropospheric delay can be removed in the same manners as ionospheric delay when using two or more receivers. More on this in section \ref{ss: Error mitigation DGPS}.
 
-\subsection{Ephemeris Errors (maa leses om; se foiler?)}
+\subsection{Ephemeris Errors}
 Error from satellites out of position. Cannot be corrected locally, but are maintained by someone.
 \subsection{Multipath}
 One of the primary source of error in in a GNSS receiver is multipath. Multipath happens when the satellite signal is reflected by a nearby surface before if reach the antenna. The delay introduced in the signal can make the receiver believe that its position is several meters away form its true position. The easiest way to mitigated multipath is to place the antenna at a location with open skies, and not tall structures nearby.
 \section{Differential GPS}
 Differential GPS consist of at least two receivers, where one is called a base station and the rest rovers. The two receivers are within range of a communication channel over which they are communicating. There are two basic ways to implement DGPS. There is the position-space method and the range-space method. Only the latter will be covered in this thesis.
 \subsection{Interger Ambiguity Resolution}
-The integer ambiguity is the uncertanty of phase cycles between the receiver and the satellites.
+The integer ambiguity is the uncertainty of phase cycles between the receiver and the satellites.
 
 There are several strategies on how to resolve the integer ambiguity. A well used strategy is the LAMBDA method. LAMBDA starts by reducing the integer search space by decorrelation adjustment.
 Fixed and Float
