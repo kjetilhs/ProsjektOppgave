@@ -1,15 +1,15 @@
 %===================================== CHAP 1 =================================
 
 \chapter{Introduction}
-This chapter the background and motivation to why this project thesis has been written. Also reference to privios work, the goal of the thesis and the layout.
+This chapter the background and motivation to why this project thesis has been written. Also reference to previous work, the goal of the thesis and the layout.
+
+Test:
+
+\newacronym{utc}{UTC}{Coordinated Universal Time}
+
+\gls{utc}
 \section{Background and motivation}
-Why is the project thesis relevant: Installing better GPS to enable better hight estimation
-
-What have I done? Integrated new GPS with DUNE
-
-What is next? Land the UAV. Test algorthm to Frølich, better state estimation 
-
-Unmanned aerial vehicles have in seen an increase usage in the civilian sector on land, where they can be used at a cheaper price then manned aircraft. However this has not yet been the case in the civil maritime sector, due to a harsher environment and smaller landing areas.
+Unmanned aerial vehicles have in seen an increase usage in the civilian sector on land, where they can be used at a cheaper price then manned aircraft. UAV are well suited for tasks like inspections, aerial photography, environment surveillance and search and rescue. Today UAV are mostly operated over land, but in the future this will include the out at sea as well. This will give some challenges that must be overcome. One of these challenges is that the UAV should be able to perform a autonomous landing.
 
 A UAV can increase performance in many maritime operation where today only other manned aircraft or satellites are the only solution. In the maritime sector they can be used in iceberg management, monitoring of oil spills, search and rescue and maritime traffic monitoring. To enable a safe UAV operation at sea there must be a system in place to ensure a safe landing.
 
@@ -28,7 +28,10 @@ The uavlab at NTNU has in the last year studied how to perform a autonomous land
 Work done on ambiguity
 \cite{Ambiguity:Estimation,LAMBDA:METHOD,LAMBDAMETHOD,GeodeticBaselines} 
 Work done with rtk gps
-\citep{Low-costRTK}  \citep{3D-RTK} 
+\citep{Low-costRTK}  \citep{3D-RTK}
+
+
+Vision added landing system \citep{williams2012intelligent}
 
 Work done in the UAVLab on automatic landing. The other master thesis on landing using visual assist. Other method that has been applied. 
 
@@ -50,6 +53,8 @@ Table \ref{Tb:GoalList} summaries the goal with this project thesis.
 \item Make Dune able to receive the output stream from rtklib, and support a new imc message that contain the relative position of the x8
 \item Test and compare the Ublox receiver against the pixi(TRENGER MODEL NAVN) receiver
 \end{itemize}
+
+
 Install new GPS receiver on the x8 and base station. Test and compare to the pixi gps that is the standard solution i the uavlab. Evaluate if the new gps is good enough to enable automatic landing
 Install new GPS reciver with higher accuracy to enable automatic landing
 \section{System layout}

@@ -1,1 +1,3 @@
-(indexentry :tkey (("A" "\\glossentry{A_B^C}") ) :locref "{}{xvii}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("A" "\\glossentry{A_B^C}") ) :locref "{}{xv}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("UTC" "\\glossentry{utc}") ) :locref "{}{xv}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("UTC" "\\glossentry{utc}") ) :locref "{}{1}" :attr "pageglsnumberformat" ) 
