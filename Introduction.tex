@@ -56,6 +56,15 @@ Install new GPS reciver with higher accuracy to enable automatic landing
 How the landing can be performed. A operator send a landing request from Neptus to dune. The path generation task generate waypoints in both local and global frame. The global waypoints are return to Neptus to show the operator were the planed path is. The local waypoints are given to a guidance system. The guidance system only requrier the local position, which it will receive from a rtk GNSS task. The rtk GNSS task is required to send both the local position and the global. The global position will be calculated as an offset from the base station location. The local position is the relative position of the UAV with respect to the base station.
 
 Include a figure that show how the full system will look like
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/SystemOverview.png}
+		\caption{The structure of the autonomos landing system}
+		\label{figure:SystemOverview}
+\end{figure}
+
+The current state of the system is that there has been done research on all of the module in different master and project thesis. However there has not been done a physical experiment with the DUNE version of the system.
 \section{Layout of thesis}
 Chapter 1 Intro
 Chapter 2 Theory about coordinate system
