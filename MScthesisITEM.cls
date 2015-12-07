@@ -264,6 +264,8 @@
   \setlength{\itemindent}{-0.5em}% 
   \addtolength{\itemindent}{\labelsep}}
   
+%Figures; For ploting figures from matlab
+\RequirePackage{epstopdf}
 % Glossary; undefine some commands from memoir.cls to avoid generating warnings
 \let\theglossary\@undefined
 \let\endtheglossary\@undefined  
