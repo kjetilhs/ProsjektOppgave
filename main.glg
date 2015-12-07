@@ -1,0 +1,26 @@
+;; This logfile was generated automatically by `xindy'
+;; at 07.12.2015  12:43:03
+;; Indexstyle: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\WvG2zhz3le", Rawindex: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\U9CVD6Wdz7", Output: "main.gls"
+
+
+Building indexentry-tree:
+Hierdepth of index is :TREE
+
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+
+Forming letter-groups:
+Letter-group: "€" -> "A"
+Letter-group: "¼" -> "N"
+Letter-group: "€" -> "A"
+Letter-group: "àÚ†" -> "U"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-other-runs: ("a") ("A") (BACKWARD FORWARD FORWARD) 1.
+sort-other-runs: ("a") ("A") (FORWARD FORWARD) 2.
+Letter-group: "€" -> "A"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "¼" -> "N"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "àÚ†" -> "U"
