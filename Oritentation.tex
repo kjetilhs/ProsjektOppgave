@@ -1,13 +1,11 @@
 %===================================== CHAP 2 =================================
 
 \chapter{Reference frames}
-This chapter will give an overview over different coordinate system and the relationship between them. A coordinate system is used to define a position relative to a origin. The choice of coordinate system is critical when describing the equation of motion. Newtons first law only apply when the origin is viewed as an inertial frame. When navigating on/or close to the surface there are two convension used; ENU and NED. Both the ENU and NED system is defines relative to the center of the Earth.
-
-Write about the long lat system and the WGS 84, the ellipsoid and geosomething
+This chapter will explain the reference frame that will be mentioned in this thesis. There are four different frames that will be explained.
 \section{ECI}
-\gls{eci} frame is considered a inertial frame for terrestrial navigation. The origin is fixed in the center of the Earth, and the axis is fixed in space.
+\gls{eci} frame is considered a inertial frame for terrestrial navigation. The origin is fixed in the center of the Earth, and the axis is fixed in space. This frame can be considered as a non-accelerating where Newton's laws of motion applies. 
 \section{ECEF}
-The \gls{ecef} coordinate system is defined in the center of the Earth with it's x-axis point toward the intersection between the Greenwich meridian and Equator ( $0\deg $ longitude, $0\deg $ latitude). The z-axis points along the Earth's rotational axis, and the y-axis complete the right handed orthogonal coordinate system. The \gls{ecef} system can be represented in either Cartesian coordinates (xyz) or ellipsoidal coordinates (longitude, latitude and height). The \gls{ecef} frame rotate relative to the \gls{eci} frame at a angular rate of $\omega_e = 7.2921 \times 10^{-5}rad/s$, where $\omega_e$ is the Earth rotation.
+The \gls{ecef} coordinate system is defined in the center of the Earth with it's x-axis point toward the intersection between the Greenwich meridian and Equator ( $0\deg $ longitude, $0\deg $ latitude). The z-axis points along the Earth's rotational axis, and the y-axis complete the right handed orthogonal coordinate system. The \gls{ecef} system can be represented in either Cartesian coordinates (xyz) or ellipsoidal coordinates (longitude, latitude and height). The \gls{ecef} frame rotate relative to the \gls{eci} frame at a angular rate of $\omega_e = 7.2921 \times 10^{-5}rad/s$, where $\omega_e$ is the Earth rotation. Due to the relatively low rotation speed some system can consider the \gls{ecef} frame as inertial.
 \section{NED and ENU}
 The \gls{ned} and \gls{enu} frame is defined as relative to the Earth reference ellipsoid (\gls{wgs-84}). For the \gls{ned} frame the x axis points in the direction to the true North, y axis towards East while the z axis points downward to completed the right handed orthogonal coordinate system. The \gls{enu} has the x and y axis exchange place in respect of the \gls{ned} frame, and the z axis point upwards instead of downwards.
 \cleardoublepage
