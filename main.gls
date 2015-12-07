@@ -24,14 +24,9 @@
 \providecommand*\glsXpageXglsignore[2]{\setentrycounter[#1]{page}\glsignore{#2}}
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax\glsresetentrylist
-\glossentry{areaofneedle}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{xv}}}\relax\glsresetentrylist
-\glossentry{angelsperarea}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{xv}}}\glsgroupskip
-\glsgroupheading{N}\relax\glsresetentrylist
-\glossentry{numofangels}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{xv}}}\glsgroupskip
+\glossentry{A_B^C}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{xiii}}}\glsgroupskip
 \glsgroupheading{U}\relax\glsresetentrylist
 \glossentry{utc}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{xv}}}%
+\glsXpageXglsnumberformat{}{xiii}}}%
 \end{theglossary}\glossarypostamble

@@ -1,5 +1,2 @@
-(indexentry :tkey (("$a$" "\\glossentry{angelsperarea}") ) :locref "{}{xv}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("$N$" "\\glossentry{numofangels}") ) :locref "{}{xv}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("$A$" "\\glossentry{areaofneedle}") ) :locref "{}{xv}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("A" "\\glossentry{A_B^C}") ) :locref "{}{xv}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("UTC" "\\glossentry{utc}") ) :locref "{}{xv}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("A" "\\glossentry{A_B^C}") ) :locref "{}{xiii}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("UTC" "\\glossentry{utc}") ) :locref "{}{xiii}" :attr "pageglsnumberformat" ) 

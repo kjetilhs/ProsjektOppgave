@@ -36,12 +36,10 @@ There has been done work on autonomous landing system using a vision aided syste
 Commercial landing system:  \citep{scanealge}
 
 \section{Goal of thesis}
-The goal of this thesis is to test the ublox-LEA M8T GNSS receiver in a real time differential GNSS setting. The RTK GNSS solution will be calculated with the open source program rtklib, which will communicate with a task in DUNE. The solution from rtklib will be compared against the solution from Piksi, and a post prosesed solution from rtklib. The result from the experiment will be used in the discusion on how to perform a autonomous landing.
+The goal of this thesis is to test the performance of ublox-LEA M8T GNSS receiver in a real time differential \gls{dgps} configuration. The \gls{rtk-gps} solution will be calculated with the open source program rtklib, which will communicate with a task in DUNE. The solution from rtklib will be compared against the solution from Piksi, and a post processed solution from rtklib. The result from the experiment will be used in the discussion on how to perform a autonomous landing.
 
 \section{System layout}
-How the landing can be performed. A operator send a landing request from Neptus to dune. The path generation task generate waypoints in both local and global frame. The global waypoints are return to Neptus to show the operator were the planed path is. The local waypoints are given to a guidance system. The guidance system only requrier the local position, which it will receive from a rtk GNSS task. The rtk GNSS task is required to send both the local position and the global. The global position will be calculated as an offset from the base station location. The local position is the relative position of the UAV with respect to the base station.
-
-Include a figure that show how the full system will look like
+The current state of the system is that it consist of two parts that has not yet been integrated with each other. The part were which is the main focus of this thesis is the positioning part. The plan is to use \gls{rtk-gps} for positioning estimation. The second part is the path and control path. Currently there has only been done simulation of the guidance system. It shows promising results, but is yet to be integrated with \gls{rtk-gps}. For more information on the subject please read the MSc thesis by \citep{Froelich}. Figure \ref{figure:SystemOverview} gives a overview on how the system may look like. Ideas on how the intergration can be acheived will be given in the future work section. 
 
 \begin{figure}[H]
 	\centering
@@ -49,14 +47,19 @@ Include a figure that show how the full system will look like
 		\caption{The structure of the autonomos landing system}
 		\label{figure:SystemOverview}
 \end{figure}
-
-The current state of the system is that there has been done research on all of the module in different master and project thesis. However there has not been done a physical experiment with the DUNE version of the system.
 \section{Layout of thesis}
+This section is currently not up to date
+
 Chapter 1 Intro
+
 Chapter 2 Theory about coordinate system
+
 Chapter 3 Theory about GNSS system with focus on the GPS
+
 Chapter 4 Hardware and software
+
 Chapter 5 Test and result
+
 Chapter 6 Conclusion, discussion and further work
 
 
