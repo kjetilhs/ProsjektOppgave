@@ -1,19 +1,18 @@
+;; This logfile was generated automatically by `xindy'
+;; at 08.12.2015  16:09:23
+;; Indexstyle: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\EncKE8V_Fk", Rawindex: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\66JwQlEDVz", Output: "main.gls"
 
 
-*** Unable to execute: '"xindy"    -I xindy -M "main" -t "main.glg" -o "main.gls" "main.glo"' ***
+Building indexentry-tree:
+Hierdepth of index is :TREE
 
-Failed with error code 1.
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 
-Status report:
-
-'"xindy"' is not recognized as an internal or external command,
-operable program or batch file.
-
-xindy didn't create a transcript.
-Check that xindy has been installed and
-is on your system's PATH.
-Your PATH environment variable is set to: 
-C:\Perl64\site\bin;C:\Perl64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\System32;C:\Go\bin;C:\Program Files\MiKTeX 2.9\miktex\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\MATLAB\R2015b\runtime\win64;C:\Program Files\MATLAB\R2015b\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\
-Try manually running:
-"xindy"    -I xindy -M "main" -t "main.glg" -o "main.gls" "main.glo"
-
+Forming letter-groups:
+Letter-group: "€" -> "A"
+Letter-group: "àÚ†" -> "U"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "€" -> "A"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "àÚ†" -> "U"
