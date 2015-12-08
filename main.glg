@@ -1,18 +1,19 @@
-;; This logfile was generated automatically by `xindy'
-;; at 07.12.2015  15:56:19
-;; Indexstyle: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\zNg1J01HzH", Rawindex: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\B3szmFjYmZ", Output: "main.gls"
 
 
-Building indexentry-tree:
-Hierdepth of index is :TREE
+*** Unable to execute: '"xindy"    -I xindy -M "main" -t "main.glg" -o "main.gls" "main.glo"' ***
 
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Failed with error code 1.
 
-Forming letter-groups:
-Letter-group: "€" -> "A"
-Letter-group: "àÚ†" -> "U"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "€" -> "A"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "àÚ†" -> "U"
+Status report:
+
+'"xindy"' is not recognized as an internal or external command,
+operable program or batch file.
+
+xindy didn't create a transcript.
+Check that xindy has been installed and
+is on your system's PATH.
+Your PATH environment variable is set to: 
+C:\Perl64\site\bin;C:\Perl64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\System32;C:\Go\bin;C:\Program Files\MiKTeX 2.9\miktex\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\MATLAB\R2015b\runtime\win64;C:\Program Files\MATLAB\R2015b\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\
+Try manually running:
+"xindy"    -I xindy -M "main" -t "main.glg" -o "main.gls" "main.glo"
+

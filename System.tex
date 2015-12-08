@@ -3,8 +3,7 @@
 \chapter{System Components}
 This chapter contains a brief description of the system that has been used.
 \section{Software}
-This section contain the different software that is used in the x8 system. The control and guidance system is runs on Dune, and the missionplaner on Neptus. The x8 operation system is GLUED. The system is connected to the rtklib which is in communication with DUNE. The internal communication in DUNE is based on IMC messages
-\subsection{GLUED}
+This section contain the different software that is used in the x8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to connect the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.\subsection{GLUED}
 Glued is a minimal Linux distribution developed by LSTS, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
 \subsection{Dune}
 Dune is a runtime environment for unmanned systems on-board software created by LSTS (Underwater Systems and Technology Laboratory) in Porto, Portugal. The environment type is called a middleware, which is seeing increase usage in unmanned systems. Can refer to ROS or MOOS middleware.
@@ -13,7 +12,10 @@ Dune works by setting up individual task that can dispatch and subscribe to diff
 A type of middleware. write how to link rtklib with dune
 Refer to the dune wiki page
 \subsection{IMC}\label{ss:IMC}
-Write about the message structure and how it's connected to DUNE. Include how to make new messages.
+The IMC (write gls here when fixed) protocol that is designed and implemented by LSTS (gls) that is build to interconnect systems of vehicles,sensors and human operators. The protocol is a messages-oriented protocol that enable exchange of real-time information about the environment and updated objectives, such that the participant in the communication can pursue a common goal cooperatively.
+IMC has a standard way of dispatching and consuming messages, which abstracts hardware
+
+Other feature: Not assuming a specific software architecture, can generate native support for different programming languages and/or computer architectures. Used in network nodes, inter-process and inter thread communication
 \subsection{Netpus}
 
 \subsection{RTKLIB}
