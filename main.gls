@@ -25,8 +25,5 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax\glsresetentrylist
 \glossentry{A_B^C}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{xiii}}}\glsgroupskip
-\glsgroupheading{U}\relax\glsresetentrylist
-\glossentry{utc}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{xiii}}}%
 \end{theglossary}\glossarypostamble

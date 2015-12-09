@@ -2,6 +2,20 @@
 
 \chapter{System Components}
 This chapter contains a brief description of the system that has been used.
+\section{Hardware}
+This section outline the physical components in the x8 and the base station.
+\subsection{The Skywalker X8 fixed wind UAV}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/Wing-X8_white-bgd2.png}
+		\caption{The X8 \citep{skywalkerx8}}
+		\label{figure:skywalkerX8}
+\end{figure}
+\subsection{Beaglebone}
+The system runs on a Beaglebone. A beaglebone were prepared for mounting in a x8
+\subsection{The GPS receiver}
+Write about the Ublox LEA M8T gnss receiver. Also include that it support sending GPS and GLONASS data at the same time. Need to be configured. A receiver were prepare and mounted in the x8.
+
 \section{Software}
 This section contain the different software that is used in the x8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to connect the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.\subsection{GLUED}
 Glued is a minimal Linux distribution developed by LSTS, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
@@ -18,7 +32,8 @@ IMC has a standard way of dispatching and consuming messages, which abstracts ha
 Other feature: Not assuming a specific software architecture, can generate native support for different programming languages and/or computer architectures. Used in network nodes, inter-process and inter thread communication
 \subsection{Netpus}
 
-\subsection{RTKLIB}
+\subsection{Piksi}\label{ss:Piksi}
+\subsection{RTKLIB}\label{ss:Rtklib}
 Rtklib is a open source program package for standard and precise positioning with GNSS developed by T. Takasu. Rtklib can use raw GNSS data to estimate the position of the rover. Rtklib can be configured to give a position solution in real time in differential mode. Figure \ref{figure:RTKLIB_STRUCTURE} shows how rtklib can be used in a RTKGNSS mode. The two main moduels here is str2str and rtkrcv. Both will be explalined more closely in the following sections. More information about  rtklib can be found in \citep{Rtklib242}.
 
 \begin{figure}[H]
@@ -57,10 +72,7 @@ The solution body is given is table
  
 \subsubsection{str2str}
 Str2str is the app program that retrieve the ublox signal from the gps and sends over tcp to the rtkrcv app. The str2str is setup to either send RMTC 3 messages, or whatever is send in from the GPS. Since the str2str do not support to send ublox signal directly. How to write that the user should not specify the input format or the output format.
-\section{Hardware}
-This section outline the physical components in the x8 and the base station.
-\subsection{Beaglebone}
-The system runs on a Beaglebone. A beaglebone were prepared for mounting in a x8
-\subsection{The GPS receiver}
-Write about the Ublox LEA M8T gnss receiver. Also include that it support sending GPS and GLONASS data at the same time. Need to be configured. A receiver were prepare and mounted in the x8.
+
+
+
 \cleardoublepage

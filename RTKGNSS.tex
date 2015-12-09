@@ -1,23 +1,35 @@
 %===================================== CHAP 3 =================================
 
 \chapter{Real time kinematic GPS}
-This chapter outline the basic of the GPS signal. how RTKGPS works. It's assumed that the reader is familiar with how a single GPS receiver works. The first section give a brief summary on what differential GPS is, and how that principle is applied in RTK-GPS. The two following sections is directly used in RKT-GPS(maybe write some more). The last section give a quick overview over the error sources that effect the measurement.
 
-The term rover and base station will be used when referencing two or more receivers. The term base station means a receiver that is assumed to have a known position by the other receivers. The term rover means a receiver that is allowed to move, is the main focus for position estimation.
+In the following the behaviour of a receiver is denoted using term like rover and base station. The term base station means a receiver that is assumed to have a known position by the other receivers. The term rover means a receiver that is allowed to move, is the main focus for position estimation.
+
+The outline of this chapter is first give a overview of current \gls{gnss} and system that is under development. For the rest of the chapter the main focus will be \gls{gps}, however the sections about error sources and error mitigation is common in all \gls{gnss} constellations. 
+
+
+
+This chapter outline the basic of the GPS signal. how RTKGPS works. The first section give a brief summary on what differential GPS is, and how that principle is applied in RTK-GPS. The two following sections is directly used in RKT-GPS(maybe write some more). The last section give a quick overview over the error sources that effect the measurement.
+
+
 
 A short description of GPS signals and error sources. How to find the Ambiguity resolution and why it's important. What is differential gps, and why use RTK-GPS.
 
 
 This chapter will explain what is meant by the term rtk-gps.
 
-The outline of this chapter is first give a overview of current \gls{gnss} and system that is under development. For the rest of the chapter the main focus will be \gls{gps}, however the sections about error sources and error mitigation is common in all \gls{gnss} constellations. 
+
 
 \section{GNSS constelations}
 There are currently two operation \gls{gnss} constellations with global coverage, which is American \gls{gps} and Russian \gls{glonass}. Other \gls{gnss} constellations that will be operational in the near future is the Chinese BeiDou and European Galileo.
-\section{GPS signals}
-GPS uses the signals L1 and L2 to calculate the receiver position, with the L5 signal soon fully available. More detailed information about the GPS signals can be found in \cite{GPSBOOK}
+\section{GPS attributes}
+The \gls{gps} satellites transmits continuously using two radio frequencies in the L-band referred to as \gls{l1} and {l2}. The L-band covers frequencies between 1 GHz and 2GHz, and is a subset of the \gls{uhf} band.
+
+Previously only the \gls{l1} signal was intended from civil users, but in the future a new {l2} signal as well as the \gls{l5} signal will be available for civil users. 
+
+\gls{gps} uses it's time reference called \gls{gpst}, which is independent from the \gls{utc}. Because of this independent the \gls{utc} diverge away from the \gls{gpst}, and to correct this the \gls{gps} keeps track of the offset between \gls{gpst} and \gls{utc}. The offset is included in the \gls{gps} message as leap seconds to be added to the \gls{gpst}. More information about the \gls{gps} can be found in \citep{GPSBOOK,vik2014integrated} 
 
 The two basic ways to measure the psedurange is code and phase measurement. Phase measurement is the most accurate of the two, but also least reliable.
+In code measurement the information in signal is used to calculate the psudorange between the receiver and the satellite. In phase measurement the signal itself is used to calculate the psudorange by counting the number of cycles between the receiver and the satellite. It's phase measurement that is used in \gls{rtk-gps}.
 
 The receiver needs at least four satellite to be able to estimate the receiver position. Three of the satellite is used for the position, and the fourth if used to calculate the receiver clock bias. 
  
@@ -27,7 +39,7 @@ In order to get high accuracy in the position estimation the different error sou
 There is drift in both the satellite clock and the receiver clock. The atomic in the satellites makes the clock drift negligible from the user perspective. The receiver clock tend to drift, and if not taken into account will cause large deviations in the position estimate from the true position. This error is remove by including a fourth satellite in the position computation. The satellite clock error given in the satellite message. 
 
 \subsection{Ionospheric and Trophospheric Delays}
-When the \gls{gps} signals travel though the atmosphere there will be a delay caused by the different layers.
+When the \gls{gps} signals travel though the atmosphere there will be a delay caused by the different layers, as further explained in this section.
 \subsubsection{Ionospheric delay}
 Gas molecules in the ionosphere becomes ionized by the ultraviolet rays that is emitted by the sun, which release free electrons. These electron can influence electromagnetic wave propagation, such as GNSS signals. The delay that the single get from the ionosphere may cause a error the the order of $1-10 meters$. The error can be mitigated by using a double frequency receiver, or by applying a mathematical model to estimate the delay. Both those cases is with a single receiver, but by having a second receiver the GNSS solution system can assume that both receiver receive signal in the same epoch, which means that the signals have experienced the same delay. More on this in section \ref{ss: Error mitigation DGPS}.
 
@@ -35,7 +47,7 @@ Gas molecules in the ionosphere becomes ionized by the ultraviolet rays that is 
 The tropospheric delay is a function of the local temperature, pressure and relative humidity. The delay can vary from $2.4$meters to $25$ meters depending on the elevation angle of the satellites. The error can be mitigated by applying a mathematical model to estimate the tropospheric delay, and by using a elevation mask can remove all satellites with a elevation angle bellow a certain threshold. Error caused by tropospheric delay can be removed in the same manners as ionospheric delay when using two or more receivers. More on this in section \ref{ss: Error mitigation DGPS}.
 
 \subsection{Ephemeris Errors}
-Error from satellites out of position. Cannot be corrected locally, but are maintained by someone.
+A satellite isn't able to perfectly follow a given orbit, and therefore there will be a deviation between satellite position given to the receiver and the true position of the satellite. This is called the ephemeris error. The true position of a satellite is monitored and corrected by the owner of the \gls{gnss} constellation, but error between each correction can be expected.
 \subsection{Multipath}
 One of the primary source of error in in a GNSS receiver is multipath. Multipath happens when the satellite signal is reflected by a nearby surface before if reach the antenna. The delay introduced in the signal can make the receiver believe that its position is several meters away form its true position. The easiest way to mitigated multipath is to place the antenna at a location with open skies, and not tall structures nearby.
 \section{Differential GPS}
@@ -49,7 +61,7 @@ The advantage with DGPS is that two or more receivers can share the same error s
 In the case of a moving baseline situation the GNSS system assumes that the rover is close enough to the base station such that they shear the same atmospheric conditions. If this assumption holds the system should be able to almost remove the error caused by atmospheric delay.
 
 
-\subsection{RTK GPS}
+\subsection{RTK GPS}\label{ss:rtk-gps}
 RTK GPS scarifies correctness in order to give a position estimate in real-time. ADD HERE RESEARCH IN THE RTK FIELD. Real time position is critical for a autonomous system to navigate to a given position. 
 
 

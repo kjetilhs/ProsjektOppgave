@@ -1,4 +1,4 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,6 +14,12 @@ Geoffrey Blewitt.
   applied to geodetic baselines uo to 2000 km.
 \newblock \emph{Journal of Geophysical Research}, 94\penalty0 (B8):\penalty0
   10,187--10,203, 1989.
+
+\bibitem[CAMPILOT()]{skywalkerx8}
+CAMPILOT.
+\newblock Skywalker x8.
+\newblock \url{http://www.campilot.tv/blog/wing-x8/}.
+\newblock Accessed: 09.12.2015.
 
 \bibitem[Frølich(2015)]{Froelich}
 Marcus Frølich.
@@ -41,12 +47,6 @@ Pratap Misra and Per Enge.
 \newblock \emph{Global Positioning System Signals, Measurements and Performance
   Revised Second Edition}.
 \newblock Ganga-Jamuna Press, 2011.
-
-\bibitem[P.J.G~Teunissen and Tiberius(1995)]{LAMBDAMETHOD}
-P.J. de~Jonge P.J.G~Teunissen and C.C.J.M. Tiberius.
-\newblock The lambda-method for fast gps surveying.
-\newblock Presented at the International Symposium "GPS Technology
-  Applications" Bucharest,Romania, 1995.
 
 \bibitem[Skulstad and Syversen(2014)]{Skulstad&Syversen}
 Robert Skulstad and Christoffer~Lie Syversen.
@@ -79,6 +79,12 @@ W.~Stempfhuber and M.~Buchholz.
 \newblock \emph{International Archives of the Photogrammetry, Remote Sensing
   and Spatial Information Sciences}, 2011.
 
+\bibitem[Teunissen and Tiberius(1995)]{LAMBDAMETHOD}
+P.J. de~Jonge Teunissen, P.J.G and C.C.J.M. Tiberius.
+\newblock The lambda-method for fast gps surveying.
+\newblock Presented at the International Symposium "GPS Technology
+  Applications" Bucharest,Romania, 1995.
+
 \bibitem[Teunissen(1994)]{Ambiguity:Estimation}
 P.J.G. Teunissen.
 \newblock A new method for fast carrier phase ambiguity estimation.
@@ -89,6 +95,11 @@ P.J.G. Teunissen.
 \newblock The least-squares ambiguity decorrelation adjustment: a method for
   fast gps integer ambiguity estimation.
 \newblock \emph{Journal of Geodesy}, 70:\penalty0 65--82, 1995.
+
+\bibitem[Vik(2014)]{vik2014integrated}
+Bjørnar Vik.
+\newblock \emph{Integrated Satellite and Inertial Navigation Systems}.
+\newblock Department of Engineering Cybernetics, NTNU, 2014.
 
 \bibitem[Williams and Crump(2012)]{williams2012intelligent}
 Paul Williams and Michael Crump.

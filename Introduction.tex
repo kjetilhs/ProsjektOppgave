@@ -9,10 +9,10 @@ A \gls{uav} can increase performance in many maritime operation where today only
 
 There exist landing system that can guide the \gls{uav} towards a net, but they are expensive and restricted to a few \glspl{uav}. A pilot could always land the \gls{uav}, but it would be better if the \gls{uav} could hit the net by it self. In order to make the \gls{uav} able to perform a automatic landing the minimum requirement is that it know where it is at all time. This require a accurate position estimation in real time. A highly accurate position sensor is typically expensive, however it's possible to achieve a accurate solution with low cost sensors. By combining two \gls{gnss} receivers it's possible to estimate the relative position of one of the receivers in respect of the other receiver highly accurately. This work will test a new generation of \gls{gnss} receiver, and use \gls{gps} to find the relative position of the \gls{uav}. The demand on the accuracy is that the error must be in decimetres to ensure safe landing in the net.
 
-In order to complete an automatic landing a path planner, guidance system and a accurate position estimation system, in addition to the low level control system in the \gls{uav} is required. Such complete system is still subject for development, where only method for achieving the different objectives has been developed, i.e. path planner and guidance system respectively. The path planer and guidance system as basis for this work was developed as previous master thesis work in the UAVLAB by \citep{Froelich}. The gudiance system is currently under further development in two project thesis. A key component in the guidance system is the position estimation system, which for the guidance referenced was developed by \citep{Spockeli}. However, this system has been concluded to be in-sufficient with respect to provide means required for automatic landing. This work will continue the research done by Spockeli, and introduce a new GNSS receiver that will be used with the open source program, rtklib. The motivation is to have a system with accurate local position estimate, such that in the future a landing can be performed automatic.
+In order to complete an automatic landing a path planner, guidance system and a accurate position estimation system, in addition to the low level control system in the \gls{uav} is required. Such complete system is still subject for development, where only method for achieving the different objectives has been developed, i.e. path planner and guidance system respectively. The path planer and guidance system as basis for this work was developed as previous master thesis work in the UAVLAB by \citep{Froelich}. The gudiance system is currently under further development in two project thesis. A key component in the guidance system is the position estimation system, which for the guidance referenced was developed by \citep{Spockeli}. However, this system has been concluded to be in-sufficient with respect to provide means required for automatic landing. This work will continue the research done by Spockeli, and introduce a new \gls{gnss} receiver that will be used with the open source program, rtklib. The motivation is to have a system with accurate local position estimate, such that in the future a landing can be performed automatic.
 
-The automatic landing system will use RTK GPS for position estimation. The main motivation for this work is to describe the gaps of the available position system sufficient to scope further work required for closure of such gaps ultimately providing means for position estimating sufficient for completion of automatic landing.
-\section{Previous work}
+The automatic landing system will use \gls{rtk-gps} for position estimation. The main motivation for this work is to describe the gaps of the available position system sufficient to scope further work required for closure of such gaps ultimately providing means for position estimating sufficient for completion of automatic landing.
+\section{Literature Review}
 Citation checking \citep{Spockeli,Froelich} or \cite{Spockeli,Froelich} or \citet{Spockeli,Froelich}
 
 GNSS navigation has been
@@ -35,11 +35,8 @@ There has been done work on autonomous landing system using a vision aided syste
 
 Commercial landing system:  \citep{scanealge}
 
-\section{Goal of thesis}
-The goal of this thesis is to test the performance of ublox-LEA M8T GNSS receiver in a real time differential \gls{dgps} configuration. The \gls{rtk-gps} solution will be calculated with the open source program rtklib, which will communicate with a task in DUNE. The solution from rtklib will be compared against the solution from Piksi, and a post processed solution from rtklib. The result from the experiment will be used in the discussion on how to perform a autonomous landing.
-
 \section{System layout}
-The current state of the system is that it consist of two parts that has not yet been integrated with each other. The part were which is the main focus of this thesis is the positioning part. The plan is to use \gls{rtk-gps} for positioning estimation. The second part is the path and control path. Currently there has only been done simulation of the guidance system. It shows promising results, but is yet to be integrated with \gls{rtk-gps}. For more information on the subject please read the MSc thesis by \citep{Froelich}. Figure \ref{figure:SystemOverview} gives a overview on how the system may look like. Ideas on how the intergration can be acheived will be given in the future work section. 
+An integrated system required for automatic landing will typically consist of four main sub-systems as shown in figure \ref{figure:SystemOverview}. Today these systems are individually available or in development; however not integrated into a proven working system allowing for automatic landing of \glspl{uav}. The four main systems comprises of the navigation part, guidance part, control part and the user interface, where further validation and development of the first is the main topic for this work.
 
 \begin{figure}[H]
 	\centering
@@ -47,6 +44,24 @@ The current state of the system is that it consist of two parts that has not yet
 		\caption{The structure of the autonomos landing system}
 		\label{figure:SystemOverview}
 \end{figure}
+
+The navigation system will apply \gls{rtk-gps} to estimate the relative position of the \gls{uav}. More details about what \gls{rtk-gps} is, will be given in \ref{ss:rtk-gps}.
+
+The control and guidance system has currently only been tested in \gls{sil} simulations with Ardupilot, which shows promising result likely to be sufficient for automatic landing applications. However this module has not yet been implemented to support the use of \gls{rtk-gps} as required for performing automatic landing.
+
+This work will identify and describe the navigation system necessary to allow for automatic landing of \glspl{uav}. The \gls{rtk-gps} solution will be compute by two different system ,which will be compared against each other. The first system is called Piksi, and is developed by Swift navigation. The second system will is called Rtklib, and is developed by T. Takasu. The latter is indepente on the type of receiver, and thus will be the main focus of this work. More detail about Piksi and Rtklib will be given in \ref{ss:Piksi} and \ref{ss:Rtklib}.
+
+The comparison test will be used to summarize further work required for complete identification of gaps and work required for closure of these gaps such that a control system including provision for automatic landing may be developed and implemented in a integrated \gls{uav} control system.
+
+This work will identify and describe the gaps which will need to be closed on order to develop and implement a solution which will allow for automatic landing of \glspl{uav}. Two different system that will be compared against each other. 
+The current state of the system is that it consist of two parts that has not yet been integrated with each other. The part were which is the main focus of this thesis is the positioning part. The plan is to use \gls{rtk-gps} for positioning estimation. The second part is the path and control path. Currently there has only been done simulation of the guidance system. It shows promising results, but is yet to be integrated with \gls{rtk-gps}. For more information on the subject please read the MSc thesis by \citep{Froelich}. Figure \ref{figure:SystemOverview} gives a overview on how the system may look like. Ideas on how the intergration can be acheived will be given in the future work section. 
+
+
+
+\section{Scope of work}
+The scope of this work is to test the performance of ublox-LEA M8T \gls{gnss} receiver in a real time differential \gls{dgps} configuration. The \gls{rtk-gps} solution will be calculated with the open source program rtklib, which will communicate with a task in DUNE. The solution from rtklib will be compared against the solution from Piksi, and a post processed solution from rtklib. The result from the experiment will be used in the discussion on how to perform a autonomous landing.
+
+
 \section{Layout of thesis}
 This section is currently not up to date
 
