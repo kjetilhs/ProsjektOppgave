@@ -4,16 +4,38 @@
 This chapter contains a brief description of the system that has been used.
 \section{Hardware}
 This section outline the physical components in the x8 and the base station.
-\subsection{The Skywalker X8 fixed wind UAV}
+\subsection{UAV}\label{ss:SkywalkerX8}
+The Skywalker X8, see \ref{figure:skywalkerX8}, is a fixed wing \gls{uav} that is moulded out of \gls{epo}, which makes it a cheap and robust platform for prototype testing. The large space within the fuselage makes it ideal for experimental payload. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/Wing-X8_white-bgd2.png}
-		\caption{The X8 \citep{skywalkerx8}}
+		\caption{X8 Skywalker from Skywalker Technologies, Picture from \url{www.campilot.tv/blog/win-x8}}
 		\label{figure:skywalkerX8}
 \end{figure}
-\subsection{Beaglebone}
-The system runs on a Beaglebone. A beaglebone were prepared for mounting in a x8
-\subsection{The GPS receiver}
+The X8 has a wingspan of $2120mm$ which allow for \gls{auw} of $3500g$. More specification about the X8 can be found at \citep{hobbyking}. The components that is used in the X8 at the UAVLAB is given in table \ref{tb:X8Components}.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{l l}
+TX & Spektrum DX7s \\
+RX & Spektrum Remote Receiver SPM9645 \\
+Servo & Hitec HS-5085MG \\
+Motor & Hacker A40-12S V2 14-Pole \\
+ESC & Master Spin 66 Pro \\
+Propeller & Aeronaut 13x8 folding propeller \\
+Battery & 1 Zippy Compact 4S 5000 mAh and 1 Haiyin 800 mAh \\
+Autopilot & 3D Robotics Pixhawk w/3DR uBlox \gls{gps} with Compass\\& kit and airspeed sensor \\
+Telemetry link & 3D Robotics radio (433MHz)
+\end{tabular}
+\end{center}
+\caption{Components in the X8 at the UAVLAB}
+\label{tb:X8Components}
+\end{table}
+\subsection{Embedded Computer}
+The embedded computer in the \gls{uav} is a BeagleBone Black
+List why this embedded computer is chosen. 
+
+Demands: Must run LSTS in real time, calculate rtkgps wight and size number of output pins.
+\subsection{GNSS receiver}
 Write about the Ublox LEA M8T gnss receiver. Also include that it support sending GPS and GLONASS data at the same time. Need to be configured. A receiver were prepare and mounted in the x8.
 
 \section{Software}
@@ -60,10 +82,10 @@ The solution body is given is table
      2 Receiver Position & The rover receive antenna position \\ \hline
      3 Quality flag (Q) & The flag which indicates the solution quality.\\& 1:Fixed\\& 2:Float\\& 5:Single \\ \hline
      4 Number of valid satellites (ns) & The number of valid satellites for solution estimation. \\ \hline
-     5 Standard deviation & The estimated standard deviation of the\\& solution assuming a priori error model and error parameters\\& by the positioning options \\ \hline
+     5 Standard deviation & The estimated standard deviation of the\\& solution assuming a priori error model and error\\& parameters by the positioning options \\ \hline
      6 Age of differential & The time difference between the observation data epochs\\& of the rover receiver and base station in second. \\ \hline
      7 Ratio factor & The ratio factor of "ratio-test" for standard integer\\& ambiguity validation strategy \\ \hline
-     8 Receiver velocity & The velocity of the rover. Given only when output is in enu format \\ \hline
+     8 Receiver velocity & The velocity of the rover. Given only when output is\\& in enu format \\ \hline
     \end{tabular}
 \end{center}
 \caption{Table 1. }

@@ -7,8 +7,8 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The X8 \citep {skywalkerx8}}}{15}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The communication structure of rtklib}}{17}{figure.4.2}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces X8 Skywalker from Skywalker Technologies, Picture from \url {www.campilot.tv/blog/win-x8}}}{15}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The communication structure of rtklib}}{18}{figure.4.2}
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces A xy plot of the piksi,rtklib real time solution and the rtklib post processed solution}}{26}{figure.6.1}
