@@ -35,8 +35,17 @@ Write here how Dune receive data from rtklib and what task is used. Include also
 Write here how neptus is configured for the test, and how it is used
 How Glued is configured to run rtklib and Dune
 \section{Hardware implementation}
+The embedded computer uses GLUED as its operating system, and on it runs both Dune and rtklib. The Piksi and Ublox is connected to the BeagleBone over uart cables.
 
+TRENGER SYSTEM FIGUR SOM VISER HVORDAN UAV ER FORBUNDET MED BASE
+The two \gls{rtk-gps} system is connected to a antenna splitter , figure \ref{figure:AntennaSplitter}, such that both system receive the same \gls{gnss} signals.
 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/066.jpg}
+		\caption{Antenna splitter}
+		\label{figure:AntennaSplitter}
+\end{figure}
 
 This section contain how all the physical components are connected at both the rover and the base station. Include also how everything was prepared.
 
