@@ -8,20 +8,28 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces X8 Skywalker from Skywalker Technologies, Picture from \url {www.campilot.tv/blog/win-x8}}}{15}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The communication structure of rtklib}}{18}{figure.4.2}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces BeagleBone Black element 14, Picture from \url {http://www.element14.com}}}{16}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ublox LEA M8T, Picture from \url {http://www.csgshop.com}}}{17}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Piksi, Picture from \url {www.swiftnav.com}}}{19}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The communication structure of rtklib}}{20}{figure.4.5}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A xy plot of the piksi,rtklib real time solution and the rtklib post processed solution}}{26}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The communication structure of rtklib}}{26}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces The difference between rtklib real time and post processed solution}}{27}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces The communication structure of rtklib}}{27}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Standard deviation of the difference between rtklib real time and post processed solution}}{28}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Standard deviation of the difference between piksi real time and rtklib post processed solution}}{28}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces The mean difference between the rtklib real time and post processed solution}}{29}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces The mean difference between the piksi real time and the rtklib post processed solution}}{29}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{30}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces The time between time samples from rtklib}}{31}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces The time between time samples from rtklib}}{31}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Visable statellite for the piksi and rtklib}}{32}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Visable statellite for the piksi and rtklib}}{33}{figure.6.13}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A xy plot of the piksi,rtklib real time solution and the rtklib post processed solution}}{28}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The communication structure of rtklib}}{28}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces The difference between rtklib real time and post processed solution}}{29}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces The communication structure of rtklib}}{29}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Standard deviation of the difference between rtklib real time and post processed solution}}{30}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Standard deviation of the difference between piksi real time and rtklib post processed solution}}{30}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The mean difference between the rtklib real time and post processed solution}}{31}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces The mean difference between the piksi real time and the rtklib post processed solution}}{31}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{32}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces The time between time samples from rtklib}}{33}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces The time between time samples from rtklib}}{33}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Visable statellite for the piksi and rtklib}}{34}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Visable statellite for the piksi and rtklib}}{35}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{36}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{36}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{37}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{37}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{38}{figure.6.18}
 \addvspace {10pt}

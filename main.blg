@@ -11,8 +11,10 @@ A level-1 auxiliary file: Discusion.aux
 The style file: plainnat.bst
 Database file #1: main.bib
 Warning--to sort, need author or key in hobbyking
+Warning--to sort, need author, organization, or key in Piksiv231
 Warning--to sort, need author, organization, or key in Rtklib242
+Warning--empty year in Piksiv231
 Warning--empty year in Rtklib242
 Warning--empty year in hobbyking
 Warning--empty year in scanealge
-(There were 5 warnings)
+(There were 7 warnings)

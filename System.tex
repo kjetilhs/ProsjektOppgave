@@ -35,9 +35,20 @@ The embedded computer in the \gls{uav} is a BeagleBone Black
 List why this embedded computer is chosen. 
 
 Demands: Must run LSTS in real time, calculate rtkgps wight and size number of output pins.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/BeagleBoneBlackE14.png}
+		\caption{BeagleBone Black element 14, Picture from \url{http://www.element14.com}}
+		\label{figure:BeagleBone}
+\end{figure}
 \subsection{GNSS receiver}
 Write about the Ublox LEA M8T gnss receiver. Also include that it support sending GPS and GLONASS data at the same time. Need to be configured. A receiver were prepare and mounted in the x8.
-
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/ubloxLeaM8T.jpg}
+		\caption{Ublox LEA M8T, Picture from \url{http://www.csgshop.com}}
+		\label{figure:Ublox}
+\end{figure}
 \section{Software}
 This section contain the different software that is used in the x8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to connect the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.\subsection{GLUED}
 Glued is a minimal Linux distribution developed by LSTS, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
@@ -55,6 +66,14 @@ Other feature: Not assuming a specific software architecture, can generate nativ
 \subsection{Netpus}
 
 \subsection{Piksi}\label{ss:Piksi}
+Piksi, see figure \ref{figure:Piksi}, is a low cost, high performance \gls{gps} receiver with \gls{rtk-gps} functionality with capabllity for centimeter level relative positioning accuracy developed by Swift Navigation. Piksi is ideal for autonomous vehicles because of its small form factor, fast position solution update rate and low power consumption.
+More detailed information about Piksi can be found in \citep{Piksiv231}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/piksi_top.jpg}
+		\caption{Piksi, Picture from \url{www.swiftnav.com}}
+		\label{figure:Piksi}
+\end{figure}
 \subsection{RTKLIB}\label{ss:Rtklib}
 Rtklib is a open source program package for standard and precise positioning with GNSS developed by T. Takasu. Rtklib can use raw GNSS data to estimate the position of the rover. Rtklib can be configured to give a position solution in real time in differential mode. Figure \ref{figure:RTKLIB_STRUCTURE} shows how rtklib can be used in a RTKGNSS mode. The two main moduels here is str2str and rtkrcv. Both will be explalined more closely in the following sections. More information about  rtklib can be found in \citep{Rtklib242}.
 

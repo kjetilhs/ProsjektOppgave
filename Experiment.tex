@@ -106,7 +106,38 @@ The position estimate of the rover is a relative position in reference to the ba
 		\caption{Visable statellite for the piksi and rtklib}
 		\label{figure:enhancedxywalk1}
 \end{figure}
-Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $0.5m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
+Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $1m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
 \subsection{Fly test}
-A test was performed at Udduvoll. Unfortunaly the test was only sucessfully with rtklib and not piksi. Because of bad weather we only managed one flight. Result shows the performance of rtklib in real time and the post processed solution from rtklib.
+A flight test with the \gls{uav} was performed at Udduvoll. Because of bad weather the were only performed one flight, and before the flight started only the Rtklib had a fixed solution. That is why in this part only performance from the Rtklib is considered, as a fixed solution is a must for a automatic landing system. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/velocityFlight.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:VelocityWalk1}
+\end{figure}
+During the flight test the integer ambiguity solution were more float then fixed as seen in figure \ref{figure:DownFlight}, which affected the measurement. The main reason for this behavior is because of the number of valid satellite the receiver can track experience large variation, as seen i figure \ref{figure:numSatFlight}.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/downFlight.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:DownFlight}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/numSatFlight.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:numSatFlight}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/errorNorthEastFlight.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:numSatFlight}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/errorDownFlight.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:numSatFlight}
+\end{figure}
 \cleardoublepage
