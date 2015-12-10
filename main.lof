@@ -12,15 +12,15 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces A xy plot of the piksi,rtklib real time solution and the rtklib post processed solution}}{26}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{26}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Visable statellite for the piksi and rtklib}}{27}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Standard deviation of the difference between rtklib real time and post processed solution}}{27}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Standard deviation of the difference between piksi real time and rtklib post processed solution}}{28}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces The time between time samples from rtklib}}{28}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces The time between time samples from rtklib}}{29}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces The mean difference between the rtklib real time and post processed solution}}{29}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces The mean difference between the piksi real time and the rtklib post processed solution}}{30}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces The difference between rtklib real time and post processed solution}}{30}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces The communication structure of rtklib}}{31}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces The communication structure of rtklib}}{31}{figure.6.12}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The difference between rtklib real time and post processed solution}}{27}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces The communication structure of rtklib}}{27}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{28}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The time between time samples from rtklib}}{29}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces The time between time samples from rtklib}}{29}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Visable statellite for the piksi and rtklib}}{30}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Standard deviation of the difference between rtklib real time and post processed solution}}{30}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Standard deviation of the difference between piksi real time and rtklib post processed solution}}{31}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces The mean difference between the rtklib real time and post processed solution}}{31}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces The mean difference between the piksi real time and the rtklib post processed solution}}{32}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces The communication structure of rtklib}}{32}{figure.6.12}
 \addvspace {10pt}

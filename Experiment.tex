@@ -6,29 +6,61 @@ This chapter contain the result from the test that were performed. The goal with
 Can mension the gnss radar used to find good gps windows.
 \section{Physical testing}
 The physical experiment were done in two parts. During the first part the x8 was carried around on a open field. The goal with this experiment was to log data from rtklib and piksi, and then compare how they deviated from each other. The second part of the physical experiment was flying (SKRIV NÅR FLYVING ER GJENNNOMFØRT)
-\subsection{Fly test}
-A test was performed at Udduvoll. Unfortunaly the test was only sucessfully with rtklib and not piksi. Because of bad weather we only managed one flight. Result shows the performance of rtklib in real time and the post processed solution from rtklib.
-\subsection{GPS test}
-The experiment started when both rtklib and piksi would signal that they had a fixed integer solution.
-Figures from a walk with the x8:
 
+\subsection{GPS test}
+In this part two sessions of navigation data will be presented. Both sessions were performed on the same day, which was cloudless and at a time with low \gls{dop}. The raw data from the Ublox receiver was post processed with rtklib, and is should be more accurate than it's real time counter part. Therefore a error was defined as:
+\begin{equation}
+e(t) = p_r(t) - p_p(t)
+\end{equation}
+where $p_r(t)$ and $p_p(t)$ is defined as the position solution from the real time system and the position solution from the post processed solution respectfully. It should be noted that in order to compare the different time-series the position data was synchronized with each other. From the error the cumulative mean error and cumulative standard deviation for the error was calculated using the matlab function "mean" and "std".
+
+Figure \ref{figure:xywalk1} shows a North East plot of how the walk was. The plot contain only the fixed solution from both the piksi and rtklib. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/xy.eps}
 		\caption{A xy plot of the piksi,rtklib real time solution and the rtklib post processed solution}
-		\label{figure:RTKLIB_STRUCTURE}
+		\label{figure:xywalk1}
 \end{figure}
+As seen in figure \ref{figure:xywalk1} the difference between the different solution appear to be small, which is comfirmed in the error plot shown in figure \ref{figure:errorRTKwalk1} and \ref{figure:errorPiksiwalk1}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/ertkpost.eps}
+		\caption{The difference between rtklib real time and post processed solution}
+		\label{figure:errorRTKwalk1}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/epiksiport.eps}
+		\caption{The communication structure of rtklib}
+		\label{figure:errorPiksiwalk1}
+\end{figure}
+The velocity data is shown in figure \ref{figure:VelocityWalk1}. It appears that rtklib has a delayed solution, that might be because of problem with the \gls{tow} that was identified in rtklib.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/velocity.eps}
 		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:RTKLIB_STRUCTURE}
+		\label{figure:VelocityWalk1}
+\end{figure}
+The problem with the \gls{tow} is shown more clearly in figure \ref{figure:timeRTKwalk1}. The figure display the time difference between each output. The first part is an altered version of the \gls{tow} from rtklib, while the other is the timestamp of the same output given by Dune. The output from rtklib gave only seconds, and not a millisecond value. To correct for this error the \gls{tow} value from rtklib altered to fill the gap between each second. The alteration was done by counting the number of elements with the same \gls{tow} value, and then equally spread them from between the \gls{tow} value to the next \gls{tow} value.
+
+The timestamp given by Dune indicate the delay a output message from rtklib might experience before it's available for consumption.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/rtktime.eps}
+		\caption{The time between time samples from rtklib}
+		\label{figure:timeRTKwalk1}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/piksitime.eps}
+		\caption{The time between time samples from rtklib}
+		\label{figure:timePiksiWalk1}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/sv.eps}
 		\caption{Visable statellite for the piksi and rtklib}
-		\label{figure:RTKLIB_STRUCTURE}
+		\label{figure:NumSatWalk1}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -42,18 +74,7 @@ Figures from a walk with the x8:
 		\caption{Standard deviation of the difference between piksi real time and rtklib post processed solution}
 		\label{figure:RTKLIB_STRUCTURE}
 \end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/rtktime.eps}
-		\caption{The time between time samples from rtklib}
-		\label{figure:RTKLIB_STRUCTURE}
-\end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/piksitime.eps}
-		\caption{The time between time samples from rtklib}
-		\label{figure:RTKLIB_STRUCTURE}
-\end{figure}
+
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/meanrtkpost.eps}
@@ -68,20 +89,10 @@ Figures from a walk with the x8:
 \end{figure}
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/ertkpost.eps}
-		\caption{The difference between rtklib real time and post processed solution}
-		\label{figure:RTKLIB_STRUCTURE}
-\end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/epiksiport.eps}
-		\caption{The communication structure of rtklib}
-		\label{figure:RTKLIB_STRUCTURE}
-\end{figure}
-\begin{figure}[H]
-	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/down.eps}
 		\caption{The communication structure of rtklib}
 		\label{figure:RTKLIB_STRUCTURE}
 \end{figure}
+\subsection{Fly test}
+A test was performed at Udduvoll. Unfortunaly the test was only sucessfully with rtklib and not piksi. Because of bad weather we only managed one flight. Result shows the performance of rtklib in real time and the post processed solution from rtklib.
 \cleardoublepage
