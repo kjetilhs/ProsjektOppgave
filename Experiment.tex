@@ -99,6 +99,14 @@ Figure
 		\caption{Visable statellite for the piksi and rtklib}
 		\label{figure:NumSatWalk1}
 \end{figure}
+The position estimate of the rover is a relative position in reference to the base station. Due to the fact that the position of the base station is calculated with a single receiver with one frequency, there will be introduced a bias in the position estimate. Figure \ref{figure:enhancedxywalk1} shows the North, East position of the the first walk. The true position is exactly the same, but in the figure it appear that the distance is approximately $5cm$. The distance from the base station to the estimated start and stop position was calculated to be $3.29m$ and $3.26$ respectfully. The measured distance was approximately $3.3m$. That gives an initial error off $0.04m$. This gives an accuracy level at centimeter level at stationary condition. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/enhancedxywalk1.eps}
+		\caption{Visable statellite for the piksi and rtklib}
+		\label{figure:enhancedxywalk1}
+\end{figure}
+Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $0.5m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
 \subsection{Fly test}
 A test was performed at Udduvoll. Unfortunaly the test was only sucessfully with rtklib and not piksi. Because of bad weather we only managed one flight. Result shows the performance of rtklib in real time and the post processed solution from rtklib.
 \cleardoublepage
