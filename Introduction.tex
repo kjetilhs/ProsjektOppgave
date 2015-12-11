@@ -60,8 +60,21 @@ The current state of the system is that it consist of two parts that has not yet
 
 
 \section{Scope of work}
-The scope of this work is to test the performance of ublox-LEA M8T \gls{gnss} receiver in a real time differential \gls{dgps} configuration. The \gls{rtk-gps} solution will be calculated with the open source program rtklib, which will communicate with a task in DUNE. The solution from rtklib will be compared against the solution from Piksi, and a post processed solution from rtklib. The result from the experiment will be used in the discussion on how to perform a autonomous landing.
+The scope of this work is to test the performance of ublox-LEA M8T \gls{gnss} receiver in a real time differential \gls{dgps} configuration. The \gls{rtk-gps} solution will be calculated with the open source program rtklib, which will communicate with a task in DUNE. The solution from rtklib will be compared against the solution from Piksi, and a post processed solution from rtklib. The result from the experiment will be used in the discussion on how to perform a automatic landing.
 
+For validation of the position accuracy needed the evasion criteria given in \ref{Tb:Evasion} \citep{Froelich} will be used.
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{ | l | l |}
+    \hline
+    \textbf{Criteria} & \textbf{Value} \\ \hline
+     Cross-track error & $\pm1$ meter  \\ \hline
+     Altitude error & $\pm1$ meter \\ \hline
+    \end{tabular}
+\end{center}
+\caption{Evasion criteria }
+\label{Tb:Evasion}
+\end{table}
 
 \section{Layout of thesis}
 This section is currently not up to date

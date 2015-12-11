@@ -1,6 +1,6 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 11.12.2015  11:24:12
-;; Indexstyle: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\UBT9wD7Vfo", Rawindex: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\HlbtIbl0SP", Output: "main.acr"
+;; at 11.12.2015  18:23:54
+;; Indexstyle: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\kSylhWqOKD", Rawindex: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\AwBdhSpkjO", Output: "main.acr"
 
 
 Building indexentry-tree:
@@ -30,8 +30,13 @@ sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 
 Forming letter-groups:
+Letter-group: "—†—œ" -> "E"
+Letter-group: "¨»†" -> "I"
 Letter-group: "¼Ú¼à" -> "N"
 Letter-group: "ÈÐ" -> "G"
 Letter-group: "ËÚ®ÈÐ" -> "R"
@@ -40,7 +45,6 @@ Letter-group: "¼—" -> "N"
 Letter-group: "—¼à" -> "E"
 Letter-group: "à€å" -> "U"
 Letter-group: "¼ÐÐ" -> "G"
-Letter-group: "—†—œ" -> "E"
 Letter-group: "—†¨" -> "E"
 Letter-group: "æÐ84" -> "W"
 Letter-group: "´Ã¼€ÐÐ" -> "G"
@@ -56,6 +60,8 @@ Letter-group: "—ÈÃ" -> "E"
 Letter-group: "€àæ" -> "A"
 Letter-group: "ÃÈ" -> "D"
 Letter-group: "ÚÃæ" -> "T"
+Letter-group: "´ÐÚÐ" -> "L"
+Letter-group: "Ð¤œ" -> "S"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "€àæ" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -65,13 +71,15 @@ Letter-group: "—†—œ" -> "E"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "´Ã¼€ÐÐ" -> "G"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "¨»†" -> "I"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "´1" -> "L"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "¼—" -> "N"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "ËÚ®ÈÐ" -> "R"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "Ð¨´" -> "S"
+Letter-group: "Ð¤œ" -> "S"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "ÚÃæ" -> "T"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
