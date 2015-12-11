@@ -63,20 +63,20 @@ More detailed information about Piksi can be found in \citep{Piksiv231}
 \end{figure}
 \section{Software}
 This section contain the different software that is used in the x8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to connect the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.\subsection{GLUED}
-Glued is a minimal Linux distribution developed by LSTS, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
+Glued is a minimal Linux distribution developed by \gls{lsts}, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
 \subsection{Dune}
-Dune is a runtime environment for unmanned systems on-board software created by LSTS (Underwater Systems and Technology Laboratory) in Porto, Portugal. The environment type is called a middleware, which is seeing increase usage in unmanned systems. Can refer to ROS or MOOS middleware.
+Dune is a runtime environment for unmanned systems on-board software created by \gls{lsts} in Porto, Portugal. The environment type is called a middleware, which is seeing increase usage in unmanned systems. Can refer to ROS or MOOS middleware.
 
-Dune works by setting up individual task that can dispatch and subscribe to different IMC messages. The IMC messages will be explained in \ref{ss:IMC}
+Dune works by setting up individual task that can dispatch and subscribe to different IMC messages. The \gls{imc} messages will be explained in \ref{ss:IMC}
 A type of middleware. write how to link rtklib with dune
 Refer to the dune wiki page
 \subsection{IMC}\label{ss:IMC}
-The IMC (write gls here when fixed) protocol that is designed and implemented by LSTS (gls) that is build to interconnect systems of vehicles,sensors and human operators. The protocol is a messages-oriented protocol that enable exchange of real-time information about the environment and updated objectives, such that the participant in the communication can pursue a common goal cooperatively.
-IMC has a standard way of dispatching and consuming messages, which abstracts hardware
+The \gls{imc} protocol that is designed and implemented by \gls{lsts} that is build to interconnect systems of vehicles,sensors and human operators. The protocol is a messages-oriented protocol that enable exchange of real-time information about the environment and updated objectives, such that the participant in the communication can pursue a common goal cooperatively.
+\gls{imc} has a standard way of dispatching and consuming messages, which abstracts hardware configuration from the software.
 
 Other feature: Not assuming a specific software architecture, can generate native support for different programming languages and/or computer architectures. Used in network nodes, inter-process and inter thread communication
-\subsection{Netpus}
-
+\subsection{Neptus}
+Neptus is an open source command and control software developed by \gls{lsts} for a single or fleet of unmanned vehicles with different types of sensors. The operator can observe real time data from a vehicle, review privios missions and plan future mission. In this work Neptus has been used to extract data logged by Dune during a defined mission, and to monitor the integer ambiguity solution from rtklib and piksi.
 \subsection{RTKLIB}\label{ss:Rtklib}
 Rtklib is a open source program package for standard and precise positioning with GNSS developed by T. Takasu. Rtklib can use raw GNSS data to estimate the position of the rover. Rtklib can be configured to give a position solution in real time in differential mode. Figure \ref{figure:RTKLIB_STRUCTURE} shows how rtklib can be used in a RTKGNSS mode. The two main moduels here is str2str and rtkrcv. Both will be explalined more closely in the following sections. More information about  rtklib can be found in \citep{Rtklib242}.
 
@@ -88,10 +88,9 @@ Rtklib is a open source program package for standard and precise positioning wit
 \end{figure}
 \subsubsection{rtkrcv}
 Rtkrcv is the app program that calculate the position of the rover.
-Rtkrcv can be configured to have two output streams. The structure of the output stream is given the rtklib manual, however there has been done some alteration in the structure of the output. It's desired in a autonumos landing system that have that velocity solution. This is was not provided in the newest version of rtklib, and therefore the source code was altered to send out the velocity data. A quick note here is that it is only available in the output solution is in a enu format.
+Rtkrcv can be configured to have two output streams. The structure of the output stream is given the rtklib manual, however there has been done some alteration in the structure of the output. It's desired in a automatic landing system that have that velocity solution. This is was not provided in the newest version of rtklib, and therefore the source code was altered to send out the velocity data. A quick note here is that it is only available in the output solution is in a enu format. The format of the output is given in table \ref{Tb:RtklibOutput}.
 
 When set configured as a differential GPS rtkrcv uses the LAMBDA method to resolve the integer ambiguity. The solution is considered fixed if the ration between the best estimate and the second best estimate is above a certain threshold.
-The solution body is given is table 
 \begin{table}[!h]
 \begin{center}
     \begin{tabular}{ | l | l |}
@@ -110,8 +109,8 @@ The solution body is given is table
      8 Receiver velocity & The velocity of the rover. Given only when output is\\& in enu format \\ \hline
     \end{tabular}
 \end{center}
-\caption{Table 1. }
-\label{Tab1}
+\caption{Rtklib output solution format }
+\label{Tb:RtklibOutput}
 \end{table}
 The position solution is calculated with a Extended Kalman Filter, that can have different structure depending on how rtkrcv is configured
 \subsubsection{str2str}

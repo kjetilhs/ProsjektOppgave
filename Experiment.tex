@@ -6,7 +6,7 @@ This chapter contain the result from the test that were performed. The goal with
 All position and velocity data is given in the \gls{ned} frame. 
 Can mension the gnss radar used to find good gps windows.
 \section{Physical testing}
-The physical experiment were done in two parts. During the first part the x8 was carried around on a open field. The goal with this experiment was to log data from rtklib and piksi, and then compare how they deviated from each other. The second part of the physical experiment was flying (SKRIV NÅR FLYVING ER GJENNNOMFØRT)
+The physical experiment were done in two parts. During the first part the x8 was carried around on a open field. The goal with this experiment was to log data from rtklib and piksi, and then compare how they deviated from each other. The second part of the physical experiment was flying 
 
 \subsection{GPS test}
 In this part two sessions of navigation data will be presented. Both sessions were performed on the same day, which was cloudless and at a time with low \gls{dop}. The raw data from the Ublox receiver was post processed with rtklib, and is should be more accurate than it's real time counter part. Therefore a error was defined as:
@@ -43,30 +43,18 @@ As seen in figure \ref{figure:xywalk1} the difference between the different solu
 		\caption{The communication structure of rtklib}
 		\label{figure:errorPiksiwalk1}
 \end{figure}
+The standard deviation plots can be used to explain how the error
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/stdrtkpost.eps}
 		\caption{Standard deviation of the difference between rtklib real time and post processed solution}
-		\label{figure:RTKLIB_STRUCTURE}
+		\label{figure:stdRTK}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/stdpiksipost.eps}
 		\caption{Standard deviation of the difference between piksi real time and rtklib post processed solution}
-		\label{figure:RTKLIB_STRUCTURE}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/meanrtkpost.eps}
-		\caption{The mean difference between the rtklib real time and post processed solution}
-		\label{figure:RTKLIB_STRUCTURE}
-\end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/meanpiksipost.eps}
-		\caption{The mean difference between the piksi real time and the rtklib post processed solution}
-		\label{figure:RTKLIB_STRUCTURE}
+		\label{figure:stdPiksi}
 \end{figure}
 The velocity data is shown in figure \ref{figure:VelocityWalk1}. It appears that rtklib has a delayed solution, that might be because of problem with the \gls{tow} that was identified in rtklib.
 \begin{figure}[H]

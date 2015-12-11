@@ -2,19 +2,23 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 A level-1 auxiliary file: abstract_english.aux
 A level-1 auxiliary file: preface.aux
 A level-1 auxiliary file: Introduction.aux
-A level-1 auxiliary file: Oritentation.aux
 A level-1 auxiliary file: RTKGNSS.aux
 A level-1 auxiliary file: System.aux
 A level-1 auxiliary file: Implementation.aux
 A level-1 auxiliary file: Experiment.aux
 A level-1 auxiliary file: Discusion.aux
 The style file: plainnat.bst
+A level-1 auxiliary file: RtklibConfiguration.aux
 Database file #1: main.bib
 Warning--to sort, need author or key in hobbyking
+Warning--to sort, need author, organization, or key in UbloxDataSheet
+Warning--to sort, need author, organization, or key in UbloxReceiverDescription
 Warning--to sort, need author, organization, or key in Piksiv231
 Warning--to sort, need author, organization, or key in Rtklib242
 Warning--empty year in Piksiv231
 Warning--empty year in Rtklib242
+Warning--empty year in UbloxDataSheet
+Warning--empty year in UbloxReceiverDescription
 Warning--empty year in hobbyking
 Warning--empty year in scanealge
-(There were 7 warnings)
+(There were 11 warnings)

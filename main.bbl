@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,14 @@
 
 \bibitem[Rtk()]{Rtklib242}
 \emph{RTKLIB ver. 2.4.2 Manual}.
+
+\bibitem[Ubl({\natexlab{a}})]{UbloxDataSheet}
+\emph{NEO/LEA-M8T u-blox M8 concurrent GNSS timing modules, Data Sheet},
+  {\natexlab{a}}.
+
+\bibitem[Ubl({\natexlab{b}})]{UbloxReceiverDescription}
+\emph{U-blox M8 Receiver Description Including Protocol Specification},
+  {\natexlab{b}}.
 
 \bibitem[hob()]{hobbyking}
 Skywalker x8.

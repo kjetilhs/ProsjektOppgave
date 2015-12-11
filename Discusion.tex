@@ -1,6 +1,35 @@
 %===================================== CHAP 5 =================================
 
 \chapter{Conclusion and Discussion}
+This chapter will discus the result from the field tests, which will be used to conclude the performance of the individual \gls{rtk-gps} system. The last part of this chapter will include suggestion for further work regarding the design of a automatic landing system.
+\section{RTK-GPS lab testing}
+Both system was able to get a fixed solution, although the rtklib was faster. Both system gave similar result during the first walk \gls{uav}, however during the second the Piksi lost its fixed solution. Rtklib had also problem during this time, but unlike the Piksi managed to find a fixed solution again. The ability for the navigation system to quickly recover its integer solution is critical in a automatic landing system.
+\section{RTK-GPS in-flight test}
+The rtklib was the only system able to get a fixed solution. Discus the performance of rtklib, whit the ublox receiver. 
+
+What can be concluded:
+
+Rtklib is able to faster find a fixed solution. Can be because of better receiver, better integer ambiguity resolution strategy, poorer validation of ambiguity, more efficient algorithm. Based on how many satellites the ublox receiver manage to track I will say that the receiver had a large part in shortening the time.
+
+When fixed there is not a large deviation between the two solutions. One difference that might cause problem in a guidance system is that it appear that the solution from rtklib is delayed. The \gls{tow} that's given with the solution do not include the millisecond value. 
+
+The Piksi is faster to calculate the position, but slower to resolve the integer ambiguity. 
+
+The conclusion of the different system. Piksi has better and more efficient solution software, however rtklib can use a superior \gls{gnss} receiver.
+
+Both system has a good estimation of the North and East velocity, however it appear that rtklib has problem estimating the vertical velocity.
+
+
 \section{Further work}
 Setup the reciver to use both gps and glonass raw data.
+
+Integrate \gls{rtk-gps} into the existing control and guidance system.
+
+A \gls{rtk-gps} system can use both the Piksi and Rtklib such that the automatic landing system has redundancy in position, and velocity estimation. A validation task must then be design to choose which of the system should send the rtkfix message to the rest of the system.
+
+Continue Spockelis work on gps/ins integration, where the rtk-gps system is used.
+
+A position estimation system that can accurately predict were the \gls{uav} will be a few seconds ahead of time, such that the \gls{uav} can better know were it is instead of were if was.
+
+Setting constraints on the path such that the antenna has a clear view of the satellites at all time during the landing phase. 
 \cleardoublepage
