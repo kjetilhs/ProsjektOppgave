@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,6 +31,11 @@ Geoffrey Blewitt.
   applied to geodetic baselines uo to 2000 km.
 \newblock \emph{Journal of Geophysical Research}, 94\penalty0 (B8):\penalty0
   10,187--10,203, 1989.
+
+\bibitem[Fossen(2011)]{fossen2011handbook}
+Thor~I Fossen.
+\newblock \emph{Handbook of marine craft hydrodynamics and motion control}.
+\newblock John Wiley \& Sons, 2011.
 
 \bibitem[Frølich(2015)]{Froelich}
 Marcus Frølich.
