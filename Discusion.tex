@@ -4,7 +4,26 @@
 This chapter will discus the result from the field tests, which will be used to conclude the performance of the individual \gls{rtk-gps} system. The last part of this chapter will include suggestion for further work regarding the design of a automatic landing system.
 \section{RTK-GPS lab testing}
 It was seen in the lab testing that both the Piksi and \gls{rtklib} was able to get a fixed solution, although the \gls{rtklib} was faster. Both system gave similar result during the first walk \gls{uav}, however during the second the Piksi lost its fixed solution. Rtklib had also problem during this time, but unlike the Piksi managed to find a fixed solution again. The ability for the navigation system to quickly recover its integer solution is critical in a automatic landing system.
+
+The time delay the output from \gls{rtklib} experience will further reduce the accuracy for the position estimate during flight. 
+
+The estimated position is accurate when the \gls{uav} isn't moving down to centimeter level accuracy. Due to the high precision of the position estimate the accuracy during a dynamical behavior will decrease to decimeter level accuracy, however that should be good enough in a navigation system for a automatic landing system.
+
+The velocity estimate from Piksi and \gls{rtklib} have similar estimate for the North and East component, but differ in the Down component. The velocity output from \gls{rtklib} appear to affect by to much noise to be at any use for a control system. It could be used if sent through a low-pass filter.
+
+The tracking performance from the two receiver type indicate that the Ublox is superior to the Piksi. It always manage to track more satellites, and did not easily loose track of them.
 \section{RTK-GPS in-flight test}
+Important stuff from the flight test.
+
+Before the take-off the piksi had yet solved its integer ambiguity, while \gls{rtklib} had. That might be because of it kept track of fever satellites. However the navigation system must be able to resolve its integer ambiguity quickly to increase the properbillity of performing a safe and successfully automatic landing.
+
+The ublox lost track of satellite, likely because of large roll/pitch
+During the flight the Ublox lost track of more satellite then during the \gls{gps} lab tests. The antenna follows the orientation of the \gls{uav} and therefore some satellite will be blocked by the fuselage. This must be consider when designing a guidance system for automatic landing. To ensure that the antenna has a clear view of the sky, the \gls{uav} should try to have a maximum roll when the automatic landing system is engaged.
+
+It might be that the float position estimate is good enough to perform a automatic landing. Further test are required.
+
+Rtklib managed to keep float/fixed solution during the landing.
+
 The rtklib was the only system able to get a fixed solution. Discus the performance of rtklib, whit the ublox receiver. 
 
 What can be concluded:

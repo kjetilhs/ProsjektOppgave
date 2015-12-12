@@ -1,5 +1,8 @@
 \chapter{Rtklib Configuration}
 
-PLASSERS I APPENDIX
-\subsubsection{str2str configuration}
-The system has to instances of rtklib. The base station uses the str2str and the x8 uses rtkrcv. str2str is configured to receive raw data from the ublox at a frequency of 10 Hz. The connection between str2str and the GNSS receiver is a uart cable that is configured with a baudrate at 115200. The program starts a tcp serve were rtkrcv becommes a client.
+\section{str2str}
+Need start commando and rate configuration of the ublox
+
+\section{rtkrcv}
+Configuration given bellow. Summarize the important parts of the configuration.
+\verbatiminput{figs/config/rtkrcv.conf}
