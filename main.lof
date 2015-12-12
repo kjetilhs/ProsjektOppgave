@@ -3,11 +3,11 @@
 \select@language {english}
 \select@language {english}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces The structure of the autonomos landing system}}{3}{figure.1.1}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The \gls {ecef} frame. Picture from \citep {fossen2011handbook}}}{8}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Concept figure of DGPS}}{12}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The \gls {ecef} frame. Picture from \url {http://gpsworld.com/wp-content/uploads/2014/01/I-Fig1.jpg}}}{13}{figure.2.3}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The structure of the autonomos landing system}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The \gls {ecef} frame. Picture from \citep {fossen2011handbook}}}{8}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Concept figure of DGPS}}{11}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The \gls {ecef} frame. Picture from \url {http://gpsworld.com/wp-content/uploads/2014/01/I-Fig1.jpg}}}{13}{figure.2.4}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces X8 Skywalker from Skywalker Technologies, Picture from \url {www.campilot.tv/blog/win-x8}}}{15}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces BeagleBone Black element 14, Picture from \url {http://www.element14.com}}}{16}{figure.3.2}
@@ -38,8 +38,5 @@
 \contentsline {figure}{\numberline {5.19}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{39}{figure.5.19}
 \contentsline {figure}{\numberline {5.20}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{39}{figure.5.20}
 \contentsline {figure}{\numberline {5.21}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{40}{figure.5.21}
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{40}{figure.5.22}
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{41}{figure.5.23}
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Velocity data from the piksi and rtklib real time solution}}{41}{figure.5.24}
 \addvspace {10pt}
 \addvspace {10pt}

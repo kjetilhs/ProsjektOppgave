@@ -2,7 +2,7 @@
 
 % this package is just to generate text for demo-purposes
 \usepackage{blindtext}
-\title{Autonomous landing UAV in a net on ship} % The title of your assignement; NB use \newlinetitle to start a newline
+\title{Position control for automatic landing of UAV in a net on ship} % The title of your assignement; NB use \newlinetitle to start a newline
 \author{Kjetil Hope Sørbø} % Your firstname and lastname
 \professor{Thor Inge Fossen, Tor Arne Johansen} % Affiliation = ITEM for instance
 \supervisor{Firstname Lastname, Affiliation}
@@ -14,7 +14,7 @@
 % \usepackage{subcaption}
 
 
-
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords:}} #1}
 
 \DeclareGraphicsExtensions{.pdf,.jpg}
 \graphicspath{{./figs/}}
@@ -41,6 +41,7 @@
 %% There must be an abstract in English, even though the main text is in Norwegian
 \selectlanguage{english}
 \include{abstract_english}
+
 \cleardoublepage
 
 %% Only for the master's thesis; if the main text is in English and you can write Norwegian, there must be an abstract in Norwegian as well.
@@ -50,8 +51,8 @@
 
 \selectlanguage{english}% Change to 'norsk' if you are writing in Norwegian
 
-\include{preface}
-\cleardoublepage
+%\include{preface}
+%\cleardoublepage
 
 % similarly you may add a separate acknowledgments page
 
@@ -77,7 +78,7 @@
 \glsaddall[]
 
 %% include if relevant
-\printglossary[title=List of Acronyms,type=\acronymtype] % prints just the list of acronyms
+\printglossary[title=Acronyms,type=\acronymtype] % prints just the list of acronyms
 
 
 \cleardoublepage

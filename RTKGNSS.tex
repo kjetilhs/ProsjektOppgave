@@ -1,23 +1,30 @@
 %===================================== CHAP 3 =================================
 
 \chapter{Real time kinematic GPS}
+This chapter will explain \acrfull{rtk-gps}, as well as how it's used in the automatic landing system. The first section will include a overview of the system, including the state of the current system. The next part will contain different reference frame used in the \gls{rtk-gps} module. Then the different \acrfull{gnss} system will be presented as well as atributes in the \acrfull{gps}. Then a quick overview over the different error sources that can affect a \gls{gnss} system, before the consept \acrfull{dgps} is presented. Lastly the term \gls{rtk-gps} will be explained. 
+In the following the behaviour of a receiver is denoted using terms rover and base station. The term base station means a receiver assumed to have a known position by the other receivers. The term rover means a receiver that is allowed to move, is the main focus for position estimation.
 
-In the following the behaviour of a receiver is denoted using term like rover and base station. The term base station means a receiver that is assumed to have a known position by the other receivers. The term rover means a receiver that is allowed to move, is the main focus for position estimation.
+\section{System layout}
+An integrated system required for automatic landing will typically consist of four main sub-systems as shown in figure \ref{figure:SystemOverview}. Today these systems are individually available or in development; however not integrated into a proven working system allowing for automatic landing of \glspl{uav}. The four main systems comprises of the navigation part, guidance part, control part and the user interface, where further validation and development of the first is the main topic for this work.
 
-The outline of this chapter is first give a overview of current \gls{gnss} and system that is under development. For the rest of the chapter the main focus will be \gls{gps}, however the sections about error sources and error mitigation is common in all \gls{gnss} constellations. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/SystemOverview.png}
+		\caption{The structure of the autonomos landing system}
+		\label{figure:SystemOverview}
+\end{figure}
+
+The navigation system will apply \gls{rtk-gps} to estimate the relative position of the \gls{uav}. More details about what \gls{rtk-gps} is, will be given in \ref{ss:rtk-gps}.
+
+The control and guidance system has currently only been tested in \gls{sil} simulations with Ardupilot, which shows promising result likely to be sufficient for automatic landing applications. However this module has not yet been implemented to support the use of \gls{rtk-gps} as required for performing automatic landing.
+
+This work will identify and describe the navigation system necessary to allow for automatic landing of \glspl{uav}. The \gls{rtk-gps} solution will be compute by two different system ,which will be compared against each other. The first system is called Piksi, and is developed by Swift navigation. The second system will is called Rtklib, and is developed by T. Takasu. The latter is indepente on the type of receiver, and thus will be the main focus of this work. More detail about Piksi and Rtklib will be given in \ref{ss:Piksi} and \ref{ss:Rtklib}.
+
+The comparison test will be used to summarize further work required for complete identification of gaps and work required for closure of these gaps such that a control system including provision for automatic landing may be developed and implemented in a integrated \gls{uav} control system. The \gls{uav} that will be used in the test is a Skywalker X8 Fixed Wing \gls{uav}. More details about the X8 will be given in \ref{ss:SkywalkerX8}
 
 
-
-This chapter outline the basic of the GPS signal. how RTKGPS works. The first section give a brief summary on what differential GPS is, and how that principle is applied in RTK-GPS. The two following sections is directly used in RKT-GPS(maybe write some more). The last section give a quick overview over the error sources that effect the measurement.
-
-
-
-A short description of GPS signals and error sources. How to find the Ambiguity resolution and why it's important. What is differential gps, and why use RTK-GPS.
-
-
-This chapter will explain what is meant by the term rtk-gps.
-
-
+This work will identify and describe the gaps which will need to be closed on order to develop and implement a solution which will allow for automatic landing of \glspl{uav}. Two different system that will be compared against each other. 
+The current state of the system is that it consist of two parts that has not yet been integrated with each other. The part were which is the main focus of this thesis is the positioning part. The plan is to use \gls{rtk-gps} for positioning estimation. The second part is the path and control path. Currently there has only been done simulation of the guidance system. It shows promising results, but is yet to be integrated with \gls{rtk-gps}. For more information on the subject please read the MSc thesis by \citep{Froelich}. Figure \ref{figure:SystemOverview} gives a overview on how the system may look like. Ideas on how the intergration can be acheived will be given in the future work section.
 \section{ECI}
 \gls{eci} frame is considered a inertial frame for terrestrial navigation. The origin is fixed in the center of the Earth, and the axis is fixed in space. This frame can be considered as a non-accelerating where Newton's laws of motion applies. 
 \section{ECEF}
@@ -28,7 +35,7 @@ The \gls{ecef} coordinate system is defined in the center of the Earth with it's
 		\caption{The \gls{ecef} frame. Picture from \citep{fossen2011handbook}}
 		\label{figure:ECEF}
 \end{figure}
-\section{NED and ENU}
+\section{Local reference frame}
 The \gls{ned} and \gls{enu} frame is defined as relative to the Earth reference ellipsoid (\gls{wgs-84}). For the \gls{ned} frame the x axis points in the direction to the true North, y axis towards East while the z axis points downward to completed the right handed orthogonal coordinate system. The \gls{enu} has the x and y axis exchange place in respect of the \gls{ned} frame, and the z axis point upwards instead of downwards.
 
 \section{GNSS constelations}
@@ -78,7 +85,7 @@ The integer ambiguity is the uncertainty of phase cycles between the receiver an
 There are several strategies on how to resolve the integer ambiguity. A well used strategy is the \gls{lambda} method. \gls{lambda} starts by reducing the integer search space by decorrelation adjustment. The \gls{lambda} method has two types of outputs. One is called the fixed solution, and the other is called the float solution. The float solution is the first solution given by the \gls{lambda} method and is used to find the fixed solution. When the right fixed solution is reached the position estimation in from a \gls{dgps} can be considered highly accurate. The solution program can calculate the wrong fixed solution, or experience a cycle slip. In order to reduce the possibility of letting a wrong solution become the fixed solution the program need a good integer ambiguity validation strategy. One validation strategy is to check if the ratio between the best ambiguity estimate and the second best estimate in greater then a certain threshold. High \gls{dop} will effect the time the LAMBDA method needs to find a fixed solution.
 
 \subsection{Cycle slip}
-When the integer number of cycles experience a sudden jump in value due to loss of lock of a receiver phase lock it's called cycle slip. The effect of cycle slip is a bias in the measurement large enough to make navigation difficult. The effect of cycle slip will appear as in figure \ref{figure:CycleSlip}.
+When the integer number of cycles experience a sudden jump in value due to loss of lock of a receiver phase lock it's called cycle slip. The effect of cycle slip is a bias in the measurement large enough to make navigation difficult. The effect of cycle slip will appear as seen in figure \ref{figure:CycleSlip}.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/cycleSlip.jpg}
@@ -91,15 +98,9 @@ In the case of a moving baseline situation the GNSS system assumes that the rove
 
 
 \subsection{RTK GPS}\label{ss:rtk-gps}
-RTK GPS scarifies correctness in order to give a position estimate in real-time. ADD HERE RESEARCH IN THE RTK FIELD. Real time position is critical for a autonomous system to navigate to a given position. 
+\gls{rtk-gps} provide accurate baseline position estimation in real time. Can either have a kinematic setting or a moving baseline setting. The difference between the two is that in kinematic the base station has a known stationary position, while in moving baseline the base station position is unknown and allowed to move. The advantage with the moving baseline configuration is that \gls{rtk-gps} can be used to find the relative position between two dynamical system using \gls{gnss} in real time. This will be the case in automatic ship landing system, where the base station must be allowed to move. Also to determine the exact position of a base station require a long measurement period. The advantage with kinematic mode is that it can give a more accurate position estimate.
 
+\gls{rtk-gps} systems needs to calculate the position estimate quicker then a standard  system. This is done by sacrificing the correctness of the solution, however in the resent time efficient software and hardware has reduced the this factor.
 
-PASS PÅ FOR Å GÅ INNOM SYSTEM SPEC. KUN TEORI OM RTK GPS
-Dynamic system can be solved in kinematic mode, or with a moving baseline. In kinematic mode the rover is allowed to move, but the base station is assumed stationary with a known position. In the case of a moving baseline both the rover and base station is allowed to move. The position of the base station is calculated in single mode. Without a known position of the base station the global position of the rover can never be better then if calculated in single mode. However the relative position of the rover from the base station is calculate accurately. There for from a local control systems per
-Need to write about baseline restrictions. In the case of this thesis is a moving baseline relevant.
-
-Trade off between getting the position fast, and getting it right 
-
-Moving baseline restrictions. The base stations position is calculated with in single mode. The error in position to the base station is inherit by the rover. Source of error.
-
+In a \gls{rtk-gps} set-up the rover assumes that it's receive the \gls{gnss} signals at the same time as the base station, and thus the two receivers receive the same signal without it having been altered any more disturbance, except local disturbance like multipath. This puts a restriction on the the range of the baseline. The assumstion that the two receiver share the same disturbance is valid for a baseline up to $2km$
 \cleardoublepage

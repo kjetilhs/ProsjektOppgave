@@ -117,68 +117,68 @@ The reason for why the Piksi lost its fixed solution might be because it lost tr
 		\caption{Visable statellite for the piksi and rtklib}
 		\label{figure:numSatWalk2}
 \end{figure}
-\subsection{Fly test}
+\subsection{In-flight test}
 A flight test with the \gls{uav} was performed at Udduvoll. Because of bad weather the were only performed one flight, and before the flight started only the Rtklib had a fixed solution. That is why in this part only performance from the Rtklib is considered, as a fixed solution is a must for a automatic landing system. 
 
-During the flight test the integer ambiguity solution were more float then fixed as seen in figure \ref{figure:DownFlight}, which affected the measurement. The main reason for this behavior is because of the number of valid satellite the receiver can track experience large variation, as seen i figure \ref{figure:numSatFlight}.
+During the flight test the integer ambiguity solution were more float then fixed as seen in figure \ref{figure:DownFlight} and \ref{figure:northEastFlight}, which affected the measurement. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/northEastFlight.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:northEastFlight}
+\end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/downFlight.eps}
 		\caption{Velocity data from the piksi and rtklib real time solution}
 		\label{figure:DownFlight}
 \end{figure}
+The main reason for this behaviour is because of the number of valid satellite the receiver can track experience large variation, as seen i figure \ref{figure:numSatFlight}.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/numSatFlight.eps}
 		\caption{Velocity data from the piksi and rtklib real time solution}
 		\label{figure:numSatFlight}
 \end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/errorNorthEastFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:numSatFlight}
-\end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/errorDownFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:numSatFlight}
-\end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/northEastFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:numSatFlight}
-\end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/landingVelocity.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:numSatFlight}
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%		\includegraphics[width=0.7\textwidth]{figs/plots/errorNorthEastFlight.eps}
+%		\caption{Velocity data from the piksi and rtklib real time solution}
+%		\label{figure:errorNorthEastFlight}
+%\end{figure}
+%\begin{figure}[H]
+%	\centering
+%		\includegraphics[width=0.7\textwidth]{figs/plots/errorDownFlight.eps}
+%		\caption{Velocity data from the piksi and rtklib real time solution}
+%		\label{figure:errorDownFlight}
+%\end{figure}
+\subsubsection{Landing}
+Figure \ref{figure:landingNorthEastFlight} and \ref{figure:landingDownFlight} shows the landing, as well as the integer solution type. During the landing the \gls{rtk-gps} system was unable to maintain a fixed solution, however it did maintain a float solution.  
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingNorthEastFlight.eps}
 		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:numSatFlight}
-\end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/landingErrorNorthEastFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:numSatFlight}
-\end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/landingErrorDownFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:numSatFlight}
+		\label{figure:landingNorthEastFlight}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingDownFlight.eps}
 		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:numSatFlight}
+		\label{figure:landingDownFlight}
+\end{figure}
+From the error plot seen in figure \ref{figure:landingErrorNorthEastDownFlight} it appear that to be able to estimate it's own position with an error bellow 1 meter most of the time. However this is compared to the post processed estimate, which also will diverge from the true value.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/landingErrorNorthEastDownFlight.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:landingErrorNorthEastDownFlight}
+\end{figure}
+The landing velocity seen in \ref{figure:landingVelocity} confirms the trend see in the first session. The North and East velocity seams to get a nice estimate, however that is not the case with the Down velocity. The Down velocity estimate appear noisy, and not suited for input into a control system. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/landingVelocity.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:landingVelocity}
 \end{figure}
 \cleardoublepage
