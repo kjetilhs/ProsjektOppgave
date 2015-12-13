@@ -13,10 +13,11 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces BeagleBone Black element 14, Picture from \url {http://www.element14.com}}}{17}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Ublox LEA M8T, Picture from \url {http://www.csgshop.com}}}{18}{figure.3.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Piksi, Picture from \url {www.swiftnav.com}}}{19}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Piksi, Picture from \url {http://sigma.octopart.com/21411362/image/Maxtena-M1227HCT-A-SMA.jpg}}}{19}{figure.3.5}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Piksi, Picture from \url {http://sigma.octopart.com/21411362/image/Maxtena-M1227HCT-A-SMA.jpg}}}{20}{figure.3.5}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Piksi, Picture from \url {http://www.novatel.com/assets/Web-Phase-2-2012/Product-Page-Images/Product-Images-Banner-and-Thumbnail/Antennas/702-L.png}}}{20}{figure.3.6}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces The communication structure of rtklib}}{22}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Antenna splitter}}{25}{figure.3.8}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Hardware Software}}{24}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Antenna splitter}}{26}{figure.3.9}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces A xy plot of the piksi,rtklib real time solution and the rtklib post processed solution}}{28}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces The communication structure of rtklib}}{29}{figure.4.2}

@@ -138,9 +138,19 @@ The position solution is calculated with a Extended Kalman Filter, that can have
 \subsubsection{str2str}
 Str2str is the app program that retrieve the ublox signal from the gps and sends over tcp to the rtkrcv app. The str2str is setup to either send RMTC 3 messages, or whatever is send in from the GPS. Since the str2str do not support to send ublox signal directly. How to write that the user should not specify the input format or the output format.
 
-\section{Software implementation}
+
+\section{Implementation}
+This section explain how the implemetation was done for the \gls{rtk-gps} navigation system. Figure \ref{figure:HardSoft} gives an overview on how the system is connected. The BeagleBone on the \gls{uav} had to be prepared.
+The following software modules was altered: Rtklib and RTKGPS
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/HardwareSoftware.png}
+		\caption{Hardware Software}
+		\label{figure:HardSoft}
+\end{figure}
+\subsection{Software implementation}
 The software implementation consist mainly of rtklib and dune. Piksi is also used in the experiment, however it's rtklib and the Dune task RTKGPS that will be discussed thoroughly.
-\subsection{Rtkgps}
+\subsubsection{Rtkgps}
 The \gls{rtk-gps} module in the navigation system consist of three parts. That is rtklib, and the two Dune tasks RTKGPS and Piksi. The RTKGPS task is connected to rtklib though a virtual connection, and the Piksi task has a physical connection to the Piksi receiver.
 
 
@@ -173,7 +183,7 @@ The output from the Dune tasks is a \gls{imc} message called RtkFix, see table \
 \label{Tb:RtkFix}
 \end{table}
 
-\section{Hardware implementation}
+\subsection{Hardware implementation}
 The embedded computer uses GLUED as its operating system, and on it runs both Dune and rtklib. The Piksi and Ublox is connected to the BeagleBone over uart cables.
 
 The primary data-link to the \gls{uav} is done with {shf} Ubiquiti AirMax radios, that is based on a Ubiquity Rocket M5
