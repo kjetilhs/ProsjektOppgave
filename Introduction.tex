@@ -15,28 +15,24 @@ This work will continue the research done by Spockeli, and introduce a new \gls{
 
 The automatic landing system will use \gls{rtk-gps} for position estimation. The main motivation for this work is to describe the gaps of the available position system sufficient to scope further work required for closure of such gaps ultimately providing means for position estimating sufficient for completion of automatic landing.
 \section{Literature Review}
-Citation checking \citep{Spockeli,Froelich} or \cite{Spockeli,Froelich} or \citet{Spockeli,Froelich}
+Automatic landing in a net has privously been successful performed in the NTNU MSc thesis \citep{Skulstad&Syversen}. They managed to land a \gls{uav} in a stationary net using \gls{rtk-gps}. A other successfull automatic landing was done in the Stellenbosch University MSc thesis \citep{smit2013autonomous} using \acrfull{dgps}. That thesis focused more on the control design.
 
-GNSS navigation has been
-As part of the NTNU MSc thesis of \citep{Skulstad&Syversen} they successfully demonstrated a net landing with a fixed wing UAV using a low-cost RTK GNSS system. More about how they did it.
+Further research on the automatic landing system at the UAVLAB at NTNU was done in the MSc thesis by \citep{Spockeli} and \citep{Froelich}. In the MSc thesis by Spockeli he studied a integrated \gls{rtk-gps}/\gls{ins} navigation system with a nonlinear observer. In the MSc thesis by Froelich he create a control and guidance system that in simulation has successfully managed to follow a landing trajectory. He also created a dynamical path generation system that allows the net to move, and re-plan the landing path.
 
-An other NTNU MSc thesis by \citep{Spockeli} simulated a net landing with a fixed wing UAV. Here the net was allowed to be dynamical, and the system was design with landing on a ship in mind. The system used artificial neural network to estimate the position of the net.
+In the paper \citep{kim2013fully} it was proposed a vision based landing system, that would detect the recovery net, and plan a landing path. The system was successfully tested and is a valid alternative for a low-cost autonomous landing system.
 
-As part of the Stellenbosch University MSc thesis \citep{smit2013autonomous} demostraded a autonomous landing on a airfield using decoupled linear controllers and DGPS. 
+There has been done work on autonomous landing system using a vision aided system. The work done in \citep{williams2012intelligent} describe a intelligent vision aided landing system that detect and generate landing waypoints for a unsurveyed airfield.
 
-An other vision \citep{kim2013fully}
+Discussion on the carrier phase ambiguity resolution was done in \citep{GeodeticBaselines}.  A well used strategy used to resolve the integer ambiguity was proposed in \citep{Ambiguity:Estimation}, and further disused in \citep{LAMBDA:METHOD,LAMBDAMETHOD}. 
 
-The uavlab at NTNU has in the last year studied how to perform a autonomous landing with a fixed wing UAV. Automatic landing of a UAV in a net using low-cost single frequency gps is described in \citep{Skulstad&Syversen}, and a path generation system that is integraded with neptus is described in \citep{Froelich}. Research on RTK GPS intergration in Dune is described in \citep{Spockeli}.
+Work on precise 3D positioning of \gls{uav} done in \citep{3D-RTK}. Tested the capabllity of rtklib
 
-Work done on ambiguity
-\cite{Ambiguity:Estimation,LAMBDA:METHOD,LAMBDAMETHOD,GeodeticBaselines} 
-Work done with rtk gps
-\citep{Low-costRTK}  \citep{3D-RTK}
+Uses rtkgps to take photo
+\citep{Low-costRTK}  
 
-There has been done work on autonomous landing system using a vision aided system. The work done in \citep{williams2012intelligent} describe a intelligent vision aided landing system that detect and generate landing waypoints for a unsurveyed airfield. Other work 
 
-Commercial landing system:  \citep{scanealge}
 
+%Commercial landing system:  \citep{scanealge}
 \section{Scope of work}
 The scope of work is to validate the performance of suitable positioning systems by study and testing, and to identify gaps required to be closed for successful implementation for a integrated autonomous Guidance, Navigation and Control system which will allow for automatic landing of a \gls{uav} at sea. This will include:
 \begin{table}[!h]
@@ -47,24 +43,23 @@ The scope of work is to validate the performance of suitable positioning systems
      Compare the real time estimate with the post processed estimate 
     \end{tabular}
 \end{center}
-\caption{Evasion criteria }
 \label{Tb:Evasion}
 \end{table}
 The scope of this work is to test the performance of ublox-LEA M8T \gls{gnss} receiver in a real time differential \gls{dgps} configuration. The \gls{rtk-gps} solution will be calculated with the open source program rtklib, which will communicate with a task in DUNE. The solution from rtklib will be compared against the solution from Piksi, and a post processed solution from rtklib. The result from the experiment will be used in the discussion on how to perform a automatic landing.
 
-For validation of the position accuracy needed the evasion criteria given in \ref{Tb:Evasion} \citep{Froelich} will be used.
-\begin{table}[!h]
-\begin{center}
-    \begin{tabular}{ | l | l |}
-    \hline
-    \textbf{Criteria} & \textbf{Value} \\ \hline
-     Cross-track error & $\pm1$ meter  \\ \hline
-     Altitude error & $\pm1$ meter \\ \hline
-    \end{tabular}
-\end{center}
-\caption{Evasion criteria }
-\label{Tb:Evasion}
-\end{table}
+%For validation of the position accuracy needed the evasion criteria given in \ref{Tb:Evasion} \citep{Froelich} will be used.
+%\begin{table}[!h]
+%\begin{center}
+%    \begin{tabular}{ | l | l |}
+%    \hline
+%    \textbf{Criteria} & \textbf{Value} \\ \hline
+%     Cross-track error & $\pm1$ meter  \\ \hline
+%     Altitude error & $\pm1$ meter \\ \hline
+%    \end{tabular}
+%\end{center}
+%\caption{Evasion criteria }
+%\label{Tb:Evasion}
+%\end{table}
 
 \section{Layout}
 This section is currently not up to date

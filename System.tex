@@ -1,6 +1,6 @@
 %===================================== CHAP 4 =================================
 
-\chapter{System Components}
+\chapter{System Components and implementation}
 This chapter contains a brief description of the system that has been used.
 \section{Hardware}
 This section outline the physical components in the x8 and the base station.
@@ -61,6 +61,28 @@ More detailed information about Piksi can be found in \citep{Piksiv231}
 		\caption{Piksi, Picture from \url{www.swiftnav.com}}
 		\label{figure:Piksi}
 \end{figure}
+\subsection{GNSS Antenna}
+The navigation system will use two \gls{gnss} antenna, one for the \gls{uav} and the other for the base station. The main creteria for the \gls{uav} antenna is that it's small,compact and have a light weight. Must not forget aerodynamic
+
+The M1227HTC-A-SMA has been used in other \gls{uav} setups at the UAVLAB with good results. It's design for L1/L2 gps/glonass bands. Further information or specification can be found in ...
+
+The base station do not have any restiction on size, weight or aerodynamic. The important factor for a base station antenna is that it has good multipath rejection. Also the base station position should be calculated as accurate as possible which impose further restriction on interference handling, phase center stability and noise rejection.
+Two antenna: The  from Maxtena and The Novatel GPS-801-GG
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/Maxtena-M1227HCT-A-SMA-image.jpg}
+		\caption{Piksi, Picture from \url{http://sigma.octopart.com/21411362/image/Maxtena-M1227HCT-A-SMA.jpg}}
+		\label{figure:Piksi}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/702-L.png}
+		\caption{Piksi, Picture from \url{http://www.novatel.com/assets/Web-Phase-2-2012/Product-Page-Images/Product-Images-Banner-and-Thumbnail/Antennas/702-L.png}}
+		\label{figure:Piksi}
+\end{figure}
+
+
 \section{Software}
 This section contain the different software that is used in the x8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to connect the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.\subsection{GLUED}
 Glued is a minimal Linux distribution developed by \gls{lsts}, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
@@ -116,6 +138,74 @@ The position solution is calculated with a Extended Kalman Filter, that can have
 \subsubsection{str2str}
 Str2str is the app program that retrieve the ublox signal from the gps and sends over tcp to the rtkrcv app. The str2str is setup to either send RMTC 3 messages, or whatever is send in from the GPS. Since the str2str do not support to send ublox signal directly. How to write that the user should not specify the input format or the output format.
 
+\section{Software implementation}
+The software implementation consist mainly of rtklib and dune. Piksi is also used in the experiment, however it's rtklib and the Dune task RTKGPS that will be discussed thoroughly.
+\subsection{Rtkgps}
+The \gls{rtk-gps} module in the navigation system consist of three parts. That is rtklib, and the two Dune tasks RTKGPS and Piksi. The RTKGPS task is connected to rtklib though a virtual connection, and the Piksi task has a physical connection to the Piksi receiver.
+
+
+Rtklib is separated into the base station and the rover. The base station implementation runs the app str2str were it communicate with the ublox over a uart cable, and start up a tcp server.
+
+The rover uses the rtkrcv app from rtklib to estimate the position of the rover. Rtkrcv connect itself as a tcp client to the tcp server that str2str create. Rtkrcv is configured in a moving baseline configuration to simulate the behavior that is expected during a landing on a ship. (Referer her til teori kap om rtklib)
+
+The output from the Dune tasks is a \gls{imc} message called RtkFix, see table \ref{Tb:RtkFix}, which include the relative position of the \gls{uav} as well as the velocity, type of integer solution and the \gls{gps} \gls{tow}.
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{ | l | l |}
+    \hline
+    \textbf{Header} & \textbf{Content} \\ \hline
+     tow & Gps time of Week  \\ \hline
+     n & Baseline North coordinate \\ \hline
+     e & Baseline East coordinate \\ \hline
+     d & Baseline Down coordinate \\ \hline
+     v\verb=_=n & Velocity North coordinate \\ \hline
+     v\verb=_=e & Velocity East coordinate \\ \hline
+     v\verb=_=d & Velocity Down coordinate \\ \hline
+     iar\verb=_=hyp & Number of hypotheses in the Integer Ambiguity Resolution \\ \hline
+     iar\verb=_=ratio & Quality ratio of Integer Ambiguity Resolution \\ \hline
+     type & Type of fix: \\& None = No solution, but RTK task is running
+     \\& Obs = No solution, but receiving observations
+     \\& Float = Floating point solution of Integer Ambiguity Resolution
+     \\& Fix = Fixed(single) solution of Integer Ambiguity Resolution \\ \hline
+    \end{tabular}
+\end{center}
+\caption{The \gls{imc} message RtkFix }
+\label{Tb:RtkFix}
+\end{table}
+
+\section{Hardware implementation}
+The embedded computer uses GLUED as its operating system, and on it runs both Dune and rtklib. The Piksi and Ublox is connected to the BeagleBone over uart cables.
+
+The primary data-link to the \gls{uav} is done with {shf} Ubiquiti AirMax radios, that is based on a Ubiquity Rocket M5
+Has a WIFI connection to the base station.
+
+
+The two \gls{rtk-gps} system is connected to a antenna splitter , figure \ref{figure:AntennaSplitter}, such that both system receive the same \gls{gnss} signals.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/066.jpg}
+		\caption{Antenna splitter}
+		\label{figure:AntennaSplitter}
+\end{figure}
+
+This section contain how all the physical components are connected at both the rover and the base station. Include also how everything was prepared.
+
+About Beaglebone: What runs on the beaglebone, connections, devices, what is it place in the system
+
+About Ublox: Explain the ublox from a system perspective, how it's connected
+
+Pixhawk: What do it do in the system:
+
+Piksi: Same as ublox
+
+The X8: How do it fit in the system
+
+The base station: Same as x8
+
+Antennas: 
+
+Wifi router
 
 
 \cleardoublepage

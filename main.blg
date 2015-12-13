@@ -3,7 +3,6 @@ A level-1 auxiliary file: abstract_english.aux
 A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: RTKGNSS.aux
 A level-1 auxiliary file: System.aux
-A level-1 auxiliary file: Implementation.aux
 A level-1 auxiliary file: Experiment.aux
 A level-1 auxiliary file: Discusion.aux
 The style file: plainnat.bst
@@ -17,5 +16,4 @@ Warning--empty year in Piksiv231
 Warning--empty year in Rtklib242
 Warning--empty year in UbloxDataSheet
 Warning--empty year in UbloxReceiverDescription
-Warning--empty year in scanealge
-(There were 9 warnings)
+(There were 8 warnings)

@@ -1,23 +1,9 @@
 \pagestyle{empty}
 \begin{abstract}
-This work present a navigation system that will be used in a automatic ship landing system for a \gls{uav}. The navigation system apply \gls{rtk-gps} for position estimation, which can provide centimeter level accuracy. If the \gls{uav} is highly dynamical only the past position the position estimate is describing a past position, resulting in reduced accuracy.
+Automatic landing of a fixed wing \acrfull{uav} in a net on a ship require a accurate positioning system. To increase availability the system must consist of low-cost components, which exclude the commercial landing system that exist today. \acrfull{rtk-gps} can provide centimeter level accuracy with the use of low-cost \acrfull{gnss} receivers. The accuracy will be reduced in a highly dynamical system like a \gls{uav} due to the processing delay.
 
+This work present software and hardware systems that is used in a navigation system that apply \gls{rtk-gps}. Two different system will be compared against each other, as well as there induvidual performance. The \gls{rtk-gps} system is using single-frequency \gls{gnss} receivers, the Piksi system from Swift Navigation and the open-source \acrfull{rtklib}. 
+The \gls{rtk-gps} system is implemented in DUNE(DUNE:Unified Navigation Environment)-framework running on the embedded payload computer on-board the \gls{uav}. Outdoor lab tests and a flight test was used to check the performance of the navigation system.
 What is presented in this work:
-
-Software used to compute the rtk position
-
-Hardware used in implementation in UAV
-
-Receiver used to opptain raw gnss data.
-
-Comparison of two rtkgps able systems, whit two different receivers.
-
-Present Dune which the task is implemented in
-
-What is done: Done some walks with the x8, as well as one flight test.
-
-
-
-
 \end{abstract}
 \keywords{test,teste}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -47,12 +47,6 @@ Blewitt Geoffrey.
 Fossen~Thor I.
 \newblock \emph{Handbook of marine craft hydrodynamics and motion control}.
 \newblock John Wiley \& Sons, 2011.
-
-\bibitem[INSITU()]{scanealge}
-INSITU.
-\newblock Scaneagle system.
-\newblock \url{http://www.insitu.com/systems/scaneagle}.
-\newblock Accessed: 07.12.2015.
 
 \bibitem[Jin et~al.(2013)Jin, Mingu, Hyon, Chulwoo, Seungho, Daewon, Hyunjin,
   Gyeongtaek, Jongho, and Youdan]{kim2013fully}

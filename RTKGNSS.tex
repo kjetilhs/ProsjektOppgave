@@ -1,9 +1,9 @@
 %===================================== CHAP 3 =================================
 
 \chapter{Real time kinematic GPS}
-This chapter will explain \acrfull{rtk-gps}, as well as how it's used in the automatic landing system. The first section will include a overview of the system, including the state of the current system. The next part will contain different reference frame used in the \gls{rtk-gps} module. Then the different \acrfull{gnss} system will be presented as well as atributes in the \acrfull{gps}. Then a quick overview over the different error sources that can affect a \gls{gnss} system, before the consept \acrfull{dgps} is presented. Lastly the term \gls{rtk-gps} will be explained. 
-In the following the behaviour of a receiver is denoted using terms rover and base station. The term base station means a receiver assumed to have a known position by the other receivers. The term rover means a receiver that is allowed to move, is the main focus for position estimation.
+This chapter will explain \acrfull{rtk-gps}, as well as how it's used in the automatic landing system. The first section will include a overview of the system, including the state of the current system. The next part will contain different reference frame used in the \gls{rtk-gps} module. Then the different \acrfull{gnss} system will be presented as well as atributes in the \acrfull{gps}. Then a quick overview over the different error sources that can affect a \gls{gnss} system, before the consept \acrfull{dgps} is presented. Lastly the term \gls{rtk-gps} will be explained.
 
+In the following the behaviour of a receiver is denoted using terms rover and base station. The term base station means a receiver assumed to have a known position by the other receivers. The term rover means a receiver that is allowed to move, is the main focus for position estimation.
 \section{System layout}
 An integrated system required for automatic landing will typically consist of four main sub-systems as shown in figure \ref{figure:SystemOverview}. Today these systems are individually available or in development; however not integrated into a proven working system allowing for automatic landing of \glspl{uav}. The four main systems comprises of the navigation part, guidance part, control part and the user interface, where further validation and development of the first is the main topic for this work.
 
@@ -25,9 +25,11 @@ The comparison test will be used to summarize further work required for complete
 
 This work will identify and describe the gaps which will need to be closed on order to develop and implement a solution which will allow for automatic landing of \glspl{uav}. Two different system that will be compared against each other. 
 The current state of the system is that it consist of two parts that has not yet been integrated with each other. The part were which is the main focus of this thesis is the positioning part. The plan is to use \gls{rtk-gps} for positioning estimation. The second part is the path and control path. Currently there has only been done simulation of the guidance system. It shows promising results, but is yet to be integrated with \gls{rtk-gps}. For more information on the subject please read the MSc thesis by \citep{Froelich}. Figure \ref{figure:SystemOverview} gives a overview on how the system may look like. Ideas on how the intergration can be acheived will be given in the future work section.
-\section{ECI}
+\section{Reference frames}
+A \gls{gnss} system calculate a position estimated of where on the Earth the receiver is. For the position to have any meaning a reference system has to be defined where a frame can be consider as an inertial frame. From there a reference frame can be fixed to the Earth rotation, but for local navigation if must be referred to surface of the Earth. This section will present the different reference frame used in global navigation systems.
+\subsection{ECI}
 \gls{eci} frame is considered a inertial frame for terrestrial navigation. The origin is fixed in the center of the Earth, and the axis is fixed in space. This frame can be considered as a non-accelerating where Newton's laws of motion applies. 
-\section{ECEF}
+\subsection{ECEF}
 The \gls{ecef} coordinate system is defined in the center of the Earth with it's x-axis point toward the intersection between the Greenwich meridian and Equator ( $0\deg $ longitude, $0\deg $ latitude). The z-axis points along the Earth's rotational axis, and the y-axis complete the right handed orthogonal coordinate system. The \gls{ecef} system can be represented in either Cartesian coordinates (xyz) or ellipsoidal coordinates (longitude, latitude and height). The \gls{ecef} frame rotate relative to the \gls{eci} frame at a angular rate of $\omega_e = 7.2921 \times 10^{-5}rad/s$, where $\omega_e$ is the Earth rotation. Due to the relatively low rotation speed some system can consider the \gls{ecef} frame as inertial.
 \begin{figure}[H]
 	\centering
@@ -35,12 +37,13 @@ The \gls{ecef} coordinate system is defined in the center of the Earth with it's
 		\caption{The \gls{ecef} frame. Picture from \citep{fossen2011handbook}}
 		\label{figure:ECEF}
 \end{figure}
-\section{Local reference frame}
+\subsection{Local reference frame}
 The \gls{ned} and \gls{enu} frame is defined as relative to the Earth reference ellipsoid (\gls{wgs-84}). For the \gls{ned} frame the x axis points in the direction to the true North, y axis towards East while the z axis points downward to completed the right handed orthogonal coordinate system. The \gls{enu} has the x and y axis exchange place in respect of the \gls{ned} frame, and the z axis point upwards instead of downwards.
-
-\section{GNSS constelations}
+\section{GPS}
+A quick overview of the gps and other gnss systems.
+\subsection{GNSS constelations}
 There are currently two operation \gls{gnss} constellations with global coverage, which is American \gls{gps} and Russian \gls{glonass}. Other \gls{gnss} constellations that will be operational in the near future is the Chinese BeiDou and European Galileo.
-\section{GPS attributes}
+\subsection{GPS attributes}
 The \gls{gps} satellites transmits continuously using two radio frequencies in the L-band referred to as \gls{l1} and {l2}. The L-band covers frequencies between 1 GHz and 2GHz, and is a subset of the \gls{uhf} band.
 
 Previously only the \gls{l1} signal was intended from civil users, but in the future a new {l2} signal as well as the \gls{l5} signal will be available for civil users. 
