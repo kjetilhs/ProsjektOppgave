@@ -1,6 +1,6 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 13.12.2015  10:27:43
-;; Indexstyle: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\yV0l4urH4u", Rawindex: "C:\\Users\\kjetilhs\\Documents\\Prosjekt\\U656PaBMBe", Output: "main.acr"
+;; at 13.12.2015  19:49:42
+;; Indexstyle: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\Fd19SAmDJk", Rawindex: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\RZqG8tbKQN", Output: "main.acr"
 
 
 Building indexentry-tree:
@@ -34,10 +34,13 @@ sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 
 Forming letter-groups:
 Letter-group: "à€å" -> "U"
 Letter-group: "ËÚ®ÈÐ" -> "R"
+Letter-group: "¼ÐÐ" -> "G"
+Letter-group: "ËÚ®´¨„" -> "R"
 Letter-group: "—†—œ" -> "E"
 Letter-group: "¨»†" -> "I"
 Letter-group: "¼Ú¼à" -> "N"
@@ -45,7 +48,6 @@ Letter-group: "ÈÐ" -> "G"
 Letter-group: "ÈÐ" -> "D"
 Letter-group: "¼—" -> "N"
 Letter-group: "—¼à" -> "E"
-Letter-group: "¼ÐÐ" -> "G"
 Letter-group: "—†¨" -> "E"
 Letter-group: "æÐ84" -> "W"
 Letter-group: "´Ã¼€ÐÐ" -> "G"
@@ -63,7 +65,7 @@ Letter-group: "ÃÈ" -> "D"
 Letter-group: "ÚÃæ" -> "T"
 Letter-group: "´ÐÚÐ" -> "L"
 Letter-group: "Ð¤œ" -> "S"
-Letter-group: "ËÚ®´¨„" -> "R"
+Letter-group: "¨¼Ð" -> "I"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "€àæ" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)

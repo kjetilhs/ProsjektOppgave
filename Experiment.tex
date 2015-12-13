@@ -97,6 +97,7 @@ The position estimate of the rover is a relative position in reference to the ba
 Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $1m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
 
 \subsubsection{Second session}
+The second session was perform few minutes after the first, whit the same weather condition.
 During the second session the Piksi lost its fixed integer solution, while Rtklib managed to keep its fixed integer solution as seen in figure \ref{figure:xyWalk2} and \ref{figure:downWalk2}. 
 \begin{figure}[H]
 	\centering
@@ -110,7 +111,7 @@ During the second session the Piksi lost its fixed integer solution, while Rtkli
 		\caption{Visable statellite for the piksi and rtklib}
 		\label{figure:downWalk2}
 \end{figure}
-The reason for why the Piksi lost its fixed solution might be because it lost track of several satellite. 
+The reason for why the Piksi lost its fixed solution might be because it lost track of several satellite, as seen in figure \ref{figure:numSatWalk2}. Since both receive share the same antenna it can be concluded that the satellite tracing performance in the Ublox is superior to the Piksi.  Even when the Piksi managed to regain track of the satellite it lost, it took 60 seconds before it regain a fixed integer solution. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/numSatWalk2.eps}
@@ -133,7 +134,7 @@ During the flight test the integer ambiguity solution were more float then fixed
 		\caption{Velocity data from the piksi and rtklib real time solution}
 		\label{figure:DownFlight}
 \end{figure}
-The main reason for this behaviour is because of the number of valid satellite the receiver can track experience large variation, as seen i figure \ref{figure:numSatFlight}.
+The main reason for this behaviour is because of the number of valid satellite the receiver can track experience large variation, as seen i figure \ref{figure:numSatFlight}. A problem that was experienced during the flight is that the dynamic behaviour of the \gls{uav} blocks the antennas view of different satellites. That is a problem that can be solved by setting restricion on the dynamical behavior of the \gls{uav} expesially befor and during landing.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/numSatFlight.eps}
@@ -153,7 +154,7 @@ The main reason for this behaviour is because of the number of valid satellite t
 %		\label{figure:errorDownFlight}
 %\end{figure}
 \subsubsection{Landing}
-Figure \ref{figure:landingNorthEastFlight} and \ref{figure:landingDownFlight} shows the landing, as well as the integer solution type. During the landing the \gls{rtk-gps} system was unable to maintain a fixed solution, however it did maintain a float solution.  
+The landing was perform by angel the \gls{uav} towards the wind direction. The \gls{rtk-gps} position estimate during the landing is shown in figure \ref{figure:landingNorthEastFlight}, as well as the integer solution type. The \gls{rtk-gps} system was unable to maintain a fixed solution, however it did maintain a float solution. Further test with a control system is required in order to test if also the float solution is accurate enough to perform a automatic landing.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingNorthEastFlight.eps}
