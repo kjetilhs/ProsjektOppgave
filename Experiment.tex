@@ -1,9 +1,7 @@
 %===================================== CHAP 5 =================================
 
 \chapter{Experimental testing}
-This chapter contain the result from the test that were performed. The goal with these test was to evaulate the ublox receiver againgst the pixi receiver, and to get a impresion on the accuracy to the rtklib solution with ublox. The comparison test was performed with the pixi and ublox connected to the same antenna at both the rover and the base station. Then the deviation in the position estimate can only come from the receivers. The accuracy test of the ublox was tested by performing the same manoeuvre several times.
-
-All position and velocity data is given in the \gls{ned} frame. 
+This chapter contain the result from the test that were performed. The goal with these test was to evaulate the ublox receiver againgst the pixi receiver, and to get a impresion on the accuracy to the rtklib solution with ublox. The comparison test was performed with the pixi and ublox connected to the same antenna at both the rover and the base station. Then the deviation in the position estimate can only come from the receivers. The accuracy test of the ublox was tested by performing the same manoeuvre several times. All position and velocity data is given in the \gls{ned} frame. 
 \section{Physical testing}
 The experimental test was split in two independent test, one where the X8 \gls{uav} was carried around on a open field to test the performance of the \gls{rtk-gps} system in a more controlled environment. The goal of the first was to log data from both \gls{rtk-gps} system in optimal condition for the navigation system. The second test was perform in a more realistic environment for a navigation system. 
 
@@ -13,7 +11,7 @@ In this part two sessions of navigation data will be presented. Both sessions we
 \begin{equation}
 e(t) = p_r(t) - p_p(t)
 \end{equation}
-where $p_r(t)$ and $p_p(t)$ is defined as the position solution from the real time system and the position solution from the post processed solution respectfully. It should be noted that in order to compare the different time-series the position data was synchronized with each other. From the error the cumulative mean error and cumulative standard deviation for the error was calculated using the matlab function "mean" and "std".
+where $p_r(t)$ and $p_p(t)$ is defined as the position solution from the real time system and the position solution from the post processed solution respectfully. It should be noted that in order to compare the different time-series the position data was synchronized with each other. From the error the cumulative standard deviation for the error was calculated using the matlab function "std".
 \subsubsection{First session}
 As expected both systems provided a position estimate with fixed integer solution that followed the true path, and further confirms that both system performed in a similar manner. Therefore both systems are suitable for further comparison of position estimation in a flying test.
 Figure \ref{figure:xywalk1} shows a North East plot of how the walk was. The plot contain only the fixed solution from both the piksi and rtklib. 

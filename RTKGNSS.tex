@@ -53,7 +53,7 @@ Previously only the \gls{l1} signal was intended from civil users, but in the fu
 The two basic ways to measure the psedurange is code and phase measurement. Phase measurement is the most accurate of the two, but also least reliable.
 In code measurement the information in signal is used to calculate the psudorange between the receiver and the satellite. In phase measurement the  receiver measures the phase of the \gls{gnss} satellite and compares it against a receiver generated signal. Then by knowing the phase and the frequency function, as well at the start and end epoch time the geometric range between the receiver and satellite can be estimated. It's phase measurement that is used in \gls{rtk-gps}. In phase measurement it's advantgus to know the unknown number of cycles between the satellite and the receiver, referred to as integer ambiguity. Estimation of integer ambiguity is called integer ambiguity resolution and will be more explained in \ref{ss:INtegerAM}.
 
-The receiver needs at least four satellite to be able to estimate the receiver position. Three of the satellite is used for the position, and the fourth if used to calculate the receiver clock bias. 
+The receiver needs at least four satellite to be able to estimate the receiver position. Three of the satellite is used for the position, and the fourth if used to calculate the receiver clock bias. The position is calculated in the \gls{ecef} reference frame. 
  
 \section{Error sources}
 In order to get high accuracy in the position estimation the different error sources must be identified and removed if possible. This section will identify some of the larger error sources that can affect the \gls{gps} signal, and how to remove or mitigate them in the estimation.
@@ -105,5 +105,5 @@ In the case of a moving baseline situation the GNSS system assumes that the rove
 
 \gls{rtk-gps} systems needs to calculate the position estimate quicker then a standard  system. This is done by sacrificing the correctness of the solution, however in the resent time efficient software and hardware has reduced the this factor.
 
-In a \gls{rtk-gps} set-up the rover assumes that it's receive the \gls{gnss} signals at the same time as the base station, and thus the two receivers receive the same signal without it having been altered any more disturbance, except local disturbance like multipath. This puts a restriction on the the range of the baseline. The assumstion that the two receiver share the same disturbance is valid for a baseline up to $2km$
+In a \gls{rtk-gps} set-up the rover assumes that it's receive the \gls{gnss} signals at the same time as the base station, and thus the two receivers receive the same signal without it having been altered any more disturbance, except local disturbance like multipath. This puts a restriction on the the range of the baseline. The assumption that the two receiver share the same disturbance is valid for a baseline up to $2km$. The relative position of the rover can be given in either the \gls{ned} or {enu} frame.
 \cleardoublepage
