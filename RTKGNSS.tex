@@ -51,7 +51,7 @@ Previously only the \gls{l1} signal was intended from civil users, but in the fu
 \gls{gps} uses it's time reference called \gls{gpst}, which is independent from the \gls{utc}. Because of this independent the \gls{utc} diverge away from the \gls{gpst}, and to correct this the \gls{gps} keeps track of the offset between \gls{gpst} and \gls{utc}. The offset is included in the \gls{gps} message as leap seconds to be added to the \gls{gpst}. \gls{gpst} can be given as \gls{tow}, which include the number of weeks since 1980-01-06T00:00Z. \gls{tow} is given in seconds, and is reset each week when the week number is incremented. More information about the \gls{gps} can be found in \citep{GPSBOOK,vik2014integrated} 
 
 The two basic ways to measure the psedurange is code and phase measurement. Phase measurement is the most accurate of the two, but also least reliable.
-In code measurement the information in signal is used to calculate the psudorange between the receiver and the satellite. In phase measurement the signal itself is used to calculate the psudorange by counting the number of cycles between the receiver and the satellite. It's phase measurement that is used in \gls{rtk-gps}.
+In code measurement the information in signal is used to calculate the psudorange between the receiver and the satellite. In phase measurement the  receiver measures the phase of the \gls{gnss} satellite and compares it against a receiver generated signal. Then by knowing the phase and the frequency function, as well at the start and end epoch time the geometric range between the receiver and satellite can be estimated. It's phase measurement that is used in \gls{rtk-gps}. In phase measurement it's advantgus to know the unknown number of cycles between the satellite and the receiver, referred to as integer ambiguity. Estimation of integer ambiguity is called integer ambiguity resolution and will be more explained in \ref{ss:INtegerAM}.
 
 The receiver needs at least four satellite to be able to estimate the receiver position. Three of the satellite is used for the position, and the fourth if used to calculate the receiver clock bias. 
  
@@ -82,11 +82,8 @@ Differential GPS consist of at least two receivers, where one is called a base s
 		\caption{Concept figure of DGPS}
 		\label{figure:DGPS}
 \end{figure}
-\subsection{Integer Ambiguity Resolution Strategy}
-
-Write first why the resolution of the integer ambiguity is important:
-
-The integer ambiguity is the uncertainty of phase cycles between the receiver and the satellites.
+\subsection{Integer Ambiguity Resolution Strategy}\label{ss:INtegerAM}
+The problem with precise relative positioning with phase measurement is problem of estimation of integer ambiguities. 
 
 There are several strategies on how to resolve the integer ambiguity. A well used strategy is the \gls{lambda} method. \gls{lambda} starts by reducing the integer search space by decorrelation adjustment. The \gls{lambda} method has two types of outputs. One is called the fixed solution, and the other is called the float solution. The float solution is the first solution given by the \gls{lambda} method and is used to find the fixed solution. When the right fixed solution is reached the position estimation in from a \gls{dgps} can be considered highly accurate. The solution program can calculate the wrong fixed solution, or experience a cycle slip (\ref{figure:CycleSlip}). In order to reduce the possibility of letting a wrong solution become the fixed solution the program need a good integer ambiguity validation strategy. One validation strategy is to check if the ratio between the best ambiguity estimate and the second best estimate in greater then a certain threshold. High \gls{dop} will effect the time the LAMBDA method needs to find a fixed solution.
 
