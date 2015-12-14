@@ -1,12 +1,11 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 14.12.2015  10:46:05
-;; Indexstyle: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\GFmPKNYNCU", Rawindex: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\ktQAzg3n78", Output: "main.acr"
+;; at 14.12.2015  14:48:59
+;; Indexstyle: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\f4fPqHkqw4", Rawindex: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\tKKaOZU6P9", Output: "main.acr"
 
 
 Building indexentry-tree:
 Hierdepth of index is :TREE
 
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -41,12 +40,13 @@ Letter-group: "à€å" -> "U"
 Letter-group: "ËÚ®ÈÐ" -> "R"
 Letter-group: "¼ÐÐ" -> "G"
 Letter-group: "ËÚ®´¨„" -> "R"
+Letter-group: "—†—œ" -> "E"
+Letter-group: "¨»†" -> "I"
 Letter-group: "¼Ú¼à" -> "N"
 Letter-group: "ÈÐ" -> "G"
 Letter-group: "ÈÐ" -> "D"
 Letter-group: "¼—" -> "N"
 Letter-group: "—¼à" -> "E"
-Letter-group: "—†—œ" -> "E"
 Letter-group: "—†¨" -> "E"
 Letter-group: "æÐ84" -> "W"
 Letter-group: "´Ã¼€ÐÐ" -> "G"
@@ -59,15 +59,11 @@ Letter-group: "´5" -> "L"
 Letter-group: "ÈÐÚ" -> "G"
 Letter-group: "àÚ†" -> "U"
 Letter-group: "—ÈÃ" -> "E"
-Letter-group: "€àæ" -> "A"
 Letter-group: "ÃÈ" -> "D"
 Letter-group: "ÚÃæ" -> "T"
-Letter-group: "¨»†" -> "I"
 Letter-group: "´ÐÚÐ" -> "L"
 Letter-group: "Ð¤œ" -> "S"
 Letter-group: "¨¼Ð" -> "I"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "€àæ" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "ÈÐ" -> "D"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)

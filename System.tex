@@ -5,39 +5,38 @@ This chapter will present the different software and hardware components used in
 \section{Hardware}
 The different hardware used in this work is a \gls{uav}, payload computer, \gls{gnss} receiver and antenna.
 \subsection{UAV}\label{ss:SkywalkerX8}
-The Skywalker X8, see \ref{figure:skywalkerX8}, is a fixed wing \gls{uav} that is moulded out of \gls{epo}, which makes it a cheap and robust platform for prototype testing. The large space within the fuselage makes it ideal for experimental payload. 
+The Skywalker X8, see \ref{figure:skywalkerX8}, is a fixed wing \gls{uav} that is moulded out of \gls{epo}, which makes it a cheap and robust platform for prototype testing. The large space within the fuselage makes it ideal for experimental payload and projects with modest requirements.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/Wing-X8_white-bgd2.png}
 		\caption{X8 Skywalker from Skywalker Technologies, Picture from \url{www.campilot.tv/blog/win-x8}}
 		\label{figure:skywalkerX8}
 \end{figure}
-The X8 has a wingspan of $2120mm$ which allow for \gls{auw} of $3500g$. More specification about the X8 can be found at \citep{KlausenX8}. The components that is used in the X8 at the UAVLAB is given in table \ref{tb:X8Components}.
+The X8 has a wingspan of $2120mm$ which allow for a Maximum Take-Off Wight of $4.2kg$, including $1kg$ for the payload. The X8 used in this work is outfitted in according to the specification given in \citep{KlausenX8}. The components that is used in the X8 at the UAVLAB is given in table \ref{tb:X8Components}.
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{l l}
-TX & Spektrum DX7s \\
-RX & Spektrum Remote Receiver SPM9645 \\
-Servo & Hitec HS-5085MG \\
-Motor & Hacker A40-12S V2 14-Pole \\
-ESC & Master Spin 66 Pro \\
-Propeller & Aeronaut 13x8 folding propeller \\
-Battery & 1 Zippy Compact 4S 5000 mAh and 1 Haiyin 800 mAh \\
-Autopilot & 3D Robotics Pixhawk w/3DR uBlox \gls{gps} with Compass\\& kit and airspeed sensor \\
-Telemetry link & 3D Robotics radio (433MHz)
+Sensors & 3DR ublox GPS with Compass Kit\\&Pixhawk Airspeed Sensor Kit \\
+Servo & Hitec HS-5125MG \\
+Motor & Hacker A40 \\
+ECU & Jeti Master Spin 66 Pro \\
+Main Battery & 1 Zippy Compact 4S 5000 mAh\\
+Autopilot & 3DR Pixhawk \\
+Primary digital data link & Ubiquiti Rocket M5
 \end{tabular}
 \end{center}
 \caption{Components in the X8 at the UAVLAB}
 \label{tb:X8Components}
 \end{table}
 \subsection{Embedded Computer}
-The embedded computer in the \gls{uav} is a BeagleBone Black, as seen in figure \ref{figure:BeagleBone}.
+The embedded computer chosen as payload in the X8 is a Beaglebone Black, shown in figure \ref{figure:BeagleBone}. The Beaglebone was chosen because of its sufficient computation power, low energy consumption and variety of communication interfaces. For ease interface access the  the Uavlab at NTNU has developed an extension board called "CAPE".
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/BeagleBoneBlackE14.png}
 		\caption{BeagleBone Black element 14, Picture from \url{http://www.element14.com}}
 		\label{figure:BeagleBone}
 \end{figure}
+The Beaglebone black supports linux operation systems, and is compatiable with the \gls{lsts} toolchain, which will be return to in \ref{S:software}.
 \subsection{GNSS receiver}
 The system will use two types of \gls{gnss} receivers, namely the Ublox LEA M8T and the Piksi system. 
 \subsubsection{Ublox LEA M8T}
@@ -59,7 +58,7 @@ More detailed information about Piksi can be found in \citep{Piksiv231}
 		\label{figure:Piksi}
 \end{figure}
 \subsection{GNSS Antenna}
-The navigation system will use two \gls{gnss} antenna, one for the \gls{uav} and the other for the base station. The main creteria for the \gls{uav} antenna is that it's small,compact and have a light weight. Must not forget aerodynamic
+The navigation system will use two \gls{gnss} antenna, one for the \gls{uav} and the other for the base station. The main criteria for the \gls{uav} antenna is that it's small,compact and have a light weight.
 
 The M1227HTC-A-SMA has been used in other \gls{uav} setups at the UAVLAB with good results. It's design for L1/L2 gps/glonass bands. Further information or specification can be found in ...
 
@@ -80,7 +79,7 @@ Two antenna: The  from Maxtena and The Novatel GPS-801-GG
 \end{figure}
 
 
-\section{Software}
+\section{Software}\label{S:software}
 This section contain the different software that is used in the x8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to connect the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.\subsection{GLUED}
 Glued is a minimal Linux distribution developed by \gls{lsts}, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
 \subsection{Dune}
