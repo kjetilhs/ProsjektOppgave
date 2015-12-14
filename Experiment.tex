@@ -4,17 +4,18 @@
 This chapter contain the result from the test that were performed. The goal with these test was to evaulate the ublox receiver againgst the pixi receiver, and to get a impresion on the accuracy to the rtklib solution with ublox. The comparison test was performed with the pixi and ublox connected to the same antenna at both the rover and the base station. Then the deviation in the position estimate can only come from the receivers. The accuracy test of the ublox was tested by performing the same manoeuvre several times.
 
 All position and velocity data is given in the \gls{ned} frame. 
-Can mension the gnss radar used to find good gps windows.
 \section{Physical testing}
-The physical experiment were done in two parts. During the first part the x8 was carried around on a open field. The goal with this experiment was to log data from rtklib and piksi, and then compare how they deviated from each other. The second part of the physical experiment was flying 
+The experimental test was split in two independent test, one where the X8 \gls{uav} was carried around on a open field to test the performance of the \gls{rtk-gps} system in a more controlled environment. The goal of the first was to log data from both \gls{rtk-gps} system in optimal condition for the navigation system. The second test was perform in a more realistic environment for a navigation system. 
 
-\subsection{GPS test}
+
+\subsection{Test 1: Test of the RTK-GPS navigation system}
 In this part two sessions of navigation data will be presented. Both sessions were performed on the same day, which was cloudless and at a time with low \gls{dop}. The raw data from the Ublox receiver was post processed with rtklib, and is should be more accurate than it's real time counter part. Therefore a error was defined as:
 \begin{equation}
 e(t) = p_r(t) - p_p(t)
 \end{equation}
 where $p_r(t)$ and $p_p(t)$ is defined as the position solution from the real time system and the position solution from the post processed solution respectfully. It should be noted that in order to compare the different time-series the position data was synchronized with each other. From the error the cumulative mean error and cumulative standard deviation for the error was calculated using the matlab function "mean" and "std".
 \subsubsection{First session}
+As expected both systems provided a position estimate with fixed integer solution that followed the true path, and further confirms that both system performed in a similar manner. Therefore both systems are suitable for further comparison of position estimation in a flying test.
 Figure \ref{figure:xywalk1} shows a North East plot of how the walk was. The plot contain only the fixed solution from both the piksi and rtklib. 
 \begin{figure}[H]
 	\centering
@@ -121,7 +122,7 @@ The reason for why the Piksi lost its fixed solution might be because it lost tr
 \subsection{In-flight test}
 A flight test with the \gls{uav} was performed at Udduvoll. Because of bad weather the were only performed one flight, and before the flight started only the Rtklib had a fixed solution. That is why in this part only performance from the Rtklib is considered, as a fixed solution is a must for a automatic landing system. 
 
-During the flight test the integer ambiguity solution were more float then fixed as seen in figure \ref{figure:DownFlight} and \ref{figure:northEastFlight}, which affected the measurement. 
+During the flight test the integer ambiguity solution were more float then fixed as seen in figure \ref{figure:DownFlight} and \ref{figure:northEastFlight}, which affected the measurement. The same behavior will be seen during the landing, however if the float solution is accurate enough the system should be able to perform a automatic landing.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/northEastFlight.eps}
@@ -154,7 +155,13 @@ The main reason for this behaviour is because of the number of valid satellite t
 %		\label{figure:errorDownFlight}
 %\end{figure}
 \subsubsection{Landing}
-The landing was perform by angel the \gls{uav} towards the wind direction. The \gls{rtk-gps} position estimate during the landing is shown in figure \ref{figure:landingNorthEastFlight}, as well as the integer solution type. The \gls{rtk-gps} system was unable to maintain a fixed solution, however it did maintain a float solution. Further test with a control system is required in order to test if also the float solution is accurate enough to perform a automatic landing.
+As expected the \gls{rtk-gps} system had problem with keeping it's fixed integer solution. The \gls{rtk-gps} position estimate of the landing path is shown in figure \ref{figure:landingNEDFlight}. The system kept changing between float and fixed solution during the landing phase. Figure \ref{figure:landingNorthEastFlight} shown the North East position during the landing with the type of solution. The Down position as well as the integer ambiguity solution is for the landing phase is seen in \ref{figure:landingDownFlight}. The \gls{rtk-gps} system was unable to maintain a fixed solution, however it did maintain a float solution. Further test with a control system is required in order to test if also the float solution is accurate enough to perform a automatic landing.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/landingNedFlight.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:landingNEDFlight}
+\end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingNorthEastFlight.eps}
@@ -167,13 +174,7 @@ The landing was perform by angel the \gls{uav} towards the wind direction. The \
 		\caption{Velocity data from the piksi and rtklib real time solution}
 		\label{figure:landingDownFlight}
 \end{figure}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{figs/plots/landingNedFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
-		\label{figure:landingNEDFlight}
-\end{figure}
-landingNedFlight
+
 From the error plot seen in figure \ref{figure:landingErrorNorthEastDownFlight} it appear that to be able to estimate it's own position with an error bellow 1 meter most of the time. However this is compared to the post processed estimate, which also will diverge from the true value.
 
 \begin{figure}[H]

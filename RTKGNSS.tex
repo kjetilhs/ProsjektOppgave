@@ -41,7 +41,7 @@ The \gls{ecef} coordinate system is defined in the center of the Earth with it's
 The \gls{ned} and \gls{enu} frame is defined as relative to the Earth reference ellipsoid (\gls{wgs-84}). For the \gls{ned} frame the x axis points in the direction to the true North, y axis towards East while the z axis points downward to completed the right handed orthogonal coordinate system. The \gls{enu} has the x and y axis exchange place in respect of the \gls{ned} frame, and the z axis point upwards instead of downwards.
 \section{GPS}
 A quick overview of the gps and other gnss systems.
-\subsection{GNSS constelations}
+\subsection{GNSS constellations}
 There are currently two operation \gls{gnss} constellations with global coverage, which is American \gls{gps} and Russian \gls{glonass}. Other \gls{gnss} constellations that will be operational in the near future is the Chinese BeiDou and European Galileo.
 \subsection{GPS attributes}
 The \gls{gps} satellites transmits continuously using two radio frequencies in the L-band referred to as \gls{l1} and {l2}. The L-band covers frequencies between 1 GHz and 2GHz, and is a subset of the \gls{uhf} band.
@@ -82,12 +82,15 @@ Differential GPS consist of at least two receivers, where one is called a base s
 		\caption{Concept figure of DGPS}
 		\label{figure:DGPS}
 \end{figure}
-\subsection{Interger Ambiguity Resolution}
+\subsection{Integer Ambiguity Resolution Strategy}
+
+Write first why the resolution of the integer ambiguity is important:
+
 The integer ambiguity is the uncertainty of phase cycles between the receiver and the satellites.
 
-There are several strategies on how to resolve the integer ambiguity. A well used strategy is the \gls{lambda} method. \gls{lambda} starts by reducing the integer search space by decorrelation adjustment. The \gls{lambda} method has two types of outputs. One is called the fixed solution, and the other is called the float solution. The float solution is the first solution given by the \gls{lambda} method and is used to find the fixed solution. When the right fixed solution is reached the position estimation in from a \gls{dgps} can be considered highly accurate. The solution program can calculate the wrong fixed solution, or experience a cycle slip. In order to reduce the possibility of letting a wrong solution become the fixed solution the program need a good integer ambiguity validation strategy. One validation strategy is to check if the ratio between the best ambiguity estimate and the second best estimate in greater then a certain threshold. High \gls{dop} will effect the time the LAMBDA method needs to find a fixed solution.
+There are several strategies on how to resolve the integer ambiguity. A well used strategy is the \gls{lambda} method. \gls{lambda} starts by reducing the integer search space by decorrelation adjustment. The \gls{lambda} method has two types of outputs. One is called the fixed solution, and the other is called the float solution. The float solution is the first solution given by the \gls{lambda} method and is used to find the fixed solution. When the right fixed solution is reached the position estimation in from a \gls{dgps} can be considered highly accurate. The solution program can calculate the wrong fixed solution, or experience a cycle slip (\ref{figure:CycleSlip}). In order to reduce the possibility of letting a wrong solution become the fixed solution the program need a good integer ambiguity validation strategy. One validation strategy is to check if the ratio between the best ambiguity estimate and the second best estimate in greater then a certain threshold. High \gls{dop} will effect the time the LAMBDA method needs to find a fixed solution.
 
-\subsection{Cycle slip}
+\subsection{Cycle slip}\label{ss:cycleSlip}
 When the integer number of cycles experience a sudden jump in value due to loss of lock of a receiver phase lock it's called cycle slip. The effect of cycle slip is a bias in the measurement large enough to make navigation difficult. The effect of cycle slip will appear as seen in figure \ref{figure:CycleSlip}.
 \begin{figure}[H]
 	\centering
