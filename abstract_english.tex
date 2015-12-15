@@ -1,9 +1,10 @@
 \pagestyle{empty}
 \begin{abstract}
-Automatic landing of a fixed wing \acrfull{uav} in a net on a ship require a accurate positioning system. To increase availability the system must consist of low-cost components, which exclude the commercial landing system that exist today. \acrfull{rtk-gps} can provide centimeter level accuracy with the use of low-cost \acrfull{gnss} receivers. The accuracy will be reduced in a highly dynamical system like a \gls{uav} due to the processing delay.
+Automatic landing of a fixed wing \acrfull{uav} in a net on a ship require a accurate positioning system. To increase general availability the system must consist of low-cost components, which exclude the commercial landing system that exist today. \acrfull{rtk-gps} can provide centimeter level position accuracy with the use of low-cost \acrfull{gnss} receivers. The processing time for the \gls{rtk-gps} system will decrease the accuracy due to its highly dynamical behaviour.
 
-This work present software and hardware systems that is used in a navigation system that apply \gls{rtk-gps}. Two different system will be compared against each other, as well as there induvidual performance. The \gls{rtk-gps} system is using single-frequency \gls{gnss} receivers, the Piksi system from Swift Navigation and the open-source \acrfull{rtklib}. 
-The \gls{rtk-gps} system is implemented in DUNE(DUNE:Unified Navigation Environment)-framework running on the embedded payload computer on-board the \gls{uav}. Outdoor lab tests and a flight test was used to check the performance of the navigation system.
-What is presented in this work:
+This work present two alternative software and hardware systems that are used in a navigation system which apply \gls{rtk-gps}. Two different systems, \gls{rtklib} and Piksi, will be compared, including their individual performance. The \gls{rtk-gps} system is using single-frequency \gls{gnss} receivers, the Piksi system from Swift Navigation and the open-source \acrfull{rtklib}. 
+The \gls{rtk-gps} system is implemented in DUNE(DUNE:Unified Navigation Environment) framework running on the embedded payload computer on-board the \gls{uav}. Outdoor lab tests and a flight test were used to test the performance of the navigation system.
+
+A test of the navigation system was successfully performed, and a \gls{rtk-gps} navigation system has been prepare for integration into a automatic net landing system. The Ublox proved to have superior satellite tracing ability, and combined with \gls{rtklib} proved the best \gls{rtk-gps} systems. 
 \end{abstract}
-\keywords{test,teste}
+\keywords{UAV,RTK-GPS,}

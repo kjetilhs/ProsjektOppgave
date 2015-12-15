@@ -2,18 +2,18 @@
 
 \chapter{Experimental testing}
 This chapter contain the result from the test that were performed. The goal with these test was to evaulate the ublox receiver againgst the pixi receiver, and to get a impresion on the accuracy to the rtklib solution with ublox. The comparison test was performed with the pixi and ublox connected to the same antenna at both the rover and the base station. Then the deviation in the position estimate can only come from the receivers. The accuracy test of the ublox was tested by performing the same manoeuvre several times. All position and velocity data is given in the \gls{ned} frame. 
-\section{Physical testing}
+\section{Performance testing of UAV Position System}
 The experimental test was split in two independent test, one where the X8 \gls{uav} was carried around on a open field to test the performance of the \gls{rtk-gps} system in a more controlled environment. The goal of the first was to log data from both \gls{rtk-gps} system in optimal condition for the navigation system. The second test was perform in a more realistic environment for a navigation system. 
 
 
 \subsection{Test 1: Test of the RTK-GPS navigation system}
-In this part two sessions of navigation data will be presented. Both sessions were performed on the same day, which was cloudless and at a time with low \gls{dop}. The raw data from the Ublox receiver was post processed with rtklib, and is should be more accurate than it's real time counter part. Therefore a error was defined as:
+In this part two test of navigation data will be presented. Both tests were performed on the same day, which was cloudless and at a time with low \gls{dop}. The raw data from the Ublox receiver was post processed with rtklib, and is should be more accurate than it's real time counter part. Therefore a estimate of error was defined as:
 \begin{equation}
 e(t) = p_r(t) - p_p(t)
 \end{equation}
-where $p_r(t)$ and $p_p(t)$ is defined as the position solution from the real time system and the position solution from the post processed solution respectfully. It should be noted that in order to compare the different time-series the position data was synchronized with each other. From the error the cumulative standard deviation for the error was calculated using the matlab function "std".
-\subsubsection{First session}
-As expected both systems provided a position estimate with fixed integer solution that followed the true path, and further confirms that both system performed in a similar manner. Therefore both systems are suitable for further comparison of position estimation in a flying test.
+where $p_r(t)$ and $p_p(t)$ is defined as the position solution from the real time system and the position solution from the post processed solution respectfully. $e(t)$ is used as a measure on the performance of the position estimate relative to the assumed more accurate post-processed estimate. It should be noted that in order to compare the different time-series the position data was synchronized with each other. From the error the cumulative standard deviation for the error was calculated using the matlab function "std".
+\subsubsection{First test}
+In the first session of the test the \gls{uav} was carried around on a open field, and latter placed exactly on the same place where it started. As expected both systems provided a position estimate with fixed integer solution that followed the true path, and further confirms that both system performed in a similar manner. Therefore both systems are suitable for further comparison of position estimation in a flying test.
 Figure \ref{figure:xywalk1} shows a North East plot of how the walk was. The plot contain only the fixed solution from both the piksi and rtklib. 
 \begin{figure}[H]
 	\centering
@@ -102,20 +102,26 @@ The position estimate from \gls{rtklib} appear to be delay in comparison to the 
 \end{figure}
 Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $1m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
 
-\subsubsection{Second session}
+\subsubsection{Second test}
 The second session was perform few minutes after the first, whit the same weather condition.
-During the second session the Piksi lost its fixed integer solution, while Rtklib managed to keep its fixed integer solution as seen in figure \ref{figure:xyWalk2} and \ref{figure:downWalk2}. 
+During the second session the Piksi lost its fixed integer solution, while Rtklib managed to keep its fixed integer solution as seen in figure \ref{figure:xyWalk2} and \ref{figure:downWalk2}.
+
 \begin{figure}[H]
+\begin{subfigure}[H]{1\textwidth}
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/xywalk2.eps}
 		\caption{Visable statellite for the piksi and rtklib}
 		\label{figure:xyWalk2}
-\end{figure}
-\begin{figure}[H]
+\end{subfigure}
+%\end{figure}
+%\begin{figure}[H]
+\begin{subfigure}[H]{1\textwidth}
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/downWalk2.eps}
 		\caption{Visable statellite for the piksi and rtklib}
 		\label{figure:downWalk2}
+\end{subfigure}
+
 \end{figure}
 The reason for why the Piksi lost its fixed solution might be because it lost track of several satellite, as seen in figure \ref{figure:numSatWalk2}. Since both receive share the same antenna it can be concluded that the satellite tracing performance in the Ublox is superior to the Piksi.  Even when the Piksi managed to regain track of the satellite it lost, it took 60 seconds before it regain a fixed integer solution. 
 \begin{figure}[H]
