@@ -11,9 +11,13 @@ Database file #1: main.bib
 Warning--to sort, need author, organization, or key in UbloxDataSheet
 Warning--to sort, need author, organization, or key in UbloxReceiverDescription
 Warning--to sort, need author, organization, or key in Piksiv231
+Warning--to sort, need author, organization, or key in maxtena
+Warning--to sort, need author, organization, or key in novatel
 Warning--to sort, need author, organization, or key in Rtklib242
 Warning--empty year in Piksiv231
 Warning--empty year in Rtklib242
 Warning--empty year in UbloxDataSheet
 Warning--empty year in UbloxReceiverDescription
-(There were 8 warnings)
+Warning--empty year in maxtena
+Warning--empty year in novatel
+(There were 12 warnings)

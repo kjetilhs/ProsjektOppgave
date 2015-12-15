@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -18,6 +18,12 @@
 \bibitem[Ubl({\natexlab{b}})]{UbloxReceiverDescription}
 \emph{U-blox M8 Receiver Description Including Protocol Specification},
   {\natexlab{b}}.
+
+\bibitem[max()]{maxtena}
+\emph{M1227HCT-A-SMA L1/L2 GPS-GLONASS Active Antenna, Data Sheet}.
+
+\bibitem[nov()]{novatel}
+\emph{Novatel, GPS-701-GG and GPS-702-GG, Data Sheet}.
 
 \bibitem[Adriaan(2013)]{smit2013autonomous}
 Smit Samuel~Jacobus Adriaan.
@@ -68,6 +74,13 @@ Williams Paul and Crump Michael.
 \newblock Intelligent landing system for landing uavs at unsurveyed airfields.
 \newblock In \emph{28th International Congress of the Aeronautical Sciences},
   2012.
+
+\bibitem[Pinto et~al.(2013)Pinto, Dias, Martins, Fortuna, Marques, and
+  Sousa]{pinto2013lsts}
+Joel Pinto, Paulo~S Dias, Rui~P Martins, Joao Fortuna, Eduardo Marques, and
+  Joao Sousa.
+\newblock The lsts toolchain for networked vehicle systems.
+\newblock In \emph{OCEANS-Bergen, 2013 MTS/IEEE}, pages 1--9. IEEE, 2013.
 
 \bibitem[P.J.G.(1994)]{Ambiguity:Estimation}
 Teunissen P.J.G.

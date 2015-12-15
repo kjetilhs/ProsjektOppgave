@@ -93,6 +93,13 @@ The position estimate of the rover is a relative position in reference to the ba
 		\caption{Visable statellite for the piksi and rtklib}
 		\label{figure:enhancedxywalk1}
 \end{figure}
+The position estimate from \gls{rtklib} appear to be delay in comparison to the solution from the Piksi. Figure \ref{figure:DownDelay} shows that both the post processed solution and the real time solution is delay by $0.5$ secounds compared to the Piksi. This could be how \gls{rtklib} resolve the millisecond in \acrfull{tow}, and will not be seen as an extra delay seen from the control systems perspective.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\textwidth]{figs/plots/downDelay.eps}
+		\caption{Velocity data from the piksi and rtklib real time solution}
+		\label{figure:DownDelay}
+\end{figure}
 Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $1m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
 
 \subsubsection{Second session}
