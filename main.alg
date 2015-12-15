@@ -1,6 +1,6 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 14.12.2015  16:47:20
-;; Indexstyle: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\DUBi37LzGn", Rawindex: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\gtKRHUKIN9", Output: "main.acr"
+;; at 15.12.2015  13:07:08
+;; Indexstyle: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\53Gn8Ukfx7", Rawindex: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\HD8XGZGGfE", Output: "main.acr"
 
 
 Building indexentry-tree:

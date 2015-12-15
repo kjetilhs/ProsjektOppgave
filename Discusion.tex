@@ -47,13 +47,13 @@ Both system has a good estimation of the North and East velocity, however it app
 
 
 \section{Further work}
-Setup the reciver to use both gps and glonass raw data.
+The Ublox receiver and the \gls{gnss} antennas are able to receive both \gls{gps} and \gls{glonass} \gls{l1} signals, which should be exploited to increase the number of valid satellite available for the \gls{rtk-gps} system. This could also give better constellation geometry, and help the system resolve its integer ambiguity faster.
 
-Integrate \gls{rtk-gps} into the existing control and guidance system.
+The \gls{rtk-gps} system must be integrated with the existing control and guidance system, and a test landing in a stationary net must be performed. 
 
-A \gls{rtk-gps} system can use both the Piksi and Rtklib such that the automatic landing system has redundancy in position, and velocity estimation. A validation task must then be design to choose which of the system should send the rtkfix message to the rest of the system.
+A \gls{rtk-gps} system can use both the Piksi and Rtklib such that the automatic landing system has redundancy in position, and velocity estimation. A validation task must then be design to choose which of the system should send the rtkfix \gls{imc} message to the rest of the system.
 
-Continue Spockelis work on gps/ins integration, where the rtk-gps system is used.
+A \gls{rtk-gps}/gls{ins} integration navigation system can be implemented in the automatic landing system. A \gls{rtk-gps}/gls{ins} integration was proposed in \citep{Spockeli}, which can be used.
 
 A position estimation system that can accurately predict were the \gls{uav} will be a few seconds ahead of time, such that the \gls{uav} can better know were it is instead of were if was.
 
