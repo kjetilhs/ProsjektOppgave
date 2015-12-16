@@ -53,7 +53,7 @@ More detailed information about Piksi can be found in \citep{Piksiv231}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/piksi_top.jpg}
-		\caption{Piksi, Picture from \url{www.swiftnav.com}}
+		\caption{Piksi receiver, Picture from \url{www.swiftnav.com}}
 		\label{figure:Piksi}
 \end{figure}
 \subsection{GNSS Antenna}
@@ -68,20 +68,20 @@ The Novatel GPS-701-GG, seen i figure \ref{figure:Novatel}, was chosen as the ba
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/Maxtena-M1227HCT-A-SMA-image.jpg}
-		\caption{Piksi, Picture from \url{http://sigma.octopart.com/21411362/image/Maxtena-M1227HCT-A-SMA.jpg}}
+		\caption{The rover \gls{gnss} antenna, Picture from \url{http://sigma.octopart.com/21411362/image/Maxtena-M1227HCT-A-SMA.jpg}}
 		\label{figure:Maxtena}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/702-L.png}
-		\caption{Piksi, Picture from \url{http://www.novatel.com/assets/Web-Phase-2-2012/Product-Page-Images/Product-Images-Banner-and-Thumbnail/Antennas/702-L.png}}
+		\caption{The base station \gls{gnss} antenna, Picture from \url{http://www.novatel.com}}
 		\label{figure:Novatel}
 \end{figure}
 
 
 \section{Software}\label{S:software}
-This section contain the different software that is used in the x8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to connect the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.
+This section contain the different software that is used in the X8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to connect the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.
 \subsection{LSTS toolchain}
 The \acrfull{lsts} toolchain is a flexible, scalable, open-source software that supports integration and control of various types of unmanned vehicles \citep{pinto2013lsts}. The toolchain includes a operating system, runtime environment, message protocol and a command and control for operations. The following program is included in the toolchain
 \subsubsection{GLUED}
@@ -96,19 +96,19 @@ The \acrfull{imc} protocol is build to interconnect systems of vehicles,sensors 
 
 %Other feature: Not assuming a specific software architecture, can generate native support for different programming languages and/or computer architectures. Used in network nodes, inter-process and inter thread communication
 \subsubsection{Neptus}
-Neptus is an open source command and control software that can be used for a single or fleet of unmanned vehicles with different types of sensors. The operator can observe real time data from a vehicle, review previous missions and plan future mission. In this work Neptus has been used to extract data logged by Dune during a defined mission, and to monitor the integer ambiguity solution from rtklib and piksi.
+Neptus is an open source command and control software that can be used for a single or fleet of unmanned vehicles with different types of sensors. The operator can observe real time data from a vehicle, review previous missions and plan future mission. In this work Neptus has been used to extract data logged by Dune during a defined mission, and to monitor the integer ambiguity solution from \gls{rtklib} and Piksi.
 \subsection{RTKLIB}\label{ss:Rtklib}
-Rtklib is a open source program package for standard and precise positioning with GNSS developed by T. Takasu. Rtklib can use raw GNSS data to estimate the position of the rover. Rtklib can be configured to give a position solution in real time in differential mode. Figure \ref{figure:RTKLIB_STRUCTURE} shows how rtklib can be used in a RTKGNSS mode. The two main moduels here is str2str and rtkrcv. Both will be explalined more closely in the following sections. More information about  rtklib can be found in \citep{Rtklib242}.
+\acrfull{rtklib} is a open source program package for standard and precise positioning with GNSS developed by T. Takasu. \gls{rtklib} can use raw GNSS data to estimate the position of the rover. \gls{rtklib} can be configured to give a position solution in real time in differential mode. Figure \ref{figure:RTKLIB_STRUCTURE} shows how \gls{rtklib} can be used in a RTKGNSS mode. The two main moduels here is str2str and rtkrcv. Both will be explained more closely in the following sections. More information about  \gls{rtklib} can be found in \citep{Rtklib242}.
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/Rtklib_structure.png}
-		\caption{The communication structure of rtklib}
+		\caption{The communication structure of \gls{rtklib}}
 		\label{figure:RTKLIB_STRUCTURE}
 \end{figure}
-\subsubsection{rtkrcv}
+\subsubsection{Rtkrcv}
 Rtkrcv is used to calculate the position of the rover in real time.
-Rtkrcv can be configured to have two output streams. The structure of the output stream is given the rtklib manual, however there has been done some alteration in the structure of the output. It's desired in a automatic landing system that have that velocity solution. This is was not provided in the newest version of rtklib, and therefore the source code was altered to send out the velocity data. A quick note here is that it is only available in the output solution is in a enu format. The format of the output is given in table \ref{Tb:RtklibOutput}.
+Rtkrcv can be configured to have two output streams. The structure of the output stream is given the \gls{rtklib} manual\citep{Rtklib242}, however there has been done some alteration in the structure of the output. It's desired in a automatic landing system that have that velocity solution. This is was not provided in the newest version of \gls{rtklib}, and therefore the source code was altered to send out the velocity data. A quick note here is that it is only available in the output solution is in a \gls{enu} format. The format of the output is given in table \ref{Tb:RtklibOutput}.
 \begin{table}[H]
 \begin{center}
     \begin{tabular}{ | l | l |}
@@ -141,18 +141,18 @@ This section explain how the implementation was done for the \gls{rtk-gps} navig
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/HardwareSoftware.png}
-		\caption{Hardware Software}
+		\caption{Hardware Software interaction}
 		\label{figure:HardSoft}
 \end{figure}
 \subsection{Software implementation}
-The software implementation consist mainly of rtklib and dune. Piksi is also used in the experiment, however it's rtklib and the Dune task RTKGPS that will be discussed thoroughly.
+The software implementation consist mainly of \gls{rtklib} and dune. Piksi is also used in the experiment, however it's \gls{rtklib} and the Dune task RTKGPS that will be discussed thoroughly.
 \subsubsection{Rtkgps}
-The \gls{rtk-gps} module in the navigation system consist of three parts. That is rtklib, and the two Dune tasks RTKGPS and Piksi. The RTKGPS task is connected to rtklib though a virtual connection, and the Piksi task has a physical connection to the Piksi receiver.
+The \gls{rtk-gps} module in the navigation system consist of three parts. That is \gls{rtklib}, and the two Dune tasks RTKGPS and Piksi. The RTKGPS task is connected to \gls{rtklib} though a virtual connection, and the Piksi task has a physical connection to the Piksi receiver.
 
 
-Rtklib is separated into the base station and the rover. The base station implementation runs the  str2str program were it communicate with the Ublox over a uart cable, and start up a tcp server.
+\gls{rtklib} is separated into the base station and the rover. The base station implementation runs the  str2str program were it communicate with the Ublox over a uart cable, and start up a tcp server.
 
-The rover uses the rtkrcv program from rtklib to estimate the position of the rover. Rtkrcv connect itself as a tcp client to the tcp server that str2str create. Rtkrcv is configured in a moving baseline configuration to simulate the behaviour that is expected during a landing on a ship. The configuration file is included in \ref{APPENDIX:RTKLIB}
+The rover uses the rtkrcv program from \gls{rtklib} to estimate the position of the rover. Rtkrcv connect itself as a tcp client to the tcp server that str2str create. Rtkrcv is configured in a moving baseline configuration to simulate the behaviour that is expected during a landing on a ship. The configuration file is included in \ref{APPENDIX:RTKLIB}
 
 The output from the Dune tasks is a \gls{imc} message called RtkFix, see table \ref{Tb:RtkFix}, which include the relative position of the \gls{uav} as well as the velocity, type of integer solution and the \gls{gps} \acrfull{tow}.
 \begin{table}[!h]
@@ -181,12 +181,12 @@ The output from the Dune tasks is a \gls{imc} message called RtkFix, see table \
 
 \subsection{Hardware implementation}
 Both the base station and \gls{uav} has been fitted with a \gls{gps} antenna splitter, seen i figure \ref{figure:AntennaSplitter}, such that both receivers receive the same signals from the antennas. GLUED is used as the operating system in the Beaglebone on both the base station and the \gls{uav}. The Piksi and Ublox is connected with the Beaglebone over uart cables. The primary data-link between the \gls{uav} and the base station with Ubiquiti AirMax radios.
-The embedded computer uses GLUED as its operating system, and on it runs both Dune and rtklib. The Piksi and Ublox is connected to the BeagleBone over uart cables.
+The embedded computer uses GLUED as its operating system, and on it runs both Dune and \gls{rtklib}. The Piksi and Ublox is connected to the BeagleBone over uart cables.
 More information on the hardware setup used in the X8 and the Base station is given in \citep{KlausenX8}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/066.jpg}
-		\caption{Antenna splitter}
+		\caption{\gls{gps} antenna splitter}
 		\label{figure:AntennaSplitter}
 \end{figure}
 \cleardoublepage

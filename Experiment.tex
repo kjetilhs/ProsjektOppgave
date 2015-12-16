@@ -7,7 +7,7 @@ The experimental test was split in two independent test, one where the X8 \gls{u
 
 
 \subsection{Test 1: Test of the RTK-GPS navigation system}
-In this part two test of navigation data will be presented. Both tests were performed on the same day, which was cloudless and at a time with low \gls{dop}. The raw data from the Ublox receiver was post processed with rtklib, and it should be more accurate than its real time counter part. Therefore a estimate of error was defined as:
+In this part two test of navigation data will be presented. Both tests were performed on the same day, which was cloudless and at a time with low \gls{dop}. The raw data from the Ublox receiver was post processed with \gls{rtklib}, and it should be more accurate than its real time counter part. Therefore a estimate of error was defined as:
 \begin{equation}
 e(t) = p_r(t) - p_p(t)
 \end{equation}
@@ -18,14 +18,14 @@ Figure \ref{figure:xywalk1} shows a North East plot of how the walk was. The plo
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/xywalk1.eps}
-		\caption{A xy plot of the piksi,rtklib real time solution and the rtklib post processed solution}
+		\caption{The North/East position during the first test}
 		\label{figure:xywalk1}
 \end{figure}
-Figure \ref{figure:DownAndAmbwalk1} shows the down position, as well as how the integer ambiguity solution was during the experiment. As seen in the figure both the Piksi and Rtklib manage to keep there fixed solution. The position solution from both the Piksi and Rtklib agrees with the post processed solution. 
+Figure \ref{figure:DownAndAmbwalk1} shows the down position, as well as how the integer ambiguity solution was during the experiment. As seen in the figure both the Piksi and \gls{rtklib} manage to keep there fixed solution. The position solution from both the Piksi and \gls{rtklib} agrees with the post processed solution. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/downWalk1.eps}
-		\caption{The communication structure of rtklib}
+		\caption{The Down position and integer ambiguity solution during the first test}
 		\label{figure:DownAndAmbwalk1}
 \end{figure}
 
@@ -33,33 +33,33 @@ As seen in figure \ref{figure:xywalk1} the difference between the different solu
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/errorRtklibWalk1.eps}
-		\caption{The difference between rtklib real time and post processed solution}
+		\caption{The error from \gls{rtklib}}
 		\label{figure:errorRTKwalk1}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/errorPiksiWalk1.eps}
-		\caption{The communication structure of rtklib}
+		\caption{The error from Piksi}
 		\label{figure:errorPiksiwalk1}
 \end{figure}
 The cumulative standard deviation for the error from both the Piksi and \gls{rtklib} indicate that the estimate has a high precision, as seen in figure \ref{figure:stdPiksi} and \ref{figure:stdRTK}. The high precision in the navigation system is critical in a automatic net landing system for the system to be able to follow a landing path.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/stdRtklibWalk1.eps}
-		\caption{Standard deviation of the difference between rtklib real time and post processed solution}
+		\caption{The cumulative standard deviation from \gls{rtklib}}
 		\label{figure:stdRTK}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/stdPiksiWalk1.eps}
-		\caption{Standard deviation of the difference between piksi real time and rtklib post processed solution}
+		\caption{The cumulative standard deviation from Piksi}
 		\label{figure:stdPiksi}
 \end{figure}
 Both the Piksi and \gls{rtklib} agrees to the same estimate the North and East velocity, as seen in figure \ref{figure:VelocityWalk1}. However the Down velocity from \gls{rtklib} is more noisy then the Piksi. This behaviour could be introduced because the \gls{uav} was carried around.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/velocityWalk1.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{The velocity from the first test}
 		\label{figure:VelocityWalk1}
 \end{figure}
 %The problem with the \gls{tow} is shown more clearly in figure \ref{figure:timeRTKwalk1}. The figure display the time difference between each output. The first part is an altered version of the \gls{tow} from rtklib, while the other is the timestamp of the same output given by Dune. The output from rtklib gave only seconds, and not a millisecond value. To correct for this error the \gls{tow} value from rtklib altered to fill the gap between each second. The alteration was done by counting the number of elements with the same \gls{tow} value, and then equally spread them from between the \gls{tow} value to the next \gls{tow} value.
@@ -78,37 +78,37 @@ Both the Piksi and \gls{rtklib} agrees to the same estimate the North and East v
 %		\caption{The time between time samples from rtklib}
 %		\label{figure:timePiksiWalk1}
 %\end{figure}
-The different receiver used in Rtklib and Piksi was not able to track the same satellites at all time. Figure \ref{figure:NumSatWalk1} shows that the Ublox LEA M8T receiver connected to Rtklib managed to track more satellite then the receiver used in Piksi. 
+The different receiver used in \gls{rtklib} and Piksi was not able to track the same satellites at all time. Figure \ref{figure:NumSatWalk1} shows that the Ublox LEA M8T receiver connected to \gls{rtklib} managed to track more satellite then the receiver used in Piksi. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/numSatWalk1.eps}
-		\caption{Visable statellite for the piksi and rtklib}
+		\caption{Number of visible satellites in the first test}
 		\label{figure:NumSatWalk1}
 \end{figure}
 The position estimate of the rover is a relative position in reference to the base station. Due to the fact that the position of the base station is calculated with a single receiver with one frequency, there will be introduced a bias in the position estimate. Figure \ref{figure:enhancedxywalk1} shows the North, East position of the the first walk. The true position is exactly the same, but in the figure the distance is approximately $5-10cm$. The distance from the base station to the estimated start and stop position was calculated to be $3.3553m$ and $3.2914m$ respectfully. The measured distance was approximately $3.3m$. That gives an initial error off $0.02m$. This gives an accuracy level at centimeter level at stationary condition. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/enhancedxywalk1.eps}
-		\caption{Visable statellite for the piksi and rtklib}
+		\caption{Enhanced North/East plot from the first test}
 		\label{figure:enhancedxywalk1}
 \end{figure}
 The position estimate from \gls{rtklib} is delayed in comparison to the solution from the Piksi. Figure \ref{figure:DownDelay} shows that both the post processed solution and the real time solution is delay by $0.5$ secounds compared to the Piksi. This could be how \gls{rtklib} resolve the millisecond in \acrfull{tow}, and may not be seen as an extra delay seen from the control systems perspective.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/downDelay.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{Enhanced Down plot from the first test}
 		\label{figure:DownDelay}
 \end{figure}
 Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $1m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
 \subsubsection{Second test}
 The second session was perform few minutes after the first, with the same weather condition.
-During the second session the Piksi lost its fixed integer solution, while Rtklib managed to keep its fixed integer solution as seen in figure \ref{figure:xyWalk2} and \ref{figure:downWalk2}.
+During the second session the Piksi lost its fixed integer solution, while \gls{rtklib} managed to keep its fixed integer solution as seen in figure \ref{figure:xyWalk2} and \ref{figure:downWalk2}.
 
 \begin{figure}[H]
 \begin{subfigure}[H]{1\textwidth}
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/xywalk2.eps}
-		\caption{Visable statellite for the piksi and rtklib}
+		\caption{The North/East position during the second test}
 		\label{figure:xyWalk2}
 \end{subfigure}
 %\end{figure}
@@ -116,7 +116,7 @@ During the second session the Piksi lost its fixed integer solution, while Rtkli
 \begin{subfigure}[H]{1\textwidth}
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/downWalk2.eps}
-		\caption{Visable statellite for the piksi and rtklib}
+		\caption{The Down position and integer ambiguity solution during the second test}
 		\label{figure:downWalk2}
 \end{subfigure}
 
@@ -125,30 +125,30 @@ The reason for why the Piksi lost its fixed solution might be because it lost tr
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/numSatWalk2.eps}
-		\caption{Visable statellite for the piksi and rtklib}
+		\caption{Number of visible satellites in the first test}
 		\label{figure:numSatWalk2}
 \end{figure}
 \subsection{In-flight test}
-A flight test with the \gls{uav} was performed at Udduvoll. Because of bad weather the were only performed one flight, and before the flight started only the Rtklib had a fixed solution. That is why in this part only performance from the Rtklib is considered, as a navigation system must have a fixed solution before the automatic net landing system can start.
+A flight test with the \gls{uav} was performed at Udduvoll. Because of bad weather the were only performed one flight, and before the flight started only the \gls{rtklib} had a fixed solution. That is why in this part only performance from the \gls{rtklib} is considered, as a navigation system must have a fixed solution before the automatic net landing system can start.
 
 During the flight test the integer ambiguity solution were more float then fixed as seen in figure \ref{figure:DownFlight} and \ref{figure:NorthEastFlight}, which affected the measurement. The same behaviour will be seen during the landing, however if the float solution is accurate enough the system should be able to perform a automatic landing.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/northEastFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{The North and East position during the flight}
 		\label{figure:NorthEastFlight}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/AltitudeFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{The altitude during the flight}
 		\label{figure:DownFlight}
 \end{figure}
 The main reason for the lost fixed solution is because of the number of valid satellite the receiver can track experience large variation, as seen i figure \ref{figure:numSatFlight}. A problem that was experienced during the flight is that large roll and pitch angel of the \gls{uav} blocks the antennas view of different satellites. That is a problem that can be solved by setting restriction on the dynamical behaviour of the \gls{uav} especially before and during landing.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/numSatFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{Number of visible satellites during the flight}
 		\label{figure:numSatFlight}
 \end{figure}
 %\begin{figure}[H]
@@ -168,13 +168,13 @@ As expected the \gls{rtk-gps} system had problem with keeping it's fixed integer
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingPath.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{The landing path}
 		\label{figure:landingPath}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingDownFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{The altitude during the landing}
 		\label{figure:landingDownFlight}
 \end{figure}
 
@@ -183,14 +183,14 @@ From the error plot seen in figure \ref{figure:landingErrorNorthEastDownFlight} 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingErrorNorthEastDownFlight.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{The error during the landing}
 		\label{figure:landingErrorNorthEastDownFlight}
 \end{figure}
 The landing velocity seen in figure \ref{figure:landingVelocity} confirms the precision in the estimate that was seen in the first test. However the altitude velocity is less noisy, and can be used in a control system.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingVelocity.eps}
-		\caption{Velocity data from the piksi and rtklib real time solution}
+		\caption{The velocity during the landing}
 		\label{figure:landingVelocity}
 \end{figure}
 \cleardoublepage
