@@ -15,12 +15,69 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="Rtklib_structure.svg"
+   sodipodi:docname="Piksi_structure.svg"
    inkscape:export-filename="C:\Users\Kjetil\Documents\ProsjektOppgave\figs\Rtklib_structure.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
      id="defs4">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker6890"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path6892" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker6772"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path6774" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5020"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path5022"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker4897"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4641"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
     <marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
@@ -127,7 +184,8 @@
        refX="0.0"
        id="marker4492"
        style="overflow:visible;"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          id="path4239"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
@@ -249,9 +307,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="344.31339"
-     inkscape:cy="446.85243"
+     inkscape:zoom="0.7"
+     inkscape:cx="259.22128"
+     inkscape:cy="528.04932"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -275,7 +333,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -363,15 +421,8 @@
        id="rect3378"
        width="173.74623"
        height="70.710678"
-       x="446.48743"
-       y="375.56" />
-    <rect
-       style="fill:#ac9d93"
-       id="rect3380"
-       width="220.21326"
-       height="113.13708"
-       x="70.710678"
-       y="613.95599" />
+       x="427.29453"
+       y="377.58029" />
     <rect
        style="fill:#ac9d93"
        id="rect3384"
@@ -414,7 +465,7 @@
        d="m 61.660466,320.64773 -13.444694,14.52766 -9.245264,9.51076 -5.858973,-18.90728 -3.613927,-12.76201 19.303667,4.37962 z"
        inkscape:transform-center-x="3.5674383"
        inkscape:transform-center-y="10.383641"
-       transform="matrix(-0.69233378,-0.7215774,0.7215774,-0.69233378,211.93302,577.64015)" />
+       transform="matrix(-0.69233378,-0.7215774,0.7215774,-0.69233378,293.75538,562.48786)" />
     <path
        sodipodi:type="star"
        style="fill:#808080"
@@ -432,7 +483,7 @@
        d="m 61.660466,320.64773 -13.444694,14.52766 -9.245264,9.51076 -5.858973,-18.90728 -3.613927,-12.76201 19.303667,4.37962 z"
        inkscape:transform-center-x="3.5674383"
        inkscape:transform-center-y="10.383641"
-       transform="matrix(-0.69233378,-0.7215774,0.7215774,-0.69233378,118.69952,888.14523)" />
+       transform="matrix(-0.69233378,-0.7215774,0.7215774,-0.69233378,77.283266,636.61725)" />
     <path
        sodipodi:type="star"
        style="fill:#999999"
@@ -450,28 +501,13 @@
        d="m 61.660466,320.64773 -13.444694,14.52766 -9.245264,9.51076 -5.858973,-18.90728 -3.613927,-12.76201 19.303667,4.37962 z"
        inkscape:transform-center-x="3.5674383"
        inkscape:transform-center-y="10.383641"
-       transform="matrix(-0.69233378,-0.7215774,0.7215774,-0.69233378,225.49829,889.15538)" />
-    <rect
-       style="fill:#ffffff"
-       id="rect3417"
-       width="131.42857"
-       height="48.57143"
-       x="121.42857"
-       y="648.07648" />
-    <rect
-       style="fill:#ffffff"
-       id="rect3419"
-       width="134.28572"
-       height="44.285713"
-       x="517.14288"
-       y="665.21936" />
+       transform="matrix(-0.69233378,-0.7215774,0.7215774,-0.69233378,184.08204,637.6274)" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 467.2648,671.10894 0,0"
+       d="m 425.84855,419.58096 0,0"
        id="path3457"
        inkscape:connector-type="orthogonal"
-       inkscape:connector-curvature="0"
-       inkscape:connection-end="#rect3384" />
+       inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
@@ -485,21 +521,22 @@
          y="395.21936" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="102.85714"
-       y="399.50507"
+       style="font-style:normal;font-weight:normal;font-size:25.59911537px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="105.02857"
+       y="383.28128"
        id="text3497"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.94997712,1.0526569)"><tspan
          sodipodi:role="line"
-         id="tspan3499"
-         x="102.85714"
-         y="399.50507"
-         style="font-size:15px">Base Station</tspan><tspan
-         sodipodi:role="line"
-         x="102.85714"
-         y="418.25507"
+         x="105.02857"
+         y="383.28128"
          id="tspan3501"
-         style="font-size:15px">GNSS Receiver</tspan></text>
+         style="font-size:19.19933701px">Base station</tspan><tspan
+         sodipodi:role="line"
+         x="105.02857"
+         y="407.28046"
+         style="font-size:19.19933701px"
+         id="tspan5164">Piksi</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot3503"
@@ -511,24 +548,7 @@
            x="478.57144"
            y="392.36221"
            style="font-size:15px;" /></flowRegion><flowPara
-         id="flowPara3509" /></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="471.42856"
-       y="396.64792"
-       id="text3511"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3513"
-         x="471.42856"
-         y="396.64792"
-         style="font-size:15px">Rover GNNS</tspan><tspan
-         sodipodi:role="line"
-         x="471.42856"
-         y="421.64792"
-         id="tspan3515"
-         style="font-size:15px">Receiver</tspan></text>
-    <flowRoot
+         id="flowPara3509" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3517"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:20px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
@@ -560,17 +580,6 @@
            y="658.61218"
            style="font-size:15px;" /></flowRegion><flowPara
          id="flowPara3547" /></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3549"
-       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
-         id="flowRegion3551"><rect
-           id="rect3553"
-           width="102.14286"
-           height="27.321428"
-           x="141.42857"
-           y="658.96936" /></flowRegion><flowPara
-         id="flowPara3555"
-         style="font-size:15px">str2str</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3557"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:125%;letter-spacing:0px;word-spacing:0px;"><flowRegion
@@ -605,18 +614,6 @@
          id="flowPara3575">rrtr</flowPara></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="536.07141"
-       y="691.64795"
-       id="text3577"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3579"
-         x="536.07141"
-         y="691.64795"
-         style="font-size:15px">rtkrcv</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="181.78571"
        y="72.362206"
        id="text4451"
@@ -629,27 +626,27 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:18.74535751px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="350.79599"
-       y="620.88678"
+       x="306.60773"
+       y="385.1377"
        id="text4455"
        sodipodi:linespacing="125%"
-       transform="scale(0.93726784,1.0669309)"><tspan
+       transform="scale(0.93726783,1.0669309)"><tspan
          sodipodi:role="line"
          id="tspan4457"
-         x="350.79599"
-         y="620.88678"
+         x="306.60773"
+         y="385.1377"
          style="font-size:14.05901814px">Tcp connection</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="109.28571"
-       y="743.79077"
+       x="70"
+       y="745.21936"
        id="text4459"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4461"
-         x="109.28571"
-         y="743.79077">Base station</tspan></text>
+         x="70"
+         y="745.21936">Base station computer</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -667,8 +664,8 @@
        id="path7602"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker7616);stroke-miterlimit:4;stroke-dasharray:2,2;stroke-dashoffset:0"
-       d="M 147.14286,123.07649 417.85714,309.50506"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker7616)"
+       d="M 227.95506,107.9242 498.66934,294.35277"
        id="path7614"
        inkscape:connector-curvature="0" />
     <path
@@ -677,70 +674,38 @@
        id="path7620"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.01391542px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker7628)"
-       d="m 417.14286,338.37774 -0.71429,67.55589 28.57143,0"
-       id="path7626"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker7634)"
-       d="m 198.57143,445.21935 -5,202.14285"
-       id="path7632"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#marker7642);stroke-miterlimit:4;stroke-dasharray:4,2;stroke-dashoffset:0"
-       d="M 334.28571,635.93363 420,635.21935"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 2;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#marker7642)"
+       d="m 292.86946,384.40565 85.71429,-0.71428"
        id="path7638"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4492)"
-       d="m 603.57143,446.64792 -2.85714,218.57143"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.89627117px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker5020);marker-end:url(#marker4492)"
+       d="M 528.82014,450.68853 525.963,626.26739"
        id="path4230"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4667);marker-start:url(#marker4835)"
-       d="m 252.14286,677.3622 70.71428,0 0.71429,-27.14285"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.66712642px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker4835);marker-end:url(#marker4667)"
+       d="m 250.36535,425.83422 31.47193,0 0.3179,-27.14285"
        id="path4659"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker5174);marker-end:url(#marker5512)"
-       d="M 430.71429,652.3622 430,678.07649 515,677.3622"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.67010313px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker5174);marker-end:url(#marker5512)"
+       d="m 388.90449,400.83422 -0.32074,25.71429 38.16825,-0.71429"
        id="path5166"
        inkscape:connector-curvature="0" />
     <flowRoot
        xml:space="preserve"
-       id="flowRoot6020"
-       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.72155915,0,0,0.90460702,103.62184,115.34168)"><flowRegion
-         id="flowRegion6022"><rect
-           id="rect6024"
-           width="182.85713"
-           height="91.428551"
-           x="670.71429"
-           y="658.79077" /></flowRegion><flowPara
-         id="flowPara6026">Position and velocity, tabel 3.2</flowPara><flowPara
-         id="flowPara6028" /></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3443"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.60369836,0,0,0.64756518,73.44928,173.45467)"><flowRegion
-         id="flowRegion3445"><rect
-           id="rect3447"
-           width="239.40616"
-           height="110.10661"
-           x="206.07112"
-           y="470.51434" /></flowRegion><flowPara
-         id="flowPara3449">Raw GNSS data</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
        id="flowRoot3443-2"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.60369836,0,0,0.64756518,479.6529,161.53171)"><flowRegion
+       transform="matrix(0.60369836,0,0,0.64756518,425.9415,160.71589)"><flowRegion
          id="flowRegion3445-8"><rect
            id="rect3447-9"
-           width="239.40616"
-           height="110.10661"
+           width="336.42719"
+           height="339.53748"
            x="206.07112"
            y="470.51434" /></flowRegion><flowPara
-         id="flowPara3449-0">Raw GNSS data</flowPara></flowRoot>    <rect
+         id="flowPara3449-0">Input:Raw GNSS data</flowPara><flowPara
+         id="flowPara5300">Output: Position and velocity</flowPara></flowRoot>    <rect
        style="fill:#ffffff"
        id="rect3477"
        width="146.47212"
@@ -758,7 +723,7 @@
            height="141.42136"
            x="523.25903"
            y="766.48901" /></flowRegion><flowPara
-         id="flowPara3485">Dune:RTKGPS</flowPara></flowRoot>    <rect
+         id="flowPara3485">Dune:Piksi</flowPara></flowRoot>    <rect
        style="fill:#808080"
        id="rect3489"
        width="230.31477"
@@ -788,11 +753,6 @@
            x="583.86816"
            y="864.47382" /></flowRegion><flowPara
          id="flowPara3505">Position and velocity, IMC:Rtkfix, tabel 3.3</flowPara></flowRoot>    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4393)"
-       d="m 582.85802,709.92049 -1.01015,46.46702"
-       id="path3507"
-       inkscape:connector-curvature="0" />
-    <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4501)"
        d="m 584.87832,823.05758 0,118.18784"
        id="path4493"
@@ -801,12 +761,63 @@
        xml:space="preserve"
        id="flowRoot3443-6"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.34768798,0,0,0.3894558,270.97751,406.31035)"><flowRegion
+       transform="matrix(0.34768798,0,0,0.3894558,229.56126,154.78237)"><flowRegion
          id="flowRegion3445-3"><rect
            id="rect3447-6"
            width="239.40616"
            height="110.10661"
            x="206.07112"
            y="470.51434" /></flowRegion><flowPara
-         id="flowPara3449-3">Raw GNSS data</flowPara></flowRoot>  </g>
+         id="flowPara3449-3">Raw GNSS data</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:31.45158005px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="362.83365"
+       y="534.80511"
+       id="text3497-2"
+       sodipodi:linespacing="125%"
+       transform="scale(1.3253069,0.75454223)"><tspan
+         sodipodi:role="line"
+         x="362.83365"
+         y="534.80511"
+         id="tspan3501-9"
+         style="font-size:23.58868599px">Rover </tspan><tspan
+         sodipodi:role="line"
+         x="362.83365"
+         y="571.30554"
+         style="font-size:23.58868599px"
+         id="tspan5166">Piksi</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="52.527931"
+       y="324.04221"
+       id="text6418"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6420"
+         x="52.527931"
+         y="324.04221">Antenna</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6432"
+       y="299.79855"
+       x="525.2793"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="299.79855"
+         x="525.2793"
+         id="tspan6434"
+         sodipodi:role="line">Antenna</tspan></text>
+    <flowRoot
+       transform="matrix(0.34768798,0,0,0.3894558,-130.05305,175.99557)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot6736"
+       xml:space="preserve"><flowRegion
+         id="flowRegion6738"><rect
+           y="470.51434"
+           x="206.07112"
+           height="110.10661"
+           width="239.40616"
+           id="rect6740" /></flowRegion><flowPara
+         id="flowPara6742">Raw GNSS data</flowPara></flowRoot>  </g>
 </svg>

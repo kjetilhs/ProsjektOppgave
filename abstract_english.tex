@@ -1,10 +1,13 @@
 \pagestyle{empty}
 \begin{abstract}
-Automatic landing of a fixed wing \acrfull{uav} in a net on a ship require a accurate positioning system. To increase general availability the system must consist of low-cost components, which exclude the commercial landing system that exist today. \acrfull{rtk-gps} can provide centimeter level position accuracy with the use of low-cost \acrfull{gnss} receivers. The processing time for the \gls{rtk-gps} system will decrease the accuracy due to its highly dynamical behaviour.
+Automatic landing of a fixed wing \acrfull{uav} in a net on a ship require an accurate positioning system. There exist today high-end systems with such capability for special applications, e.g military systems and costly commercial systems. To increase general availability the system must consist of low-cost components. An alternative is the use of low-cost \gls{gnss} receiver and apply \acrfull{rtk-gps}, which can provide centimeter level position accuracy. However the processing time for the \gls{rtk-gps} system results in degraded accuracy when exposed to highly dynamical behaviour.
 
-This work present two alternative software and hardware systems that are used in a navigation system which apply \gls{rtk-gps}. Two different systems, \gls{rtklib} and Piksi, will be compared, including their individual performance. The \gls{rtk-gps} system is using single-frequency \gls{gnss} receivers, the Piksi system from Swift Navigation and an altered version of the open-source \acrfull{rtklib}. 
-The \gls{rtk-gps} system is implemented in DUNE(DUNE:Unified Navigation Environment) framework running on the embedded payload computer on-board the \gls{uav}. Outdoor lab tests and a flight test were used to test the performance of the navigation system.
+This work present two alternative software and hardware position systems suitable for use in navigation system which apply \gls{rtk-gps}, namely \gls{rtklib} with a Ublox Lea M8T receiver and Piksi. Both the Piksi and the Ublox receivers are single-frequency \gls{gnss} receivers. The Piksi supports \gls{rtk-gps}, while the Ublox can send raw \gls{gnss} data to \gls{rtklib}. The \gls{rtklib} version used in this work is an altered version from the latest release. These systems will in this work be compared and their individual capability to provide accurate position estimate will be evaluated. 
 
-A test of the navigation system was successfully performed, and a \gls{rtk-gps} navigation system has been prepare for integration into a automatic net landing system. The Ublox proved to have superior satellite tracing ability, and combined with \gls{rtklib} proved the best \gls{rtk-gps} systems. 
+The \gls{rtk-gps} system is implemented in DUNE(DUNE:Unified Navigation Environment) framework running on an embedded payload computer on-board the \gls{uav}.
+
+The performance of these position systems are in this work investigated by experimental testing. These tests of the navigation system was successfully performed, and have proven that the navigation system is sufficient from integration into a control and guidance system.
+
+Of the two positioning system the \gls{rtklib} combined with the Ublox LEA M8T receiver proved superior to the Piksi system.
 \end{abstract}
-\keywords{UAV,RTK-GPS,}
+%\keywords{UAV,RTK-GPS,}
