@@ -54,15 +54,15 @@ Establishment of accuracy requirement by conduct over land automatic net landing
 
 Implementation of an integrated test system with automatic net landing capabilities.
 
-Determine operation limitations, e.g weather, temperature,
+Determine operation weather limitations, e.g wind, temperature and rain.
 
-The flight test shown that the navigation system has problem with keeping its fixed integer ambiguity solution during flight. Therefore further test are required to investigate the effect of mixed float and fixed solution during landing. This can be achieved by integrating the navigation system into a control and guidance system, which can be used to perform a trial landing with a safety margin to ensure that the \gls{uav} do not crash.
-
-Constraints on the behaviour of the \gls{uav} will help the navigation system to keep its fixed integer ambiguity solution during the landing. A upper limit on the roll and pitch angle that minimize the time the antenna is in a shadow zone will increase position accuracy from the navigation system.
-
-The Ublox receiver and the \gls{gnss} antennas are able to receive both \gls{gps} and \gls{glonass} L1 signals, which should be exploited to increase the number of valid satellite available for the \gls{rtk-gps} system. This could also give better constellation geometry, and help the system resolve its integer ambiguity faster.
- 
-
-A \gls{rtk-gps} system can use both the Piksi and \gls{rtklib} such that the automatic landing system has redundancy in position, and velocity estimation. A validation task must then be design to choose which of the system should send the rtkfix \gls{imc} message to the rest of the system.
+%The flight test shown that the navigation system has problem with keeping its fixed integer ambiguity solution during flight. Therefore further test are required to investigate the effect of mixed float and fixed solution during landing. This can be achieved by integrating the navigation system into a control and guidance system, which can be used to perform a trial landing with a safety margin to ensure that the \gls{uav} do not crash.
+%
+%Constraints on the behaviour of the \gls{uav} will help the navigation system to keep its fixed integer ambiguity solution during the landing. A upper limit on the roll and pitch angle that minimize the time the antenna is in a shadow zone will increase position accuracy from the navigation system.
+%
+%The Ublox receiver and the \gls{gnss} antennas are able to receive both \gls{gps} and \gls{glonass} L1 signals, which should be exploited to increase the number of valid satellite available for the \gls{rtk-gps} system. This could also give better constellation geometry, and help the system resolve its integer ambiguity faster.
+% 
+%
+%A \gls{rtk-gps} system can use both the Piksi and \gls{rtklib} such that the automatic landing system has redundancy in position, and velocity estimation. A validation task must then be design to choose which of the system should send the rtkfix \gls{imc} message to the rest of the system.
 
 \cleardoublepage

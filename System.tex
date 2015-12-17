@@ -50,19 +50,23 @@ The Ublox LEA M8T is a new generation of low-cost \gls{gnss} receiver from ublox
 \subsubsection{Piksi}\label{ss:Piksi}
 The Piksi system is a low cost, high performance \gls{gps} receiver with \gls{rtk-gps} functionality with capability for centimeter level relative positioning accuracy developed by Swift Navigation, shown in figure \ref{figure:Piksi}. Piksi is ideal for autonomous vehicles because of its small form factor, fast position solution update rate and low power consumption. 
 More detailed information about Piksi can be found in \citep{Piksiv231}
+The communication structure for Piksi used in this project work is seen in figure \ref{figure:CommunicationPiksi}.
 \begin{figure}[H]
+\begin{subfigure}[H]{1\textwidth}
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/piksi_top.jpg}
 		\caption{Piksi receiver, Picture from \url{www.swiftnav.com}}
 		\label{figure:Piksi}
-\end{figure}
-The communication structure for Piksi used in this project work is seen in figure \ref{figure:CommunicationPiksi}.
-\begin{figure}[H]
+\end{subfigure}
+
+\begin{subfigure}[H]{1\textwidth}
 	\centering
-		\includegraphics[width=1\textwidth]{figs/Piksi.png}
+		\includegraphics[width=0.8\textwidth]{figs/Piksi.png}
 		\caption{Communication structure for Piksi}
 		\label{figure:CommunicationPiksi}
+\end{subfigure}		
 \end{figure}
+
 \subsection{GNSS Antenna}
 The navigation system will use two \gls{gnss} antenna, one for the \gls{uav} and the other for the base station. The main criteria for the \gls{uav} antenna is that it's small,compact and have a light weight.
 
@@ -74,14 +78,14 @@ The Novatel GPS-701-GG, seen i figure \ref{figure:Novatel}, was chosen as the ba
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.7\textwidth]{figs/Maxtena-M1227HCT-A-SMA-image.jpg}
+		\includegraphics[width=0.5\textwidth]{figs/Maxtena-M1227HCT-A-SMA-image.jpg}
 		\caption{The rover \gls{gnss} antenna, Picture from \url{http://sigma.octopart.com/21411362/image/Maxtena-M1227HCT-A-SMA.jpg}}
 		\label{figure:Maxtena}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.7\textwidth]{figs/702-L.png}
+		\includegraphics[width=0.5\textwidth]{figs/702-L.png}
 		\caption{The base station \gls{gnss} antenna, Picture from \url{http://www.novatel.com}}
 		\label{figure:Novatel}
 \end{figure}
