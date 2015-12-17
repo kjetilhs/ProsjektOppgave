@@ -1,18 +1,17 @@
 %===================================== CHAP 5 =================================
 
-\chapter{Conclusion and recommendation for further work}
-This chapter will discus the result from the experimental tests, which will be used to conclude the performance of the individual \gls{rtk-gps} system. The last part of this chapter will include suggestion for further work regarding the design of a automatic net landing system.
-\section{Conclusion}
-In the fist test both the \gls{rtklib} and Piksi managed to get a fixed solution, which gave similar result from both systems. However during the second run the Piksi lost its fixed solution. The \gls{rtklib} had also problem with keeping its fixed solution, however mangaged to recover faster then the Piksi. The ability for the navigation system to quickly recover its integer ambiguity solution is critical for the performance of a automatic net landing system.
+\chapter{Closing discussion and conclusion}
+This chapter present the discussion on the result from the experimental tests, which will be used to conclude the performance of the individual \gls{rtk-gps} system. Then recommendation for further work is presented regarding the design of a automatic net landing system.
+\section{Closing discussion and conclusion}
+In the fist test both the \gls{rtklib} and Piksi managed to get a fixed solution, which gave similar result from both systems. However during the second run the Piksi lost its fixed integer ambiguity solution, while \gls{rtklib} managed to keep its fixed integer ambiguity solution. The ability for the navigation system to quickly recover its integer ambiguity solution is critical for the performance of a automatic net landing system.
 
-The \gls{rtk-gps} system achieves centimetre level accuracy when stationary. Together with the high precision in the navigation system the accuracy of the relative position would be at a decimetre level, given that the integer ambiguity solution is fixed. With a float solution the accuracy will decrease, and it has yet to be determined if the degradation will make the \gls{uav} unable to perform a automatic landing in a net.
+The \gls{rtk-gps} system achieves centimetre level accuracy when stationary. Together with the high precision solution from the navigation system the accuracy of the relative position would be at a decimetre level, given that the integer ambiguity solution is fixed. With a float solution the accuracy will decrease, and it has yet to be determined if the degradation will make the \gls{uav} unable to perform a automatic landing in a net.
 
-The output solution from \gls{rtklib} has a \acrfull{tow} value that is constant half a second delayed compared to the Piksi. This may be a result from how \gls{rtklib} is handling microseconds in the \gls{tow} value, such that a control system will not get a delayed position estimate. However for a integrated navigation system this pose a problem. The integration becomes more difficult when it's unclear how old the position estimate is.
+The output solution from \gls{rtklib} has a \acrfull{tow} value that is constant half a second delayed compared to the Piksi. This may be a result from the handling of \gls{tow} value from different satellites in \gls{rtklib}, such that a control system will not get a delayed position estimate. However for a integrated navigation system this pose a problem. The integration becomes more difficult when it's unclear how old the position estimate is.
 
 The tracking performance from the two receiver type indicate that the Ublox is superior to the Piksi. It always manage to track more satellites, and keep track of them longer.
-
-Before the take-off the Piksi had yet solved its integer ambiguity, while \gls{rtklib} had. That might be because of it kept track of fever satellites. 
-The flight test showed that keeping the fixed integer solution during a flight is difficult, likely due to the dynamic behaviour of the \gls{uav}. Constraint on the behaviour such that the antenna is kept out of shadow zones will help, however the landing phase of the \gls{uav} operation must be kept independent from the rest of the operation. Therefore landing specific constraint cannot be imposed on the \gls{uav} general behaviour. Hence the navigation system must be able to recover its fixed integer ambiguity solution during flight, which the \gls{rtklib} system proved the capability of.
+Before the take-off the Piksi had yet solved its integer ambiguity, while \gls{rtklib} had. This might be because it kept track of fever satellites. 
+The flight test showed that keeping a fixed integer ambiguity solution during a flight is difficult, likely due to the dynamic behaviour of the \gls{uav}. Constraint on the behaviour such that the antenna is kept out of shadow zones will help, however the landing phase of the \gls{uav} operation must be kept independent from the rest of the operation. Therefore landing specific constraint cannot be imposed on the \gls{uav} general behaviour. Hence the navigation system must be able to recover its fixed integer ambiguity solution during the flight, which the \gls{rtklib} system proved the capability of.
 
 
 %During the flight the Ublox lost track of more satellite then during the \gls{gps} lab tests. The antenna follows the orientation of the \gls{uav} and therefore some satellite will be blocked by the fuselage. This must be consider when designing a guidance system for automatic landing. To ensure that the antenna has a clear view of the sky, the \gls{uav} should try to have a maximum roll when the automatic landing system is engaged.
@@ -48,7 +47,7 @@ The velocity estimate from Piksi and \gls{rtklib} in the first test have similar
 
 
 \section{Further work}
-Further work required for the development of an \gls{uav} system with automatic landing capabilities sufficient for landing in a net on a ship includes:
+Further work required for the development of an \gls{uav} system with automatic landing capabilities sufficient for landing in a net on a ship includes
 
 Establishment of accuracy requirement by conduct over land automatic net landing.
 
