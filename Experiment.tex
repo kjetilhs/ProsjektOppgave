@@ -1,19 +1,19 @@
 %===================================== CHAP 5 =================================
 
 \chapter{Experimental testing}
-This chapter contain the result from the test that were performed. The goal with these tests was to test the performance of the Ublox LEA M8T, compare the performance of \acrfull{rtklib} with Piksi, and to compare the real time estimate from both system with the post-processed solution. The comparison test was performed with the pixi and ublox connected to the same antenna at both the rover and the base station. Then the deviation in the position estimate can only come from the receivers. All position and velocity data is given in the \gls{ned} frame, however altitude is used for the flight test.
+This chapter contain the result from the test that were performed. The goal with these tests was to test the performance of the Ublox LEA M8T, compare the performance of the \acrfull{rtklib} with the Piksi alternative, and to compare the real time estimate from both system with the post-processed solution. The comparison test was performed with the pixi and ublox connected to the same antenna at both the rover and the base station. Hence the deviation in the position estimate can only come from the receivers. All position and velocity data is given in the \gls{ned} frame, however altitude is only used for the flight test.
 \section{Performance testing of UAV Position System}
-The experimental test was split in two independent test, one where the X8 \gls{uav} was carried around on a open field to test the performance of the \gls{rtk-gps} system in a more controlled environment. The goal of the first was to log data from both \gls{rtk-gps} system in optimal condition for the navigation system. The second test was perform in a more realistic environment for a navigation system. 
+The experimental test was split in two independent test, one where the X8 \gls{uav} was carried around on a open field to test the performance of the \gls{rtk-gps} system in a more controlled environment, and a second test where the \gls{uav} was flying by means of pilot control. The goal of the first was to log data from both \gls{rtk-gps} system in optimal condition for the navigation system. The objective of the second test was to test the systems in a more realistic environment for application in an automatic net landing system. 
 
 
 \subsection{Test 1: Test of the RTK-GPS navigation system}
-In this part two test of navigation data will be presented. Both tests were performed on the same day, which was cloudless and at a time with low \gls{dop}. The raw data from the Ublox receiver was post processed with \gls{rtklib}, and it should be more accurate than its real time counter part. Therefore a estimate of error was defined as:
+The first test was repeated twice where results from both runs are reported. Both tests were performed on the same day, which was cloudless and at a time with good satellite constellation geometry. The raw data from the Ublox receiver was post processed with \gls{rtklib}, which is assumed more accurate than real time processed data. Therefore a estimate of error is defined as:
 \begin{equation}
 e(t) = p_r(t) - p_p(t)
 \end{equation}
 where $p_r(t)$ and $p_p(t)$ is defined as the position solution from the real time system and the position solution from the post processed solution respectfully. $e(t)$ is used as a measure on the performance of the position estimate relative to the assumed more accurate post-processed estimate. It should be noted that in order to compare the different time-series the position data was synchronized with each other. From the error the cumulative standard deviation was calculated using the matlab function "std".
 \subsubsection{First test}
-In the first session of the test the \gls{uav} was carried around on a open field, and latter placed exactly on the same place where it started. As expected both systems provided a position estimate with fixed integer solution that followed the true path, and further confirms that both system performed in a similar manner. Therefore both systems are suitable for further comparison of position estimation in a flying test.
+In the first session of the test the \gls{uav} was carried around on a open field, and later placed exactly on the same place where it started. As expected both systems provided a position estimate with fixed integer solution that followed the true path, and further confirms that both system performed in a similar manner. Therefore both systems are suitable for further comparison of position estimation in a flying test.
 Figure \ref{figure:xywalk1} shows a North East plot of how the walk was. The plot contain only the fixed solution from both the piksi and rtklib. 
 \begin{figure}[H]
 	\centering
@@ -101,7 +101,7 @@ The position estimate from \gls{rtklib} is delayed in comparison to the solution
 \end{figure}
 Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $1m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
 \subsubsection{Second test}
-The second session was perform few minutes after the first, with the same weather condition.
+The second session was performed few minutes after the first, with the same weather condition.
 During the second session the Piksi lost its fixed integer solution, while \gls{rtklib} managed to keep its fixed integer solution as seen in figure \ref{figure:xyWalk2} and \ref{figure:downWalk2}.
 
 \begin{figure}[H]
@@ -129,9 +129,9 @@ The reason for why the Piksi lost its fixed solution might be because it lost tr
 		\label{figure:numSatWalk2}
 \end{figure}
 \subsection{In-flight test}
-A flight test with the \gls{uav} was performed at Udduvoll. Because of bad weather the were only performed one flight, and before the flight started only the \gls{rtklib} had a fixed solution. That is why in this part only performance from the \gls{rtklib} is considered, as a navigation system must have a fixed solution before the automatic net landing system can start.
+A flight test with the \gls{uav} was performed at Udduvoll. Because of bad weather only one flight test was performed. Prior to take-of it was only the \gls{rtklib} which was able to provide a fixed solution. Hence only performance from the \gls{rtklib} is considered in this test, as a navigation system must have a fixed solution before the automatic net landing system can start.
 
-During the flight test the integer ambiguity solution were more float then fixed as seen in figure \ref{figure:DownFlight} and \ref{figure:NorthEastFlight}, which affected the measurement. The same behaviour will be seen during the landing, however if the float solution is accurate enough the system should be able to perform a automatic landing.
+During the flight test the integer ambiguity solution were more float then fixed as seen in figure \ref{figure:DownFlight} and \ref{figure:NorthEastFlight}, which affected the measurement. The same behaviour will be seen during the landing, however if the float solution is accurate enough the system should be able to perform an automatic landing.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/northEastFlight.eps}
@@ -144,7 +144,7 @@ During the flight test the integer ambiguity solution were more float then fixed
 		\caption{The altitude during the flight}
 		\label{figure:DownFlight}
 \end{figure}
-The main reason for the lost fixed solution is because of the number of valid satellite the receiver can track experience large variation, as seen i figure \ref{figure:numSatFlight}. A problem that was experienced during the flight is that large roll and pitch angel of the \gls{uav} blocks the antennas view of different satellites. That is a problem that can be solved by setting restriction on the dynamical behaviour of the \gls{uav} especially before and during landing.
+The main reason for the lost fixed solution is because of the number of valid satellite the receiver can track experience large variation, as seen i figure \ref{figure:numSatFlight}. A problem that was experienced during the flight is that large roll and pitch angel of the \gls{uav} puts the antennas in shadow zones, i.e. lose communication with different satellites. That is a problem that can be solved in a control system by setting restriction on the dynamical behaviour of the \gls{uav} especially before and during landing.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/numSatFlight.eps}
