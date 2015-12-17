@@ -1,6 +1,6 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 16.12.2015  14:35:30
-;; Indexstyle: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\uVQnW4uHTU", Rawindex: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\10cFMP8quO", Output: "main.acr"
+;; at 17.12.2015  14:00:04
+;; Indexstyle: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\voH2M9JAWe", Rawindex: "C:\\Users\\Kjetil\\Documents\\ProsjektOppgave\\Ds7_9kb_7R", Output: "main.acr"
 
 
 Building indexentry-tree:
@@ -36,13 +36,13 @@ sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 
 Forming letter-groups:
 Letter-group: "à€å" -> "U"
-Letter-group: "ËÚ®ÈÐ" -> "R"
 Letter-group: "¼ÐÐ" -> "G"
+Letter-group: "ËÚ®ÈÐ" -> "R"
 Letter-group: "ËÚ®´¨„" -> "R"
 Letter-group: "—†—œ" -> "E"
-Letter-group: "¨»†" -> "I"
-Letter-group: "ÈÐ" -> "G"
 Letter-group: "ÈÐ" -> "D"
+Letter-group: "ÈÐ" -> "G"
+Letter-group: "¨»†" -> "I"
 Letter-group: "¼—" -> "N"
 Letter-group: "—¼à" -> "E"
 Letter-group: "—†¨" -> "E"

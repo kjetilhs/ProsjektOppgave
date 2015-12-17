@@ -12,7 +12,7 @@ The first test was repeated twice where results from both runs are reported. Bot
 e(t) = p_r(t) - p_p(t)
 \end{equation}
 where $p_r(t)$ and $p_p(t)$ is defined as the position solution from the real time system and the position solution from the post processed solution respectfully. $e(t)$ is used as a measure on the performance of the position estimate relative to the assumed more accurate post-processed estimate. It should be noted that in order to compare the different time-series the position data was synchronized with each other. From the error the cumulative standard deviation was calculated using the matlab function "std".
-\subsubsection{First test}
+\paragraph{First test}
 In the first session of the test the \gls{uav} was carried around on a open field, and later placed exactly on the same place where it started. As expected both systems provided a position estimate with fixed integer solution that followed the true path, and further confirms that both system performed in a similar manner. Therefore both systems are suitable for further comparison of position estimation in a flying test.
 Figure \ref{figure:xywalk1} shows a North East plot of how the walk was. The plot contain only the fixed solution from both the piksi and rtklib. 
 \begin{figure}[H]
@@ -100,7 +100,8 @@ The position estimate from \gls{rtklib} is delayed in comparison to the solution
 		\label{figure:DownDelay}
 \end{figure}
 Given that the error given in figure \ref{figure:errorPiksiwalk1} and \ref{figure:errorRTKwalk1} is never has a greater absolute value then $0.2m$ it's possible to assume that the true error will be bellow $1m$ which was given as an evasion criterion in the MSc thesis by \citep{Froelich}, if the \gls{rtk-gps} system has a fixed integer solution.
-\subsubsection{Second test}
+
+\paragraph{Second test}
 The second session was performed few minutes after the first, with the same weather condition.
 During the second session the Piksi lost its fixed integer solution, while \gls{rtklib} managed to keep its fixed integer solution as seen in figure \ref{figure:xyWalk2} and \ref{figure:downWalk2}.
 
@@ -164,7 +165,7 @@ The main reason for the lost fixed solution is because of the number of valid sa
 %		\label{figure:errorDownFlight}
 %\end{figure}
 \subsubsection{Landing}
-As expected the \gls{rtk-gps} system had problem with keeping it's fixed integer solution. The \gls{rtk-gps} position estimate of the landing path is shown in figure \ref{figure:landingPath}. The system kept changing between float and fixed solution during the landing phase. Figure \ref{figure:landingNorthEastFlight} shown the North East position during the landing with the type of solution. The Down position as well as the integer ambiguity solution is for the landing phase is seen in \ref{figure:landingDownFlight}. The \gls{rtk-gps} system was unable to maintain a fixed solution, however it did maintain a float solution. Further test with a control system is required in order to test if also the float solution is accurate enough to perform a automatic net landing.
+As expected the \gls{rtk-gps} system had problem with keeping it's fixed integer solution. The \gls{rtk-gps} position estimate of the landing path is shown in figure \ref{figure:landingPath}. The system kept changing between float and fixed solution during the landing phase. The Down position as well as the integer ambiguity solution for the landing phase is seen in \ref{figure:landingDownFlight}. The \gls{rtk-gps} system was unable to maintain a fixed solution, however it did maintain a float solution. Further test with a control system is required in order to test if also the float solution is accurate enough to perform a automatic net landing.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingPath.eps}
@@ -178,7 +179,7 @@ As expected the \gls{rtk-gps} system had problem with keeping it's fixed integer
 		\label{figure:landingDownFlight}
 \end{figure}
 
-From the error plot seen in figure \ref{figure:landingErrorNorthEastDownFlight} it appear that to be able to estimate it's own position with an error bellow 1 meter most of the time. However this is compared to the post processed estimate, which also will diverge from the true value since it is based on the same raw data as the real time solution.
+From the error plot seen in figure \ref{figure:landingErrorNorthEastDownFlight} it is able to estimate it's own position with an error bellow 1 meter most of the time. However this is compared to the post processed estimate, which also will diverge from the true value since it is based on the same raw data as the real time solution.
 
 \begin{figure}[H]
 	\centering

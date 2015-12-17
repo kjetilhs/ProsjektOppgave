@@ -13,29 +13,30 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces BeagleBone Black element 14, Picture from \url {http://www.element14.com}\relax }}{17}{figure.caption.14}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Ublox LEA M8T, Picture from \url {http://www.csgshop.com}\relax }}{18}{figure.caption.15}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Piksi receiver, Picture from \url {www.swiftnav.com}\relax }}{19}{figure.caption.17}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The rover \gls {gnss} antenna, Picture from \url {http://sigma.octopart.com/21411362/image/Maxtena-M1227HCT-A-SMA.jpg}\relax }}{20}{figure.caption.18}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces The base station \gls {gnss} antenna, Picture from \url {http://www.novatel.com}\relax }}{20}{figure.caption.19}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces The communication structure of \gls {rtklib}\relax }}{22}{figure.caption.24}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Hardware Software interaction\relax }}{24}{figure.caption.28}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces \gls {gps} antenna splitter\relax }}{26}{figure.caption.31}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Communication structure for Piksi\relax }}{19}{figure.caption.18}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The rover \gls {gnss} antenna, Picture from \url {http://sigma.octopart.com/21411362/image/Maxtena-M1227HCT-A-SMA.jpg}\relax }}{20}{figure.caption.19}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The base station \gls {gnss} antenna, Picture from \url {http://www.novatel.com}\relax }}{21}{figure.caption.20}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The communication structure of \gls {rtklib}\relax }}{23}{figure.caption.25}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Hardware Software interaction\relax }}{25}{figure.caption.29}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \gls {gps} antenna splitter\relax }}{27}{figure.caption.32}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The North/East position during the first test\relax }}{28}{figure.caption.33}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The Down position and integer ambiguity solution during the first test\relax }}{29}{figure.caption.34}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The error from \gls {rtklib}\relax }}{29}{figure.caption.35}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces The error from Piksi\relax }}{30}{figure.caption.36}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces The cumulative standard deviation from \gls {rtklib}\relax }}{30}{figure.caption.37}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces The cumulative standard deviation from Piksi\relax }}{31}{figure.caption.38}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces The velocity from the first test\relax }}{31}{figure.caption.39}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Number of visible satellites in the first test\relax }}{32}{figure.caption.40}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Enhanced North/East plot from the first test\relax }}{33}{figure.caption.41}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Enhanced Down plot from the first test\relax }}{33}{figure.caption.42}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Number of visible satellites in the first test\relax }}{36}{figure.caption.45}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces The North and East position during the flight\relax }}{37}{figure.caption.46}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces The altitude during the flight\relax }}{37}{figure.caption.47}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Number of visible satellites during the flight\relax }}{38}{figure.caption.48}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces The landing path\relax }}{39}{figure.caption.50}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces The altitude during the landing\relax }}{39}{figure.caption.51}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces The error during the landing\relax }}{40}{figure.caption.52}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces The velocity during the landing\relax }}{40}{figure.caption.53}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The North/East position during the first test\relax }}{30}{figure.caption.34}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The Down position and integer ambiguity solution during the first test\relax }}{31}{figure.caption.35}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The error from \gls {rtklib}\relax }}{31}{figure.caption.36}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The error from Piksi\relax }}{32}{figure.caption.37}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The cumulative standard deviation from \gls {rtklib}\relax }}{32}{figure.caption.38}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces The cumulative standard deviation from Piksi\relax }}{33}{figure.caption.39}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces The velocity from the first test\relax }}{33}{figure.caption.40}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Number of visible satellites in the first test\relax }}{34}{figure.caption.41}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Enhanced North/East plot from the first test\relax }}{35}{figure.caption.42}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Enhanced Down plot from the first test\relax }}{35}{figure.caption.43}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Number of visible satellites in the first test\relax }}{37}{figure.caption.46}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces The North and East position during the flight\relax }}{38}{figure.caption.47}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces The altitude during the flight\relax }}{38}{figure.caption.48}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Number of visible satellites during the flight\relax }}{39}{figure.caption.49}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces The landing path\relax }}{40}{figure.caption.51}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces The altitude during the landing\relax }}{40}{figure.caption.52}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces The error during the landing\relax }}{41}{figure.caption.53}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces The velocity during the landing\relax }}{41}{figure.caption.54}
 \addvspace {10pt}
 \addvspace {10pt}
