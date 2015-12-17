@@ -1,9 +1,9 @@
 %===================================== CHAP 4 =================================
 
 \chapter{System Components and implementation}
-This chapter will present the different software and hardware components used in this project work, in addition to how they are implemented and connected to each other. The two first sections in this chapter will present the hardware and software components respectfully. This is followed by a overview over the components in the \gls{uav} and base station that is used to create the \gls{rtk-gps} system. The two last chapters will explain how the software and hardware implementation respectfully.
+This chapter will present the different software and hardware components used in this project work. The two first sections in this chapter will present the hardware and software components respectfully. This is followed by an overview over the components used in the \gls{uav} and base station that is used to create the \gls{rtk-gps} system. The last part of the chapter explains how the software and hardware components are implemented in the \gls{uav} test system.
 \section{Hardware}
-The different hardware components used in this work is a \gls{uav}, payload computer, \gls{gnss} receiver and antenna.
+The different hardware components used in this work includes an \gls{uav},a payload computer, two \gls{gnss} receiver and two antennas.
 \subsection{UAV}\label{ss:SkywalkerX8}
 The \gls{uav} used is a Skywalker X8, see figure \ref{figure:skywalkerX8}, which is a fixed wing \acrfull{uav} that is moulded out of \gls{epo}, which makes it a cheap and robust platform for prototype testing and modifications. The large space within the fuselage makes it ideal for experimental payload and projects with modest requirements.
 \begin{figure}[H]
@@ -29,16 +29,16 @@ Primary digital data link & Ubiquiti Rocket M5
 \label{tb:X8Components}
 \end{table}
 \subsection{Embedded Computer}
-The embedded computer chosen as payload in the X8 is a Beaglebone Black, shown in figure \ref{figure:BeagleBone}. The Beaglebone was chosen because of its sufficient computation power, low energy consumption and variety of communication interfaces. For ease interface access the  the Uavlab at NTNU has developed an extension board called "CAPE".
+The embedded computer chosen as payload in the X8 is a Beaglebone Black, shown in figure \ref{figure:BeagleBone}. The Beaglebone was chosen because of its sufficient computation power, low energy consumption and variety of communication interfaces. For ease interface access the  the UAVLAB at NTNU has developed an extension board called "CAPE".
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/BeagleBoneBlackE14.png}
 		\caption{BeagleBone Black element 14, Picture from \url{http://www.element14.com}}
 		\label{figure:BeagleBone}
 \end{figure}
-The Beaglebone black supports linux operation systems, and it is compatible with the \gls{lsts} toolchain, which will be return to in \ref{S:software}.
+The Beaglebone black supports linux operation systems, and it is compatible with the \gls{lsts} toolchain, which is further presented in section \ref{S:software}.
 \subsection{GNSS receiver}
-The system will use two types of \gls{gnss} receivers, namely the Ublox LEA M8T and the Piksi system. 
+The system will use two types of \gls{gnss} receivers, namely an Ublox LEA M8T receiver and a Piksi system receiver. 
 
 The Ublox LEA M8T is a new generation of low-cost \gls{gnss} receiver from ublox. The receiver support sending out raw \gls{gnss} data from both \gls{gps} and \gls{glonass} in the same configuration. The receiver have great performance in acquisition and tracking sensitivity of \gls{gnss} satellites. More technical details can be found in  \citep{UbloxDataSheet,UbloxReceiverDescription}.
 \begin{figure}[H]
@@ -69,12 +69,10 @@ The communication structure for Piksi used in this project work is seen in figur
 
 \subsection{GNSS Antenna}
 The navigation system will use two \gls{gnss} antenna, one for the \gls{uav} and the other for the base station. The main criteria for the \gls{uav} antenna is that it's small,compact and have a light weight.
-
-The M1227HTC-A-SMA, seen in figure \ref{figure:Maxtena} has been used in other \gls{uav} setups at the UAVLAB with good results. The antenna is small, compact and with an light weight of $17g$. It's design for L1/L2 gps/glonass bands. Further information or specification can be found in the datasheet \citep{maxtena}
+The selected antenna type M1227HTC-A-SMA, seen in figure \ref{figure:Maxtena} has been used in other \gls{uav} setups at the UAVLAB with good results. The antenna is small, compact and with an light weight of $17g$. It's design for L1/L2 gps/glonass bands. Further information or specification can be found in the datasheet \citep{maxtena}
 
 The base station do not have any restriction on size, weight or aerodynamic. The important factor for a base station antenna is that it has good multipath rejection. Also the base station position should be calculated as accurate as possible which impose further restriction on interference handling, phase center stability and noise rejection.
-
-The Novatel GPS-701-GG, seen i figure \ref{figure:Novatel}, was chosen as the base station antenna. The antenna has excellent multipath rejection whit a highly stable phase center. It has reception for both \gls{gps} and \gls{glonass} L1 signals.Further information or specification can be found in the datasheet \citep{novatel}.
+The antenna Novatel GPS-701-GG, seen i figure \ref{figure:Novatel}, was chosen as the base station antenna. The antenna has excellent multipath rejection whit a highly stable phase center. It has reception for both \gls{gps} and \gls{glonass} L1 signals.Further information or specification can be found in the datasheet \citep{novatel}.
 
 \begin{figure}[H]
 	\centering
@@ -92,9 +90,9 @@ The Novatel GPS-701-GG, seen i figure \ref{figure:Novatel}, was chosen as the ba
 
 
 \section{Software}\label{S:software}
-This section contain the different software that is used in the X8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to perform the different tasks, the messages protocol, the missionplaner program and rtklib which will have the main focus.
+This section contain the different software that is used in the X8 system. The following sections contain the operating system that runs on the base station and rover, the middleware used to perform the different tasks, the messages protocol, the missionplaner program, and the navigation system used, e.g. \gls{rtklib} and Piksi.
 \subsection{LSTS toolchain}
-The Laboratório de Sistemas e Tecnologia Subaquática (LSTS) toolchain is used a platform for software implementation. This is a flexible, scalable, open-source software that supports integration and control of various types of unmanned vehicles \citep{pinto2013lsts}. The toolchain includes a operating system, runtime environment, message protocol and a command and control for operations. The following program is included in the toolchain
+The Laboratório de Sistemas e Tecnologia Subaquática (LSTS) toolchain is used a platform for software implementation. This is a flexible, scalable, open-source software that supports integration and control of various types of unmanned vehicles \citep{pinto2013lsts}. The toolchain includes a operating system, runtime environment, message protocol and a command and control for operations. The following program are included in the toolchain
 \subsubsection{GLUED}
 Glued is a minimal Linux operating system distribution, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
 \subsubsection{Dune}
@@ -119,7 +117,7 @@ Neptus is an open source command and control software that can be used for a sin
 \end{figure}
 \subsubsection{Rtkrcv}
 As part of the \gls{rtklib} Rtkrcv is  used to calculate the position of the rover in real time.
-Rtkrcv can be configured to have two output streams. The structure of the output stream is given the \gls{rtklib} manual\citep{Rtklib242}. It's desired in a automatic landing system that have that velocity solution. This is was not provided in the newest version of \gls{rtklib}, and therefore the source code was altered to send out the velocity data. The position output is in \gls{enu} format and the full output structure is shown in table \ref{Tb:RtklibOutput}
+Rtkrcv can be configured to have two output streams. The structure of the output stream is given the \gls{rtklib} manual\citep{Rtklib242}. It's desired in a automatic landing system to have a velocity estimate. However this is not provided in the newest version of \gls{rtklib}, and therefore the source code had to be altered to send out the velocity data. The position output is in \gls{enu} format and the full output structure is presented in table \ref{Tb:RtklibOutput}
 \begin{table}[H]
 \begin{center}
     \begin{tabular}{ | l | l |}
@@ -141,25 +139,25 @@ Rtkrcv can be configured to have two output streams. The structure of the output
 \caption{Rtklib output solution format }
 \label{Tb:RtklibOutput}
 \end{table}
-When set configured as a differential GPS rtkrcv uses the \gls{lambda} method to resolve the integer ambiguity., which is further explained in \citep{LAMBDAMETHOD}. The solution is considered fixed if the ration between the best estimate and the second best estimate is above a certain threshold.
 
-The position solution is calculated with a Extended Kalman Filter, that can have different structure depending on how rtkrcv is configured
+When configured as a differential \gls{gps} the rtkrcv must resolves the integer ambiguity, which relate to lack of information on the number of whole phase cycles between the receiver and a satellite. In rtkrcv this is managed by implementation of the \gls{lambda} method, which is explain in \citep{LAMBDAMETHOD,Ambiguity:Estimation}.
+Further the position solution is calculated using a Extended Kalman Filter, where the structure of the filter is depending on the configuration of rtkrcv.
 \subsubsection{Str2str}
-Str2str is used as a base station program that can retrieve raw \gls{gnss} data and create a tcp sever, which the rtkrcv program can connect itself as a client. Str2str sends out RMTC3 formatted messages, however it can be configured to send whatever comes in as input.
+Str2str is used as a base station program that can receive raw \gls{gnss} data and further export data over tcp server, set-up by str2str. Str2str sends out Radio Technical Commission for Maritime Service 3 (RMTC3) formatted messages, however it can be configured to send whatever comes in as input. The communication between str2str and rtkrcv is shown i figure \ref{figure:HardSoft}
 \section{Implementation}
-This section explain how the \gls{rtk-gps} navigation system has been implemented in the \gls{uav} system used in the testing. The implementation includes both a software and a hardware part, as shown i figure \ref{figure:HardSoft}.
+This section explain how the \gls{rtk-gps} navigation system has been implemented in the \gls{uav} system used in the testing. The final implementation includes both use of \gls{rtklib} and Piksi for position estimation, as shown in figure \ref{figure:HardSoft}
 
+
+\subsection{Software implementation}
+The software implementation is shown in figure \ref{figure:HardSoft}, where the different modules are available from the UAVLAB. The detailed implementation has been trough configuration of the config files, including alteration of the existing implementation.
+\subsubsection{RTKGPS}
+The \gls{rtk-gps} module in the navigation system includes \gls{rtklib}, and the two Dune tasks RTKGPS and Piksi. The RTKGPS task is connected to \gls{rtklib} though a virtual connection, and the Piksi task has a physical connection to the Piksi receiver, as shown i figure \ref{figure:HardSoft}.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\textwidth]{figs/Combined.png}
-		\caption{Hardware Software interaction}
+		\caption{System implementation}
 		\label{figure:HardSoft}
 \end{figure}
-\subsection{Software implementation}
-The software implemented is shown in figure \ref{figure:HardSoft}, where the different modules are available from the UAVLAB. The detailed implementation has been trough configuration of the config files, including alteration of the existing implementation.
-\subsubsection{RTKGPS}
-The \gls{rtk-gps} module in the navigation system includes \gls{rtklib}, and the two Dune tasks RTKGPS and Piksi. The RTKGPS task is connected to \gls{rtklib} though a virtual connection, and the Piksi task has a physical connection to the Piksi receiver, as shown i figure \ref{figure:HardSoft}.
-
 
 \gls{rtklib} is implemented into the base station and the rover. The base station implementation use the  str2str program to communicate with the Ublox over a uart cable, outputs raw \gls{gnss} data over tcp to the rover.
 The rover uses the rtkrcv program from \gls{rtklib} to estimate the position of the rover. Rtkrcv receive raw \gls{gnss} data from both the str2str program and the Ublox installed in the \gls{uav}, as shown in figure \ref{figure:RTKLIB_STRUCTURE}. Rtkrcv is configured in a moving baseline configuration to simulate the behaviour that is expected during a landing on a ship. The configuration file is included in \ref{APPENDIX:RTKLIB}.
