@@ -5,7 +5,7 @@ This chapter will present the different software and hardware components used in
 \section{Hardware}
 The different hardware components used in this work includes an \gls{uav},a payload computer, two \gls{gnss} receivers and two antennas.
 \subsection{UAV}\label{ss:SkywalkerX8}
-The \gls{uav} used is a Skywalker X8, see figure \ref{figure:skywalkerX8}, which is a fixed wing \acrfull{uav} that is moulded out of \gls{epo}, which makes it a cheap and robust platform for prototype testing and modifications. The large space within the fuselage makes it ideal for experimental payload and projects with modest requirements.
+The \gls{uav} used is a Skywalker X8 from Skywalker Technology, see figure \ref{figure:skywalkerX8}, which is a fixed wing \acrfull{uav} that is moulded out of \gls{epo}, which makes it a cheap and robust platform for prototype testing and modifications. The large space within the fuselage makes it ideal for experimental payload and projects with modest requirements.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/Wing-X8_white-bgd2.png}
@@ -29,7 +29,7 @@ Primary digital data link & Ubiquiti Rocket M5
 \label{tb:X8Components}
 \end{table}
 \subsection{Embedded computer}
-The embedded computer chosen as payload in the X8 is a Beaglebone Black, shown in figure \ref{figure:BeagleBone}. The Beaglebone was chosen because of its sufficient computation power, low energy consumption and variety of communication interfaces. For ease interface access the  the UAV-Lab at NTNU has developed an extension board called "CAPE"\citep{KlausenX8}.
+The embedded computer chosen as payload in the X8 is a Beaglebone Black \citep{BeagleBoneBlack}, shown in figure \ref{figure:BeagleBone}. The Beaglebone was chosen because of its sufficient computation power, low energy consumption and variety of communication interfaces. For ease interface access the  the UAV-Lab at NTNU has developed an extension board called "CAPE"\citep{KlausenX8}.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/BeagleBoneBlackE14.png}
@@ -48,8 +48,8 @@ The Ublox LEA M8T is a new generation of low-cost single frequency\gls{gnss} rec
 		\label{figure:Ublox}
 \end{figure}
 \subsubsection{Piksi}\label{ss:Piksi}
-The Piksi system is a low cost, high performance \gls{gps} receiver with \gls{rtk-gps} functionality with capability for centimeter level relative positioning accuracy developed by Swift Navigation, shown in figure \ref{figure:Piksi}. Piksi is ideal for autonomous vehicles because of its small form factor, fast position solution update rate and low power consumption. 
-More detailed information about Piksi can be found in \citep{Piksiv231}
+The Piksi system is a low cost, high performance \gls{gps} receiver with \gls{rtk-gps} functionality with capability for centimetre level relative positioning accuracy developed by Swift Navigation, shown in figure \ref{figure:Piksi}. Piksi is ideal for autonomous vehicles because of its small form factor, fast position solution update rate and low power consumption. 
+More detailed information about Piksi can be found in the datasheet \citep{Piksiv231}
 The communication structure for Piksi used in this project work is seen in figure \ref{figure:CommunicationPiksi}.
 \begin{figure}[H]
 \begin{subfigure}[H]{1\textwidth}
@@ -106,7 +106,7 @@ The \acrfull{imc} protocol is build to interconnect systems of vehicles,sensors 
 \subsubsection{Neptus}
 Neptus is an open source command and control software that can be used for a single or fleet of unmanned vehicles with different types of sensors. The operator can observe real time data from a vehicle, review previous missions and plan future mission. In this work Neptus has been used to extract data logged by Dune during a defined mission, and to monitor the integer ambiguity solution from \gls{rtklib} and Piksi.
 \subsection{RTKLIB}\label{ss:Rtklib}
-\acrfull{rtklib} is a open source program package for standard and precise positioning with GNSS developed by T. Takasu. \gls{rtklib} can be configured to apply \gls{rtk-gps}, such that raw GNSS data is used estimate the position of the rover in real time. Figure \ref{figure:RTKLIB_STRUCTURE} shows how \gls{rtklib} can be used in a \gls{rtk-gps} mode. The two main modules here is str2str and rtkrcv. Both will be explained more closely in the following sections. More information about  \gls{rtklib} can be found in \citep{Rtklib242}.
+\acrfull{rtklib}\citep{takasu2009development} is a open source program package for standard and precise positioning with GNSS developed by T. Takasu. \gls{rtklib} can be configured to apply \gls{rtk-gps}, such that raw GNSS data is used estimate the position of the rover in real time. Figure \ref{figure:RTKLIB_STRUCTURE} shows how \gls{rtklib} can be used in a \gls{rtk-gps} mode. The two main modules here is str2str and rtkrcv. Both will be explained more closely in the following sections. More information about  \gls{rtklib} can be found in the manual \citep{Rtklib242}.
 
 \begin{figure}[H]
 	\centering

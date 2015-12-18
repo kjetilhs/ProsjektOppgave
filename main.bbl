@@ -1,29 +1,15 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Pik()]{Piksiv231}
-\emph{Piksi Datasheet ver. 2.3.1}.
-
-\bibitem[Rtk()]{Rtklib242}
-\emph{RTKLIB ver. 2.4.2 Manual}.
-
-\bibitem[Ubl({\natexlab{a}})]{UbloxDataSheet}
-\emph{NEO/LEA-M8T u-blox M8 concurrent GNSS timing modules, Data Sheet},
-  {\natexlab{a}}.
-
-\bibitem[Ubl({\natexlab{b}})]{UbloxReceiverDescription}
-\emph{U-blox M8 Receiver Description Including Protocol Specification},
-  {\natexlab{b}}.
-
-\bibitem[max()]{maxtena}
-\emph{M1227HCT-A-SMA L1/L2 GPS-GLONASS Active Antenna, Data Sheet}.
-
-\bibitem[nov()]{novatel}
-\emph{Novatel, GPS-701-GG and GPS-702-GG, Data Sheet}.
+\bibitem[BeagleBone()]{BeagleBoneBlack}
+BeagleBone.
+\newblock Beaglebone black.
+\newblock \url{http://beagleboard.org/BLACK}.
+\newblock Accessed: 18.12.2015.
 
 \bibitem[Blewitt(1989)]{GeodeticBaselines}
 Geoffrey Blewitt.
@@ -52,11 +38,29 @@ Kim~H Jin, Kim Mingu, Lim Hyon, Park Chulwoo, Yoon Seungho, Lee Daewon, Choi
 \newblock \emph{Mechatronics, IEEE/ASME Transactions on}, 18\penalty0
   (4):\penalty0 1320--1333, 2013.
 
+\bibitem[Maxtena()]{maxtena}
+Maxtena.
+\newblock M1227hct-a-sma l1/l2 gps-glonass active antenna, data sheet.
+\newblock \url{http://www.farnell.com/datasheets/1681376.pdf}.
+\newblock Accessed: 18.12.2015.
+
 \bibitem[Misra and Enge(2011)]{GPSBOOK}
 Pratap Misra and Per Enge.
 \newblock \emph{Global Positioning System Signals, Measurements and Performance
   Revised Second Edition}.
 \newblock Ganga-Jamuna Press, 2011.
+
+\bibitem[Navigation()]{Piksiv231}
+Swift Navigation.
+\newblock Piksi datasheet ver. 2.3.1.
+\newblock \url{http://docs.swiftnav.com/pdfs/piksi_datasheet_v2.3.1.pdf}.
+\newblock Accessed: 18.12.2015.
+
+\bibitem[Novatel()]{novatel}
+Novatel.
+\newblock Gps-701-gg and gps-702-gg, data sheet.
+\newblock \url{www.novatel.com/assets/Documents/Papers/GPS701_702GG.pdf}.
+\newblock Accessed: 18.12.2015.
 
 \bibitem[Pinto et~al.(2013)Pinto, Dias, Martins, Fortuna, Marques, and
   Sousa]{pinto2013lsts}
@@ -64,6 +68,12 @@ Joel Pinto, Paulo~S Dias, Rui~P Martins, Joao Fortuna, Eduardo Marques, and
   Joao Sousa.
 \newblock The lsts toolchain for networked vehicle systems.
 \newblock In \emph{OCEANS-Bergen, 2013 MTS/IEEE}, pages 1--9. IEEE, 2013.
+
+\bibitem[RTKLIB()]{Rtklib242}
+RTKLIB.
+\newblock Rtklib ver. 2.4.2 manual.
+\newblock \url{http://www.rtklib.com/prog/manual_2.4.2.pdf}.
+\newblock Accessed: 18.12.2015.
 
 \bibitem[Skulstad and Syversen(2014)]{Skulstad&Syversen}
 Robert Skulstad and Christoffer~Lie Syversen.
@@ -96,6 +106,13 @@ W.~Stempfhuber and M.~Buchholz.
 \newblock \emph{International Archives of the Photogrammetry, Remote Sensing
   and Spatial Information Sciences}, 2011.
 
+\bibitem[Takasu and Yasuda(2009)]{takasu2009development}
+Tomoji Takasu and Akio Yasuda.
+\newblock Development of the low-cost rtk-gps receiver with an open source
+  program package rtklib.
+\newblock In \emph{international symposium on GPS/GNSS}, pages 4--6.
+  International Convention Centre Jeju, Korea, 2009.
+
 \bibitem[Teunissen(1994)]{Ambiguity:Estimation}
 P.J.G. Teunissen.
 \newblock A new method for fast carrier phase ambiguity estimation.
@@ -112,6 +129,22 @@ P.J.G Teunissen, P.J. de~Jonge, and C.C.J.M. Tiberius.
 \newblock The lambda-method for fast gps surveying.
 \newblock Presented at the International Symposium "GPS Technology
   Applications" Bucharest,Romania, 1995.
+
+\bibitem[U-blox({\natexlab{a}})]{UbloxDataSheet}
+U-blox.
+\newblock Neo/lea-m8t u-blox m8 concurrent gnss timing modules, data sheet.
+\newblock
+  \url{https://www.u-blox.com/sites/default/files/NEO-LEA-M8T_DataSheet_(UBX-14006196).pdf},
+  {\natexlab{a}}.
+\newblock Accessed: 18.12.2015.
+
+\bibitem[U-blox({\natexlab{b}})]{UbloxReceiverDescription}
+U-blox.
+\newblock U-blox m8 receiver description including protocol specification.
+\newblock
+  \url{https://www.u-blox.com/sites/default/files/products/documents/u-bloxM8_ReceiverDescrProtSpec_%28UBX-13003221%29_Public.pdf?utm_source=en%2Fimages%2Fdownloads%2FProduct_Docs%2Fu-bloxM8_ReceiverDescriptionProtocolSpec_%28UBX-13003221%29_Public.pdf},
+  {\natexlab{b}}.
+\newblock Accessed: 18.12.2015.
 
 \bibitem[Vik(2014)]{vik2014integrated}
 Bjørnar Vik.

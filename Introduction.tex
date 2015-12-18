@@ -17,6 +17,8 @@ An other successful automatic landing was done in the Stellenbosch University MS
 
 
 \section{Literature review}
+\acrfull{rtk-gps} is a precise positioning technology that can obtain centimetre level accuracy by processing carrier phase measurement in the \gls{gps} signal. A open source program, \gls{rtklib} was presented in \citep{takasu2009development}, which can be used in combination with low cost \gls{rtk-gps} able receivers. \gls{rtklib} is used in this project work in combination with a Ublox LEA M8T receiver.
+
 The use of \gls{rtk-gps} for accurate position estimation has been studied in \citep{3D-RTK}. The paper proposed how to create a low-cost \gls{rtk-gps} system that can accurate measure the position in 3D. They used raw \gls{gnss} data from the \gls{gnss} receiver and the program library \acrfull{rtklib} to estimate the position of a trolley in real time.
 
 \acrfull{rtk-gps} apply phase measurement of the \gls{gnss} signal for position estimation. In order to get a accurate position estimate the integer ambiguity must be resolved. An integer ambiguity resolution strategy was proposed in \citep{GeodeticBaselines}, and demonstrated centimeter level accuracy for a baseline up to $2000km$. Further studies on integer ambiguity resolution strategies resolved in the \gls{lambda} strategy, which was proposed in \citep{Ambiguity:Estimation}, and further disused in \citep{LAMBDA:METHOD,LAMBDAMETHOD}. The \gls{lambda} method has been wildly used, and has proven a quick strategy to resolve the integer ambiguity, which makes it ideal for \gls{rtk-gps} systems. 
