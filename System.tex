@@ -36,11 +36,11 @@ The embedded computer chosen as payload in the X8 is a Beaglebone Black \citep{B
 		\caption{BeagleBone Black element 14, Picture from \url{http://www.element14.com}}
 		\label{figure:BeagleBone}
 \end{figure}
-The Beaglebone black supports linux operating systems, and it is compatible with the \gls{lsts} toolchain, which is further presented in section \ref{S:software}.
+The Beaglebone black supports linux operating systems, and it is compatible with the Laboratório de Sistemas e Tecnologia Subaquática (LSTS) toolchain, which is further presented in section \ref{S:software}.
 \subsection{GNSS receiver}
 The system will use two types of \gls{gnss} receivers, namely an Ublox LEA M8T receiver and a Piksi system receiver. 
 
-The Ublox LEA M8T is a new generation of low-cost single frequency\gls{gnss} receiver from Ublox. The receiver support sending out raw \gls{gnss} data from both \gls{gps} and \gls{glonass}. The receiver have great performance in acquisition and tracking sensitivity of \gls{gnss} satellites. More technical details can be found in  \citep{UbloxDataSheet,UbloxReceiverDescription}.
+The Ublox LEA M8T is a new generation of low-cost single frequency \gls{gnss} receiver from Ublox. The receiver support sending out raw \gls{gnss} data from both \gls{gps} and \gls{glonass}. The receiver have great performance in acquisition and tracking sensitivity of \gls{gnss} satellites. More technical details can be found in  \citep{UbloxDataSheet,UbloxReceiverDescription}.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/ubloxLeaM8T.jpg}
@@ -72,7 +72,7 @@ The navigation system uses two \gls{gnss} antenna, one for the \gls{uav} and the
 The selected antenna type M1227HTC-A-SMA, seen in figure \ref{figure:Maxtena}, which has been used in other \gls{uav} set-ups at the UAV-Lab with good results. The antenna is small, compact and with an light weight of $17g$. It's design for L1/L2 gps/glonass bands. Further information or specification can be found in the datasheet \citep{maxtena}
 
 The base station do not have any restriction on size, weight or aerodynamic. The important factor for a base station antenna is that it has good multipath rejection. Also the base station position should be calculated as accurate as possible which impose further restriction on interference handling, phase center stability and noise rejection.
-The antenna Novatel GPS-701-GG, seen i figure \ref{figure:Novatel}, was chosen as the base station antenna. The antenna has excellent multipath rejection with a highly stable phase center. It has reception for both \gls{gps} and \gls{glonass} L1 signals.Further information or specification can be found in the datasheet \citep{novatel}.
+The antenna Novatel GPS-701-GG, seen i figure \ref{figure:Novatel}, was chosen as the base station antenna. The antenna has excellent multipath rejection with a highly stable phase center. It has reception for both \gls{gps} and \gls{glonass} L1 signals. Further information or specification can be found in the datasheet \citep{novatel}.
 
 \begin{figure}[H]
 	\centering
@@ -96,7 +96,7 @@ The Laboratório de Sistemas e Tecnologia Subaquática (LSTS) toolchain is used 
 \subsubsection{Glued}
 Glued is a minimal Linux operating system distribution, and design with embedded system in mind. It is platform independent, easy to configure and contain only the necessary packages to run on a embedded system. This makes GLUED a light and fast distribution. GLUED is configured through a single configuration file that which can be created for a specific system. 
 \subsubsection{Dune}
-Dune (DUNE Uniform Navigation Environment) is a runtime environment for unmanned systems. DUNE is operating system independent and can run on-board the embedded computer. It can interact with the sensors, actuators and payload. In addition it can be used for tasks like communication, navigation, control, manoeuvring, plan execution and supervision.
+Dune (DUNE Uniform Navigation Environment) is a runtime environment for unmanned systems. DUNE is operating system independent and can run on the embedded computer. It can interact with the sensors, actuators and payload. In addition it can be used for tasks like communication, navigation, control, manoeuvring, plan execution and supervision.
 Dune works by setting up individual task that can dispatch and subscribe to different \gls{imc} messages.
 \subsubsection{IMC}\label{ss:IMC}
 The \acrfull{imc} protocol is build to interconnect systems of vehicles,sensors and human operators. The protocol is a messages-oriented protocol that enable exchange of real-time information about the environment and updated objectives, such that the participant in the communication can pursue a common goal cooperatively.

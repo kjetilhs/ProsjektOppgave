@@ -1,9 +1,9 @@
 %===================================== CHAP 5 =================================
 
 \chapter{Experimental testing}
-This chapter present the result from the test that were performed. Here the goal of the tests were to test the performance of the Ublox LEA M8T, compare the performance of the \acrfull{rtklib} with the Piksi alternative, and to compare the real time estimate from both system with the post-processed solution. The raw \gls{gnss} data from the Ubloxs are used to compute the post processed solution. The comparison test was performed with the Piksi and the Ublox connected to the same antenna at both the rover and the base station. Hence the deviation in the position estimate is limited to the receivers. All position and velocity data is given in the \gls{ned} frame, however altitude is only used for the flight test.
+This chapter present the results from the tests that were performed. Here the goal of the tests were to test the performance of the Ublox LEA M8T, compare the performance of the \acrfull{rtklib} with the Piksi alternative, and to compare the real time estimate from both system with the post-processed solution. The raw \gls{gnss} data from the Ubloxs are used to compute the post processed solution. The comparison test was performed with the Piksi and the Ublox connected to the same antenna at both the rover and the base station. Hence the deviation in the position estimate is limited to the receivers. All position and velocity data is given in the \gls{ned} frame, however altitude is only used for the flight test.
 \section{Performance testing of UAV Position System}
-The experimental test was split in two independent test, one where the X8 \gls{uav} was carried around on a open field to test the performance of the position system in a more controlled environment, and a second test where the \gls{uav} was flying by means of pilot control. The goal of the first test was to log data from both \gls{rtk-gps} systems in optimal condition for the navigation system. The objective of the second test was to test the systems in a more realistic environment for application in an automatic net landing system. 
+The experimental test was split in two independent test, one where the X8 \gls{uav} was carried around on a open field to test the performance of the position system in a more controlled environment, and a second test where the \gls{uav} was flying by means of pilot control. The goal of the first test was to log data from both \gls{rtk-gps} systems in optimal condition. The objective of the second test was to test the systems in a more realistic environment for application in an automatic net landing system. 
 
 
 \subsection{Test 1: Test of the RTK-GPS navigation system}
@@ -25,7 +25,7 @@ Figure \ref{figure:xywalk1} shows a North East plot of how the walk was. The plo
 ~\\
 \paragraph{Integer ambiguity solution and position error}~\\
 
-Figure \ref{figure:DownAndAmbwalk1} shows the down position, as well as how the integer ambiguity solution was during the experiment. As seen in the figure both the Piksi and \gls{rtklib} manage to keep there fixed solution. The position solution from both the Piksi and \gls{rtklib} agrees with the post processed solution. 
+Figure \ref{figure:DownAndAmbwalk1} shows the Down position, as well as how the integer ambiguity solution was during the experiment. As seen in the figure both the Piksi and \gls{rtklib} manage to keep there fixed solution. The position solution from both the Piksi and \gls{rtklib} agrees with the post processed solution. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/downWalk1.eps}
@@ -62,7 +62,7 @@ The cumulative standard deviation for the error from both the Piksi and \gls{rtk
 \end{figure}
 \paragraph{Velocity}~\\
 
-Both the Piksi and \gls{rtklib} agrees to the same estimate in North and East velocity, as seen in figure \ref{figure:VelocityWalk1}. However the Down velocity from \gls{rtklib} is more noisy then the Piksi. The noisy behaviour may be because the \gls{uav} was carried around.
+Both the Piksi and \gls{rtklib} agrees to the same estimate in North and East velocity, as seen in figure \ref{figure:VelocityWalk1}. However the Down velocity from \gls{rtklib} is more noisy then the Piksi. The noisy behaviour could be because the \gls{uav} was carried around.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/velocityWalk1.eps}
@@ -80,7 +80,7 @@ The different receivers used in \gls{rtklib} and Piksi was not able to track the
 \end{figure}
 \paragraph{Accuracy for stationary position estimate}~\\
 
-The position estimate of the rover is a relative position in reference to the base station. Due to the fact that the position of the base station is calculated with a single receiver with one frequency, there will be introduced a bias in the position estimate. Figure \ref{figure:enhancedxywalk1} shows the North, East position of the the first walk. The true position is exactly the same, but in the figure the distance is approximately $5-10cm$. The distance from the base station to the estimated start and stop position was calculated to be $3.3553m$ and $3.2914m$ respectfully. The measured distance was approximately $3.3m$. That gives an initial error off $0.02m$. The true Down position was measured to approximately $0.78m$. \gls{rtklib} had a initial Down position of $0.7096m$, and stop position at $0.7155m$. This five a initial error of $-0.704m$ and stop error of $-0.0645m$ for \gls{rtklib}. For Piksi the initial Down position was $0.7630m$ and stop position of $0.721m$, which gives and error of $-0.0170m$ and $-0.0590m$ for initial and stop position respectfully. This gives an accuracy level at centimetre level at stationary condition. 
+The position estimate of the rover is a relative position in reference to the base station. Due to the fact that the position of the base station is calculated with a single receiver with one frequency, there will be introduced a bias in the position estimate. Figure \ref{figure:enhancedxywalk1} shows the North, East position of the the first walk. The true position is exactly the same, however in the figure the distance is approximately $5-10cm$. The distance from the base station to the estimated start and stop position was calculated to be $3.3553m$ and $3.2914m$ respectfully. The measured distance was approximately $3.3m$. That gives an initial error off $0.02m$. The true Down position was measured to approximately $0.78m$. \gls{rtklib} had a initial Down position of $0.7096m$, and stop position at $0.7155m$. This five a initial error of $-0.704m$ and stop error of $-0.0645m$ for \gls{rtklib}. For Piksi the initial Down position was $0.7630m$ and stop position of $0.721m$, which gives and error of $-0.0170m$ and $-0.0590m$ for initial and stop position respectfully. This gives an accuracy level at centimetre level at stationary condition. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/enhancedxywalk1.eps}
@@ -168,7 +168,7 @@ The main reason for the lost fixed solution is because of the number of valid sa
 %		\label{figure:errorDownFlight}
 %\end{figure}
 \paragraph{Landing}~\\
-As expected the navigation system had problem with keeping it's fixed integer solution. The \gls{rtk-gps} position estimate of the landing path is shown in figure \ref{figure:landingPath}. The system kept changing between float and fixed solution during the landing phase. The Down position as well as the integer ambiguity solution for the landing phase is seen in \ref{figure:landingDownFlight}. The navigation system was unable to maintain a fixed solution, however it did maintain a float solution. Further test with a control system is required in order to test if the float solution is accurate enough to perform a automatic net landing.
+As expected the navigation system had problem with keeping it's fixed integer solution. The \gls{rtk-gps} position estimate of the landing path is shown in figure \ref{figure:landingPath}. The system kept changing between float and fixed solution during the landing phase. The Down position, in addition to the integer ambiguity solution for the landing phase is seen in \ref{figure:landingDownFlight}. The navigation system was unable to maintain a fixed solution, however it did maintain a float solution and recovered its fixed solution before touch down.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingPath.eps}
@@ -190,7 +190,7 @@ From the error plot seen in figure \ref{figure:landingErrorNorthEastDownFlight} 
 		\caption{The error during the landing}
 		\label{figure:landingErrorNorthEastDownFlight}
 \end{figure}
-The landing velocity seen in figure \ref{figure:landingVelocity} confirms the precision in the estimate that was seen in the first test. However the altitude velocity is less noisy, and can be used in a control system.
+The landing velocity seen in figure \ref{figure:landingVelocity} confirms the precision in the estimate that was seen in the first test. However the altitude velocity is less noisy then in figure \ref{figure:VelocityWalk1}, and can be used in a control system.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{figs/plots/landingVelocity.eps}
