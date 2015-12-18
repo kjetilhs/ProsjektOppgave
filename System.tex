@@ -139,7 +139,7 @@ Rtkrcv can be configured to have two output streams. It's desired in a automatic
 \label{Tb:RtklibOutput}
 \end{table}
 
-When configured as a \gls{rtk-gps} the rtkrcv must resolves the integer ambiguity, which relate to lack of information on the number of whole phase cycles between the receiver and a satellite. In rtkrcv this is managed by implementation of the \gls{lambda} method, which is explain in \citep{LAMBDAMETHOD,Ambiguity:Estimation}.
+When configured as a \gls{rtk-gps} the rtkrcv must resolves the integer ambiguity, which relate to lack of information on the number of whole phase cycles between the receiver and a satellite. In rtkrcv this is managed by implementation of the \gls{lambda} method, which is explain in \citep{LAMBDAMETHOD,Ambiguity:Estimation,LAMBDA:METHOD}.
 Further the position solution is calculated using a Extended Kalman Filter, where the structure of the filter is depending on the configuration of rtkrcv.
 \subsubsection{Str2str}
 Str2str is used as a base station program that can receive raw \gls{gnss} data and further export data over tcp server, set-up by str2str. Str2str sends out Radio Technical Commission for Maritime Service 3 (RMTC3) formatted messages, however it can be configured to send whatever comes in as input. The communication between str2str and rtkrcv is shown i figure \ref{figure:RTKLIB_STRUCTURE}

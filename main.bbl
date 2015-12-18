@@ -25,34 +25,23 @@
 \bibitem[nov()]{novatel}
 \emph{Novatel, GPS-701-GG and GPS-702-GG, Data Sheet}.
 
-\bibitem[Adriaan(2013)]{smit2013autonomous}
-Smit Samuel~Jacobus Adriaan.
-\newblock Autonomous landing of a fixed-wing unmanned aerial vehicle using
-  differential gps.
-\newblock Master's thesis, Stellenbosch: Stellenbosch University, 2013.
-
-\bibitem[Amstrup(2015)]{Spockeli}
-Spockeli~Bjørn Amstrup.
-\newblock Integration of rtk gps and imu for accurate uav positioning.
-\newblock Master's thesis, Norwegian University of Science and Technology,
-  NTNU, 2015.
-
-\bibitem[Bjørnar(2014)]{vik2014integrated}
-Vik Bjørnar.
-\newblock \emph{Integrated Satellite and Inertial Navigation Systems}.
-\newblock Department of Engineering Cybernetics, NTNU, 2014.
-
-\bibitem[Geoffrey(1989)]{GeodeticBaselines}
-Blewitt Geoffrey.
+\bibitem[Blewitt(1989)]{GeodeticBaselines}
+Geoffrey Blewitt.
 \newblock Carrier phase ambiguity resolution for the global positioning system
   applied to geodetic baselines uo to 2000 km.
 \newblock \emph{Journal of Geophysical Research}, 94\penalty0 (B8):\penalty0
   10,187--10,203, 1989.
 
-\bibitem[I(2011)]{fossen2011handbook}
-Fossen~Thor I.
+\bibitem[Fossen(2011)]{fossen2011handbook}
+Thor~I Fossen.
 \newblock \emph{Handbook of marine craft hydrodynamics and motion control}.
 \newblock John Wiley \& Sons, 2011.
+
+\bibitem[Frølich(2015)]{Froelich}
+Marcus Frølich.
+\newblock Automatic ship landing system for fixed-wing uav.
+\newblock Master's thesis, Norwegian University of Science and Technology,
+  NTNU, 2015.
 
 \bibitem[Jin et~al.(2013)Jin, Mingu, Hyon, Chulwoo, Seungho, Daewon, Hyunjin,
   Gyeongtaek, Jongho, and Youdan]{kim2013fully}
@@ -63,17 +52,11 @@ Kim~H Jin, Kim Mingu, Lim Hyon, Park Chulwoo, Yoon Seungho, Lee Daewon, Choi
 \newblock \emph{Mechatronics, IEEE/ASME Transactions on}, 18\penalty0
   (4):\penalty0 1320--1333, 2013.
 
-\bibitem[Marcus(2015)]{Froelich}
-Frølich Marcus.
-\newblock Automatic ship landing system for fixed-wing uav.
-\newblock Master's thesis, Norwegian University of Science and Technology,
-  NTNU, 2015.
-
-\bibitem[Paul and Michael(2012)]{williams2012intelligent}
-Williams Paul and Crump Michael.
-\newblock Intelligent landing system for landing uavs at unsurveyed airfields.
-\newblock In \emph{28th International Congress of the Aeronautical Sciences},
-  2012.
+\bibitem[Misra and Enge(2011)]{GPSBOOK}
+Pratap Misra and Per Enge.
+\newblock \emph{Global Positioning System Signals, Measurements and Performance
+  Revised Second Edition}.
+\newblock Ganga-Jamuna Press, 2011.
 
 \bibitem[Pinto et~al.(2013)Pinto, Dias, Martins, Fortuna, Marques, and
   Sousa]{pinto2013lsts}
@@ -82,50 +65,67 @@ Joel Pinto, Paulo~S Dias, Rui~P Martins, Joao Fortuna, Eduardo Marques, and
 \newblock The lsts toolchain for networked vehicle systems.
 \newblock In \emph{OCEANS-Bergen, 2013 MTS/IEEE}, pages 1--9. IEEE, 2013.
 
-\bibitem[P.J.G.(1994)]{Ambiguity:Estimation}
-Teunissen P.J.G.
-\newblock A new method for fast carrier phase ambiguity estimation.
-\newblock \emph{IEEE}, pages 562--573, 1994.
-
-\bibitem[P.J.G.(1995)]{LAMBDA:METHOD}
-Teunissen P.J.G.
-\newblock The least-squares ambiguity decorrelation adjustment: a method for
-  fast gps integer ambiguity estimation.
-\newblock \emph{Journal of Geodesy}, 70:\penalty0 65--82, 1995.
-
-\bibitem[Pratap and Per(2011)]{GPSBOOK}
-Misra Pratap and Enge Per.
-\newblock \emph{Global Positioning System Signals, Measurements and Performance
-  Revised Second Edition}.
-\newblock Ganga-Jamuna Press, 2011.
-
-\bibitem[Robert and Lie(2014)]{Skulstad&Syversen}
-Skulstad Robert and Syversen~Christoffer Lie.
+\bibitem[Skulstad and Syversen(2014)]{Skulstad&Syversen}
+Robert Skulstad and Christoffer~Lie Syversen.
 \newblock Low-cost instrumentation system for recovery of fixed-wing uav in a
   net.
 \newblock Master's thesis, Norwegian University of Science and Technology,
   NTNU, 2014.
 
-\bibitem[Teunissen~P.J.G and C.C.J.M.(1995)]{LAMBDAMETHOD}
-de~Jonge~P.J. Teunissen~P.J.G and Tiberius C.C.J.M.
-\newblock The lambda-method for fast gps surveying.
-\newblock Presented at the International Symposium "GPS Technology
-  Applications" Bucharest,Romania, 1995.
+\bibitem[Smit(2013)]{smit2013autonomous}
+Samuel Jacobus~Adriaan Smit.
+\newblock Autonomous landing of a fixed-wing unmanned aerial vehicle using
+  differential gps.
+\newblock Master's thesis, Stellenbosch: Stellenbosch University, 2013.
 
-\bibitem[W.(2013)]{3D-RTK}
-Stempfhuber W.
+\bibitem[Spockeli(2015)]{Spockeli}
+Bjørn~Amstrup Spockeli.
+\newblock Integration of rtk gps and imu for accurate uav positioning.
+\newblock Master's thesis, Norwegian University of Science and Technology,
+  NTNU, 2015.
+
+\bibitem[Stempfhuber(2013)]{3D-RTK}
+W.~Stempfhuber.
 \newblock 3d-rtk capability of single gnss receivers.
 \newblock \emph{International Archives of the Photogrammetry, Remote Sensing
   and Spatial Information Sciences}, 2013.
 
-\bibitem[W. and M.(2011)]{Low-costRTK}
-Stempfhuber W. and Buchholz M.
+\bibitem[Stempfhuber and M.(2011)]{Low-costRTK}
+W.~Stempfhuber and Buchholz M.
 \newblock A precise, low-cost rtk gnss system for uav applications.
 \newblock \emph{International Archives of the Photogrammetry, Remote Sensing
   and Spatial Information Sciences}, 2011.
 
-\bibitem[Zolich A.~P. and K.(2015)]{KlausenX8}
-Cisek K.~P. Zolich A.~P., Johansen T.~A. and Klausen K.
+\bibitem[Teunissen(1994)]{Ambiguity:Estimation}
+P.J.G. Teunissen.
+\newblock A new method for fast carrier phase ambiguity estimation.
+\newblock \emph{IEEE}, pages 562--573, 1994.
+
+\bibitem[Teunissen(1995)]{LAMBDA:METHOD}
+P.J.G. Teunissen.
+\newblock The least-squares ambiguity decorrelation adjustment: a method for
+  fast gps integer ambiguity estimation.
+\newblock \emph{Journal of Geodesy}, 70:\penalty0 65--82, 1995.
+
+\bibitem[Teunissen et~al.(1995)Teunissen, de~Jonge, and Tiberius]{LAMBDAMETHOD}
+P.J.G Teunissen, P.J. de~Jonge, and C.C.J.M. Tiberius.
+\newblock The lambda-method for fast gps surveying.
+\newblock Presented at the International Symposium "GPS Technology
+  Applications" Bucharest,Romania, 1995.
+
+\bibitem[Vik(2014)]{vik2014integrated}
+Bjørnar Vik.
+\newblock \emph{Integrated Satellite and Inertial Navigation Systems}.
+\newblock Department of Engineering Cybernetics, NTNU, 2014.
+
+\bibitem[Williams and Crump(2012)]{williams2012intelligent}
+Paul Williams and Michael Crump.
+\newblock Intelligent landing system for landing uavs at unsurveyed airfields.
+\newblock In \emph{28th International Congress of the Aeronautical Sciences},
+  2012.
+
+\bibitem[Zolich et~al.(2015)Zolich, Johansen, and Klausen]{KlausenX8}
+A.~P. Zolich, Cisek K.~P. Johansen, T.~A., and K.~Klausen.
 \newblock Unmanned aerial system architecture for maritime missions. design and
   hardware description.
 \newblock In \emph{Education and Development of Unmanned Aerial Systems
